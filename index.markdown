@@ -7,10 +7,13 @@ layout: home
 <img src="./ada_ARG_logo_quill_small.jpg" width=100 height=100>
 <center>Welcome to the Github Pages for the Ada Rapporteur Group.</center>
 <br/><br/>
+
 The Ada Rapporteur Group (ARG) handles comments on the Ada standard from the
-general public. These comments usually concern possible enhancements to or
+general public. Please visit the [ARG Community Input](https://arg.adaic.org/community-input) website to provide comments on the Ada standard,
+or visit [ARG GitHub Issue List](https://github.com/Ada-Rapporteur-Group/User-Community-Input/issues) to view existing issues or create new ones.
+These comments usually concern possible enhancements to or
 errors in the standard. The ARG is tasked with considering the enhancements and
-resolving the errors. To do so, the comments are distilled into Ada Issues.
+resolving the errors. To do so, the comments are distilled into Ada Interpretations.
 
 ### Ada Reference Manual
 
