@@ -15,6 +15,10 @@
     DT {display: compact}
     SPAN.insert6 {text-decoration: underline; color: rgb(0,51,204) }
     SPAN.delete6 {text-decoration: line-through; color: rgb(0,51,204) }
+    SPAN.insert7 {text-decoration: underline; color: rgb(0,102,153) }
+    SPAN.delete7 {text-decoration: line-through; color: rgb(0,102,153) }
+    SPAN.insert8 {text-decoration: underline; color: rgb(204,51,0) }
+    SPAN.delete8 {text-decoration: line-through; color: rgb(204,51,0) }
     A.Bar:link {font-family: Arial, Helvetica, sans-serif; font-style: normal; text-decoration: none; color: rgb(204,204,51)}
     A.Bar:visited {font-family: Arial, Helvetica, sans-serif; font-style: normal; text-decoration: none; color: rgb(204,204,51)}
     DIV.Normal {font-family: "Times New Roman", Times, serif; line-height: 122%; margin-left: 1.8em; margin-bottom: 0.6em}
@@ -27,7 +31,7 @@
     </STYLE>
 </HEAD>
 <BODY TEXT="#000000" BGCOLOR="#FFFFF0" LINK="#000080" VLINK="#330033" ALINK="#0000FF">
-<DIV><SPAN Style="font-size:200%; color: rgb(0,51,153)"><B>Annotated</B></SPAN><SPAN Style="font-size:200%; color: rgb(0,0,102)"><B>&nbsp;Ada Reference Manual</B> (Ada 202y Draft 1)</SPAN> &mdash; <A HREF="AA-TTL.html"><B>Legal Information</B></A></DIV>
+<DIV><SPAN Style="font-size:200%; color: rgb(0,51,153)"><B>Annotated</B></SPAN><SPAN Style="font-size:200%; color: rgb(0,0,102)"><B>&nbsp;Ada Reference Manual</B> (Ada 202y Draft 3)</SPAN> &mdash; <A HREF="AA-TTL.html"><B>Legal Information</B></A></DIV>
 <div style="margin-top: 0.6em; margin-bottom: 0.0em"><A HREF="AA-TOC.html"><IMG SRC="cont.gif" ALT="Contents" BORDER=0></A>&nbsp;
 &nbsp;<A HREF="AA-0-4.html"><IMG SRC="index.gif" ALT="Index" BORDER=0></A>&nbsp;
 &nbsp;<A HREF="AA-STDS.html"><IMG SRC="lib.gif" ALT="References" BORDER=0></A>&nbsp;
@@ -55,7 +59,7 @@ documents include:&nbsp;</div>
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0245-1.TXT">AI05-0245-1</A></I>} 
 Ada 2022 Overview. This gives an introduction to the changes and new 
 features in Ada 2022. Programmers should read this overview before reading 
-Reference Manual in depth.</div>
+this Reference Manual in depth.</div>
 <div class="paranum"><a name="p4">4/1</a></div>
 <div class="Bulleted"><SPAN STYLE="font-size: 80%"><I>This paragraph 
 was deleted.</I></SPAN></div>
@@ -64,7 +68,7 @@ was deleted.</I></SPAN></div>
 to the International Standard &mdash; ISO/IEC 8652:<span class="insert6">202y</span><span class="delete6">&nbsp;2023</span>.</div>
 <div class="WideAbove"><SPAN Class="swiss"><SPAN STYLE="font-size: 156%"><B>Design 
 Goals</B></SPAN></SPAN></div>
-<div class="paranum"><a name="p6">6/5</a></div>
+<div class="paranum"><a name="p6">6/6</a></div>
 <div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00387.TXT">AI95-00387-01</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0313-1.TXT">AI12-0313-1</A></I>} 
 Ada was originally designed with three overriding concerns: program reliability 
@@ -74,7 +78,8 @@ and extensibility, additional control over storage management and synchronizatio
 and standardized packages oriented toward supporting important application 
 areas, while at the same time retaining the original emphasis on reliability, 
 maintainability, and efficiency. Subsequent editions, including this 
-fourth edition, have provided further flexibility and added more standardized 
+<span class="insert6">Ada 202y</span><span class="delete6">&nbsp;fourth</span> 
+edition, have provided further flexibility and added more standardized 
 packages within the framework provided by the 1995 revision.</div>
 <div class="paranum"><a name="p7">7</a></div>
 <div class="Normal">The need for languages that promote reliability and 
@@ -700,14 +705,13 @@ reviewing feature designs, and creating and editing wording changes,
 was critical to the entire process.</span></div>
 <div class="WideAbove"><SPAN Class="swiss"><SPAN STYLE="font-size: 156%"><B>Using 
 this version of the Ada Reference Manual</B></SPAN></SPAN></div>
-<div class="paranum"><a name="p72">72/6</a></div>
-<div class="Normal">This document has been revised with <span class="insert6">changes 
-for Ada 202y</span><span class="delete6">&nbsp;the corrections specified in 
-Technical Corrigendum 1 for Ada 2012 (which corresponds to ISO/IEC 8652:2012/COR.1:2016) 
-and other changes specifically for this fourth edition</span>. In addition, 
-more annotations have been added and a variety of editorial errors have 
-been corrected.&nbsp;</div>
-<div class="paranum"><a name="p73">73/6</a></div>
+<div class="paranum"><a name="p72">72/7</a></div>
+<div class="Normal">This document has been revised with <span class="insert6">the 
+corrections specified in Technical Corrigendum 1 for Ada 2022</span><span class="insert7">&nbsp;and other changes specifically for Ada 202y</span><span class="insert6"></span><span class="delete6">&nbsp;the corrections specified in Technical Corrigendum 1 for Ada 2012 (which 
+corresponds to ISO/IEC 8652:2012/COR.1:2016) and other changes specifically 
+for this fourth edition</span>. In addition, more annotations have been 
+added and a variety of editorial errors have been corrected.&nbsp;</div>
+<div class="paranum"><a name="p73">73/7</a></div>
 <div class="Normal">Changes to the original 1995 version of the Annotated 
 Ada Reference Manual (AARM) can be identified by the version number following 
 the paragraph number. Paragraphs with a version number of /1 were changed 
@@ -720,17 +724,20 @@ number of /4 were changed by Technical Corrigendum 1 for Ada 2012 or
 were editorial corrections at that time. Paragraphs with a version number 
 of /5 were changed by the 2022 edition of the AARM (including additional 
 editorial corrections).<span class="insert6">&nbsp;Paragraphs with a version 
-number of /6 were changed for Ada 202y or are recent editorial corrections.</span> 
-Paragraphs not so marked are unchanged since the original 1995 edition 
-of the Annotated Ada Reference Manual, and have the same paragraph numbers 
-as in that edition. Inserted text is indicated by underlining, and deleted 
-text is indicated by strikethroughs. Some versions also use color to 
-indicate the version of the change. Where paragraphs are inserted, the 
-paragraph numbers are of the form pp.nn, where pp is the number of the 
-preceding paragraph, and nn is an insertion number. For instance, the 
-first paragraph inserted after paragraph 8 is numbered 8.1, the second 
-paragraph inserted is numbered 8.2, and so on. Deleted paragraphs are 
-indicated by text such as <I></I><SPAN STYLE="font-size: 80%"><I>This 
+number of /6 were changed by Technical Corrigendum 1 for Ada 2022 or 
+were editorial corrections at that time.</span><span class="insert7">&nbsp;Paragraphs with a version number of /7 were changed for Ada 202y or are 
+recent editorial corrections.</span> Paragraphs not so marked are unchanged 
+since the original 1995 edition of the Annotated Ada Reference Manual, 
+and have the same paragraph numbers as in that edition. <span class="insert6">Some 
+versions indicate some or all inserted</span><span class="delete6">&nbsp;Inserted</span> 
+text <span class="delete6">is indicated&nbsp;</span>by underlining, and deleted 
+text <span class="delete6">is indicated&nbsp;</span>by strikethroughs. Some 
+versions also use color to indicate the version of the change. Where 
+paragraphs are inserted, the paragraph numbers are of the form pp.nn, 
+where pp is the number of the preceding paragraph, and nn is an insertion 
+number. For instance, the first paragraph inserted after paragraph 8 
+is numbered 8.1, the second paragraph inserted is numbered 8.2, and so 
+on. Deleted paragraphs are indicated by text such as <I></I><SPAN STYLE="font-size: 80%"><I>This 
 paragraph was deleted.</I></SPAN><I></I> Deleted paragraphs include empty 
 paragraphs that were numbered in the 1995 edition of the Ada Reference 
 Manual. Similar markings and numbering are used for changes to annotations. 

@@ -13,6 +13,8 @@
     DIV.paranum {float: left; font-family: Arial, Helvetica, sans-serif; font-size: 64%; width: 2.8em; margin-left: -0.4em; margin-right: -3.0em; margin-top: 0.2em}
     TT {font-family: "Courier New", monospace}
     DT {display: compact}
+    SPAN.insert6 {text-decoration: underline; color: rgb(0,51,204) }
+    SPAN.delete6 {text-decoration: line-through; color: rgb(0,51,204) }
     A.Bar:link {font-family: Arial, Helvetica, sans-serif; font-style: normal; text-decoration: none; color: rgb(204,204,51)}
     A.Bar:visited {font-family: Arial, Helvetica, sans-serif; font-style: normal; text-decoration: none; color: rgb(204,204,51)}
     DIV.Normal {font-family: "Times New Roman", Times, serif; line-height: 122%; margin-left: 1.8em; margin-bottom: 0.6em}
@@ -22,7 +24,7 @@
     </STYLE>
 </HEAD>
 <BODY TEXT="#000000" BGCOLOR="#FFFFF0" LINK="#000080" VLINK="#330033" ALINK="#0000FF">
-<DIV><SPAN Style="font-size:200%; color: rgb(0,51,153)"><B>Annotated</B></SPAN><SPAN Style="font-size:200%; color: rgb(0,0,102)"><B>&nbsp;Ada Reference Manual</B> (Ada 202y Draft 1)</SPAN> &mdash; <A HREF="AA-TTL.html"><B>Legal Information</B></A></DIV>
+<DIV><SPAN Style="font-size:200%; color: rgb(0,51,153)"><B>Annotated</B></SPAN><SPAN Style="font-size:200%; color: rgb(0,0,102)"><B>&nbsp;Ada Reference Manual</B> (Ada 202y Draft 3)</SPAN> &mdash; <A HREF="AA-TTL.html"><B>Legal Information</B></A></DIV>
 <div style="margin-top: 0.6em; margin-bottom: 0.0em"><A HREF="AA-TOC.html"><IMG SRC="cont.gif" ALT="Contents" BORDER=0></A>&nbsp;
 &nbsp;<A HREF="AA-0-4.html"><IMG SRC="index.gif" ALT="Index" BORDER=0></A>&nbsp;
 &nbsp;<A HREF="AA-STDS.html"><IMG SRC="lib.gif" ALT="References" BORDER=0></A>&nbsp;
@@ -48,21 +50,23 @@ in <A HREF="AA-10-2-1.html">10.2.1</A>.&nbsp;</div>
 The following <SPAN Class="swiss"><A HREF="AA-2-8.html#S0019">pragma</A></SPAN>s 
 are defined with the given forms:&nbsp;</div>
 <div class="paranum"><a name="p3">3/5</a></div>
-<div class="Indented1">&nbsp;&nbsp;<B>pragma</B> <A NAME="I10598"></A><A NAME="I10599"></A>Preelaborate[(<I>library_unit_</I><A NAME="I10600"></A><SPAN Class="swiss"><A HREF="AA-4-1.html#S0091">name</A></SPAN>)];</div>
+<div class="Indented1">&nbsp;&nbsp;<B>pragma</B> <A NAME="I10807"></A><A NAME="I10808"></A>Preelaborate[(<I>library_unit_</I><A NAME="I10809"></A><SPAN Class="swiss"><A HREF="AA-4-1.html#S0091">name</A></SPAN>)];</div>
 <div class="paranum"><a name="p4">4/5</a></div>
-<div class="Indented1">&nbsp;&nbsp;<B>pragma</B> <A NAME="I10601"></A><A NAME="I10602"></A>Preelaborable_Initialization(<A NAME="I10603"></A><SPAN Class="swiss"><A HREF="AA-4-1.html#S0092">direct_name</A></SPAN>);</div>
+<div class="Indented1">&nbsp;&nbsp;<B>pragma</B> <A NAME="I10810"></A><A NAME="I10811"></A>Preelaborable_Initialization(<A NAME="I10812"></A><SPAN Class="swiss"><A HREF="AA-4-1.html#S0092">direct_name</A></SPAN>);</div>
 <div class="paranum"><a name="p5">5/5</a></div>
-<div class="Indented1">&nbsp;&nbsp;<B>pragma</B> <A NAME="I10604"></A><A NAME="I10605"></A>Pure[(<I>library_unit_</I><A NAME="I10606"></A><SPAN Class="swiss"><A HREF="AA-4-1.html#S0091">name</A></SPAN>)];</div>
+<div class="Indented1">&nbsp;&nbsp;<B>pragma</B> <A NAME="I10813"></A><A NAME="I10814"></A>Pure[(<I>library_unit_</I><A NAME="I10815"></A><SPAN Class="swiss"><A HREF="AA-4-1.html#S0091">name</A></SPAN>)];</div>
 <div class="paranum"><a name="p6">6/5</a></div>
-<div class="Indented1">&nbsp;&nbsp;<B>pragma</B> <A NAME="I10607"></A><A NAME="I10608"></A>Elaborate_Body[(<I>library_unit_</I><A NAME="I10609"></A><SPAN Class="swiss"><A HREF="AA-4-1.html#S0091">name</A></SPAN>)];</div>
+<div class="Indented1">&nbsp;&nbsp;<B>pragma</B> <A NAME="I10816"></A><A NAME="I10817"></A>Elaborate_Body[(<I>library_unit_</I><A NAME="I10818"></A><SPAN Class="swiss"><A HREF="AA-4-1.html#S0091">name</A></SPAN>)];</div>
 <div class="paranum"><a name="p7">7/5</a></div>
 <div class="Indented1">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0417-1.TXT">AI12-0417-1</A></I>} 
-<A NAME="I10610"></A><A NAME="I10611"></A><SPAN Class="swiss"><A HREF="AA-2-8.html#S0019">Pragma</A></SPAN>s 
-Preelaborate, Pure, and Elaborate_Body are library unit pragmas.<A NAME="I10612"></A> 
-<A NAME="I10613"></A><A NAME="I10614"></A><A NAME="I10615"></A></div>
-<div class="paranum"><a name="p7.a">7.a/5</a></div>
-<div class="Annotations"><B>Ramification:&nbsp;</B><SPAN Class="swiss"><A HREF="AA-2-8.html#S0019">Pragma</A></SPAN> 
-Preelaborable_Initialization is <B>not</B> a library unit pragma.&nbsp;</div>
+<A NAME="I10819"></A><A NAME="I10820"></A><SPAN Class="swiss"><A HREF="AA-2-8.html#S0019">Pragma</A></SPAN>s 
+Preelaborate, Pure, and Elaborate_Body are library unit pragmas.<A NAME="I10821"></A> 
+<A NAME="I10822"></A><A NAME="I10823"></A><A NAME="I10824"></A><span class="insert6"><A NAME="I10825"></A><A NAME="I10826"></A></span></div>
+<div class="paranum"><a name="p7.a">7.a/6</a></div>
+<div class="Annotations"><B>Ramification:&nbsp;</B>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0045-1.html">AI22-0045-1</A></I>} 
+<SPAN Class="swiss"><A HREF="AA-2-8.html#S0019">Pragma</A></SPAN> Preelaborable_Initialization 
+is <B>not</B> a library unit pragma<span class="insert6">, it is just 
+an aspect-related pragma</span>.&nbsp;</div>
 
 <H4 Class="centered">Static Semantics</H4>
 <div class="paranum"><a name="p8">8/5</a></div>
@@ -100,7 +104,7 @@ be declared immediately within the same package as the pragma. The composite
 type shall be one for which the Preelaborable_Initialization aspect can 
 be directly specified as True. In addition to the places where Legality 
 Rules normally apply (see <A HREF="AA-12-3.html">12.3</A>), these rules 
-also apply in the private part of an instance of a generic unit.<A NAME="I10616"></A></div>
+also apply in the private part of an instance of a generic unit.<A NAME="I10827"></A></div>
 <div class="paranum"><a name="p13">13/5</a></div>
 <div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0409-1.TXT">AI12-0409-1</A></I>} 
 If the pragma appears in a <SPAN Class="swiss"><A HREF="AA-12-1.html#S0313">generic_formal_part</A></SPAN>, 

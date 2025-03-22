@@ -13,6 +13,12 @@
     DIV.paranum {float: left; font-family: Arial, Helvetica, sans-serif; font-size: 64%; width: 2.8em; margin-left: -0.4em; margin-right: -3.0em; margin-top: 0.2em}
     TT {font-family: "Courier New", monospace}
     DT {display: compact}
+    SPAN.insert6 {text-decoration: underline; color: rgb(0,51,204) }
+    SPAN.delete6 {text-decoration: line-through; color: rgb(0,51,204) }
+    SPAN.insert7 {text-decoration: underline; color: rgb(0,102,153) }
+    SPAN.delete7 {text-decoration: line-through; color: rgb(0,102,153) }
+    SPAN.insert8 {text-decoration: underline; color: rgb(204,51,0) }
+    SPAN.delete8 {text-decoration: line-through; color: rgb(204,51,0) }
     A.Bar:link {font-family: Arial, Helvetica, sans-serif; font-style: normal; text-decoration: none; color: rgb(204,204,51)}
     A.Bar:visited {font-family: Arial, Helvetica, sans-serif; font-style: normal; text-decoration: none; color: rgb(204,204,51)}
     DIV.Normal {font-family: "Times New Roman", Times, serif; line-height: 122%; margin-left: 1.8em; margin-bottom: 0.6em}
@@ -25,7 +31,7 @@
     </STYLE>
 </HEAD>
 <BODY TEXT="#000000" BGCOLOR="#FFFFF0" LINK="#000080" VLINK="#330033" ALINK="#0000FF">
-<DIV><SPAN Style="font-size:200%; color: rgb(0,51,153)"><B>Annotated</B></SPAN><SPAN Style="font-size:200%; color: rgb(0,0,102)"><B>&nbsp;Ada Reference Manual</B> (Ada 202y Draft 1)</SPAN> &mdash; <A HREF="AA-TTL.html"><B>Legal Information</B></A></DIV>
+<DIV><SPAN Style="font-size:200%; color: rgb(0,51,153)"><B>Annotated</B></SPAN><SPAN Style="font-size:200%; color: rgb(0,0,102)"><B>&nbsp;Ada Reference Manual</B> (Ada 202y Draft 3)</SPAN> &mdash; <A HREF="AA-TTL.html"><B>Legal Information</B></A></DIV>
 <div style="margin-top: 0.6em; margin-bottom: 0.0em"><A HREF="AA-TOC.html"><IMG SRC="cont.gif" ALT="Contents" BORDER=0></A>&nbsp;
 &nbsp;<A HREF="AA-0-4.html"><IMG SRC="index.gif" ALT="Index" BORDER=0></A>&nbsp;
 &nbsp;<A HREF="AA-STDS.html"><IMG SRC="lib.gif" ALT="References" BORDER=0></A>&nbsp;
@@ -47,11 +53,11 @@ X that denotes a scalar object [(after any implicit dereference)], the
 following attribute is defined:&nbsp;</div>
 <div class="paranum"><a name="p3">3/4</a></div>
 <div class="WideHanging-Term">X'Valid</div><div class="WideHanging-Body">
-<A NAME="I6330"></A><A NAME="I6331"></A>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0153-3.TXT">AI05-0153-3</A></I>} 
+<A NAME="I6445"></A><A NAME="I6446"></A>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0153-3.TXT">AI05-0153-3</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0071-1.TXT">AI12-0071-1</A></I>} 
 Yields True if and only if the object denoted by X is normal, has a valid 
 representation, and then, if the preceding conditions hold, the value 
-of X also satisfies the predicates<A NAME="I6332"></A> of the nominal 
+of X also satisfies the predicates<A NAME="I6447"></A> of the nominal 
 subtype of X. The value of this attribute is of the predefined type Boolean. 
 </div>
 <div class="paranum"><a name="p3.a">3.a</a></div>
@@ -60,6 +66,39 @@ is True, it is safe to read the value of X without fear of erroneous
 execution caused by abnormality, or a bounded error caused by an invalid 
 representation. Such a read will produce a value in the subtype of X. 
 </div>
+<div class="paranum"><a name="p3.1">3.1/6</a></div>
+<div class="WideHanging-Term">&nbsp;{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0115-1.html">AI22-0115-1</A></I>} 
+<span class="insert6">Notwithstanding what this Reference Manual says 
+elsewhere, evaluating X'Valid does not evaluate the prefix X unless X 
+is normal and has a valid representation. If X is Volatile, evaluating 
+X'Valid is still considered a read of X.</span>&nbsp;</div>
+<div class="paranum"><a name="p3.b">3.b/6</a></div>
+<div class="Annotations"><span class="insert6"><B>Reason:&nbsp;</B>Evaluating 
+the prefix X for an invalid or abnormal value would trigger a bounded 
+error or erroneous execution, thus defeating the purpose of the attribute.</span></div>
+<div class="paranum"><a name="p3.c">3.c/6</a></div>
+<div class="Annotations"><span class="insert6">Since an implementation 
+is not allowed to add, remove, or reorder accesses to volatile objects, 
+we have to define X'Valid as a read so that it is implementable for most 
+subtypes as the value of the object is required.</span>&nbsp;</div>
+<div class="paranum"><a name="p3.d">3.d/6</a></div>
+<div class="Annotations"><span class="insert6"><B>Ramification:&nbsp;</B>A 
+&ldquo;read of X&rdquo; in the sense of <A HREF="AA-C-6.html">C.6</A> 
+does not imply the evaluation of X; the second sentence of the wording 
+does not change the first. The implementation of X&#146;Valid has to 
+retrieve the value of X so it can be tested for validity (regardless 
+of volatility), so all we&#146;re doing here is making that explicit 
+in the case of a volatile object.</span>&nbsp;</div>
+
+<H4 Class="centered">Usage</H4>
+<div class="paranum"><a name="p3.2">3.2/7</a></div>
+<div class="Normal">&nbsp;{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0055-1.html">AI22-0055-1</A></I>} 
+<span class="insert7">The Valid attribute can be used to check the result 
+of calling an instance of Unchecked_Conversion (or any other operation 
+that can return invalid values). However, an exception handler should 
+also be provided because implementations are permitted to raise Constraint_Error 
+or Program_Error if they detect the use of an invalid representation 
+(see <A HREF="AA-13-9-1.html">13.9.1</A>).</span>&nbsp;</div>
 <div class="paranum"><a name="p4">4</a></div>
 <div class="Notes" style="margin-bottom: 0.4em">NOTE 1&nbsp;&nbsp;&nbsp;Invalid 
 data can be created in the following cases (not counting erroneous or 
@@ -82,31 +121,43 @@ and</div>
 <div class="paranum"><a name="p11">11</a></div>
 <div class="Indented2SmallBulleted">use of an object whose Address has 
 been specified.&nbsp;</div>
-<div class="paranum"><a name="p12">12/5</a></div>
+<div class="paranum"><a name="p12">12/6</a></div>
 <div class="Notes">NOTE 2&nbsp;&nbsp;&nbsp;{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0071-1.TXT">AI12-0071-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0440-1.TXT">AI12-0440-1</A></I>} 
-Determining whether X is normal and has a valid representation as part 
-of the evaluation of X'Valid is not considered to include an evaluation 
-of X; hence, it is not an error to check the validity of an object that 
-is invalid or abnormal. Determining whether X satisfies the predicates 
-of its nominal subtype can include an evaluation of X, but only after 
-it has been determined that X has a valid representation.</div>
-<div class="paranum"><a name="p13">13/4</a></div>
-<div class="Notes">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0071-1.TXT">AI12-0071-1</A></I>} 
-If X is volatile, the evaluation of X'Valid is considered a read of X.</div>
-<div class="paranum"><a name="p13.a">13.a/4</a></div>
-<div class="Annotations"><B>Reason:&nbsp;</B>Since an implementation is not 
-allowed to add, remove, or reorder accesses to volatile objects, we have 
-to define X'Valid as a read so that it is implementable for most subtypes 
-as the value of the object is required.&nbsp;</div>
-<div class="paranum"><a name="p14">14/5</a></div>
-<div class="Notes">NOTE 3&nbsp;&nbsp;&nbsp;{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00426.TXT">AI95-00426-01</A></I>} 
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0115-1.html">AI22-0115-1</A></I>} 
+<span class="insert6">Since evaluating X'Valid does not evaluate X unless 
+X is normal and valid</span><span class="delete6">&nbsp;Determining whether 
+X is normal and has a valid representation as part of the evaluation 
+of X'Valid is not considered to include an evaluation of X; hence</span>, 
+it is not an error to check the validity of an object that is invalid 
+or abnormal. Determining whether X satisfies the predicates of its nominal 
+subtype can include an evaluation of X, but <span class="insert6">this 
+determination is made&nbsp;</span>only after it has been determined that X 
+has a valid representation<span class="insert6">&nbsp;and therefore is safe 
+to evaluate</span>.</div>
+<div class="paranum"><a name="p13">13/6</a></div>
+<div class="Notes"><SPAN STYLE="font-size: 80%"><I>This paragraph was 
+deleted.</I></SPAN>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0071-1.TXT">AI12-0071-1</A></I>} 
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0115-1.html">AI22-0115-1</A></I>} 
+<span class="delete6">If X is volatile, the evaluation of X'Valid is 
+considered a read of X.</span></div>
+<div class="paranum"><a name="p13.a">13.a/6</a></div>
+<div class="Annotations"><SPAN STYLE="font-size: 80%"><I>This paragraph 
+was deleted.</I></SPAN><B>Reason:&nbsp;</B><span class="delete6">Since an 
+implementation is not allowed to add, remove, or reorder accesses to 
+volatile objects, we have to define X'Valid as a read so that it is implementable 
+for most subtypes as the value of the object is required.</span>&nbsp;</div>
+<div class="paranum"><a name="p14">14/7</a></div>
+<div class="Notes"><SPAN STYLE="font-size: 80%"><I>This paragraph was 
+deleted.</I></SPAN>NOTE 3&nbsp;&nbsp;&nbsp;{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00426.TXT">AI95-00426-01</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0442-1.TXT">AI12-0442-1</A></I>} 
-The Valid attribute can be used to check the result of calling an instance 
-of Unchecked_Conversion (or any other operation that can return invalid 
-values). However, an exception handler is still useful because implementations 
-are permitted to raise Constraint_Error or Program_Error if they detect 
-the use of an invalid representation (see <A HREF="AA-13-9-1.html">13.9.1</A>).</div>
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0055-1.html">AI22-0055-1</A></I>} 
+<span class="delete7">The Valid attribute can be used to check the result 
+of calling an instance of Unchecked_Conversion (or any other operation 
+that can return invalid values). However, an exception handler is still 
+useful because implementations are permitted to raise Constraint_Error 
+or Program_Error if they detect the use of an invalid representation 
+(see <A HREF="AA-13-9-1.html">13.9.1</A>).</span></div>
 <div class="paranum"><a name="p14.a">14.a</a></div>
 <div class="Annotations"><B>Ramification:&nbsp;</B>If X is of an enumeration 
 type with a representation clause, then X'Valid checks that the value 
@@ -130,7 +181,7 @@ was deleted.</I></SPAN>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/A
 
 <H4 Class="centered">Extensions to Ada 83</H4>
 <div class="paranum"><a name="p14.d">14.d</a></div>
-<div class="Annotations"><A NAME="I6333"></A>X'Valid is new in Ada 95. 
+<div class="Annotations"><A NAME="I6448"></A>X'Valid is new in Ada 95. 
 </div>
 
 <H4 Class="centered">Wording Changes from Ada 95</H4>
@@ -155,6 +206,15 @@ object.&nbsp;</div>
 the new term &quot;satisfies the predicates&quot; (see <A HREF="AA-3-2-4.html">3.2.4</A>). 
 Also updated the notes to make sense when evaluating predicates and testing 
 validity of volatile objects.&nbsp;</div>
+
+<H4 Class="centered">Wording Changes from Ada 2022</H4>
+<div class="paranum"><a name="p14.h">14.h/6</a></div>
+<div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0115-1.html">AI22-0115-1</A></I>} 
+<span class="insert6"><B>Corrigendum:</B> We now normatively say that 
+the prefix of X'Valid is not evaluated until after we've checked for 
+validity, because that cannot be derived from any normative wording and 
+thus it is inappropriate for a note. The rule for volatile objects was 
+moved for the same reason.</span>&nbsp;</div>
 
 <HR>
 <div style="margin-top: 0.0em; margin-bottom: 0.6em"><A HREF="AA-TOC.html"><IMG SRC="cont.gif" ALT="Contents" BORDER=0></A>&nbsp;

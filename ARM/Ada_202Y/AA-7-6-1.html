@@ -13,6 +13,12 @@
     DIV.paranum {float: left; font-family: Arial, Helvetica, sans-serif; font-size: 64%; width: 2.8em; margin-left: -0.4em; margin-right: -3.0em; margin-top: 0.2em}
     TT {font-family: "Courier New", monospace}
     DT {display: compact}
+    SPAN.insert6 {text-decoration: underline; color: rgb(0,51,204) }
+    SPAN.delete6 {text-decoration: line-through; color: rgb(0,51,204) }
+    SPAN.insert7 {text-decoration: underline; color: rgb(0,102,153) }
+    SPAN.delete7 {text-decoration: line-through; color: rgb(0,102,153) }
+    SPAN.insert8 {text-decoration: underline; color: rgb(204,51,0) }
+    SPAN.delete8 {text-decoration: line-through; color: rgb(204,51,0) }
     A.Bar:link {font-family: Arial, Helvetica, sans-serif; font-style: normal; text-decoration: none; color: rgb(204,204,51)}
     A.Bar:visited {font-family: Arial, Helvetica, sans-serif; font-style: normal; text-decoration: none; color: rgb(204,204,51)}
     DIV.Normal {font-family: "Times New Roman", Times, serif; line-height: 122%; margin-left: 1.8em; margin-bottom: 0.6em}
@@ -27,7 +33,7 @@
     </STYLE>
 </HEAD>
 <BODY TEXT="#000000" BGCOLOR="#FFFFF0" LINK="#000080" VLINK="#330033" ALINK="#0000FF">
-<DIV><SPAN Style="font-size:200%; color: rgb(0,51,153)"><B>Annotated</B></SPAN><SPAN Style="font-size:200%; color: rgb(0,0,102)"><B>&nbsp;Ada Reference Manual</B> (Ada 202y Draft 1)</SPAN> &mdash; <A HREF="AA-TTL.html"><B>Legal Information</B></A></DIV>
+<DIV><SPAN Style="font-size:200%; color: rgb(0,51,153)"><B>Annotated</B></SPAN><SPAN Style="font-size:200%; color: rgb(0,0,102)"><B>&nbsp;Ada Reference Manual</B> (Ada 202y Draft 3)</SPAN> &mdash; <A HREF="AA-TTL.html"><B>Legal Information</B></A></DIV>
 <div style="margin-top: 0.6em; margin-bottom: 0.0em"><A HREF="AA-TOC.html"><IMG SRC="cont.gif" ALT="Contents" BORDER=0></A>&nbsp;
 &nbsp;<A HREF="AA-0-4.html"><IMG SRC="index.gif" ALT="Index" BORDER=0></A>&nbsp;
 &nbsp;<A HREF="AA-STDS.html"><IMG SRC="lib.gif" ALT="References" BORDER=0></A>&nbsp;
@@ -43,15 +49,15 @@ of the execution of constructs and entities. A <I>master</I> is the execution
 of a construct that includes finalization of local objects after it is 
 complete (and after waiting for any local tasks &mdash; see <A HREF="AA-9-3.html">9.3</A>), 
 but before leaving. Other constructs and entities are left immediately 
-upon completion. <A NAME="I4546"></A><A NAME="I4547"></A>]</div>
+upon completion. <A NAME="I4622"></A><A NAME="I4623"></A>]</div>
 
 <H4 Class="centered">Dynamic Semantics</H4>
 <div class="paranum"><a name="p2">2/2</a></div>
 <div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-10318.TXT">AI95-00318-02</A></I>} 
-<A NAME="I4548"></A><A NAME="I4549"></A>The execution of a construct 
+<A NAME="I4624"></A><A NAME="I4625"></A>The execution of a construct 
 or entity is <I>complete</I> when the end of that execution has been 
 reached, or when a transfer of control (see <A HREF="AA-5-1.html">5.1</A>) 
-causes it to be abandoned. <A NAME="I4550"></A><A NAME="I4551"></A><A NAME="I4552"></A><A NAME="I4553"></A>Completion 
+causes it to be abandoned. <A NAME="I4626"></A><A NAME="I4627"></A><A NAME="I4628"></A><A NAME="I4629"></A>Completion 
 due to reaching the end of execution, or due to the transfer of control 
 of an <SPAN Class="swiss"><A HREF="AA-5-7.html#S0193">exit_statement</A></SPAN>, 
 return statement, <SPAN Class="swiss"><A HREF="AA-5-8.html#S0194">goto_statement</A></SPAN>, 
@@ -68,21 +74,23 @@ in <A HREF="AA-3-11-1.html">3.11.1</A>.&nbsp;</div>
 <div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00162.TXT">AI95-00162-01</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00416.TXT">AI95-00416-01</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0406-1.TXT">AI12-0406-1</A></I>} 
-<A NAME="I4554"></A><A NAME="I4555"></A>After execution of a construct 
+<A NAME="I4630"></A><A NAME="I4631"></A>After execution of a construct 
 or entity is complete, it is <I>left</I>, meaning that execution continues 
 with the next action, as defined for the execution that is taking place. 
-<A NAME="I4556"></A>Leaving an execution happens immediately after its 
+<A NAME="I4632"></A>Leaving an execution happens immediately after its 
 completion, except in the case of the execution of a <I>master construct</I>: 
-<A NAME="I4557"></A><A NAME="I4558"></A>a body other than a <SPAN Class="swiss"><A HREF="AA-7-2.html#S0231">package_body</A></SPAN>; 
+<A NAME="I4633"></A><A NAME="I4634"></A>a body other than a <SPAN Class="swiss"><A HREF="AA-7-2.html#S0231">package_body</A></SPAN>; 
 a <SPAN Class="swiss"><A HREF="AA-5-1.html#S0167">statement</A></SPAN>; 
-or an <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN>, 
+<span class="delete6">or&nbsp;</span>an <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN>, 
 <SPAN Class="swiss"><A HREF="AA-6-4.html#S0218">function_call</A></SPAN>, 
 or <SPAN Class="swiss"><A HREF="AA-3-5.html#S0037">range</A></SPAN> that 
 is not part of an enclosing <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN>, 
 <SPAN Class="swiss"><A HREF="AA-6-4.html#S0218">function_call</A></SPAN>, 
 <SPAN Class="swiss"><A HREF="AA-3-5.html#S0037">range</A></SPAN>, or 
 <SPAN Class="swiss"><A HREF="AA-5-1.html#S0168">simple_statement</A></SPAN> 
-other than a <SPAN Class="swiss"><A HREF="AA-6-5.html#S0222">simple_return_statement</A></SPAN>. 
+other than a <SPAN Class="swiss"><A HREF="AA-6-5.html#S0222">simple_return_statement</A></SPAN><span class="insert6">; 
+or an <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN> 
+or &lt;&gt; that appears in an iterative context (see <A HREF="AA-4-4.html">4.4</A>)</span>. 
 The term <I>master</I> by itself refers to the execution of a master 
 construct. A master is finalized after it is complete, and before it 
 is left.</div>
@@ -113,8 +121,24 @@ do not individually become masters. We certainly do not want the parameter
 <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN>s 
 of a <SPAN Class="swiss"><A HREF="AA-6-4.html#S0218">function_call</A></SPAN> 
 to be separate masters, as they would then be finalized before the function 
-is called.&nbsp;</div>
-<div class="paranum"><a name="p3.c">3.c/2</a></div>
+is called.</div>
+<div class="paranum"><a name="p3.c">3.c/6</a></div>
+<div class="Annotations" style="margin-bottom: 0.4em">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0040-1.html">AI22-0040-1</A></I>} 
+<span class="insert6">Expressions in iterative contexts are masters so 
+that temporary objects do not have to be retained until the surrounding 
+master is completed. (That could be difficult, as the number of temporary 
+object might not be known at compile-time.) For instance, if <TT>Func</TT> 
+returns a controlled record object with a component <TT>C</TT>:</span> 
+</div>
+<div class="paranum"><a name="p3.d">3.d/6</a></div>
+<div class="SmallExamples"><span class="insert6"><B>return</B>&nbsp;(1&nbsp;..&nbsp;Computed_Length&nbsp;=&gt;&nbsp;Func.C);</span></div>
+<div class="paranum"><a name="p3.e">3.e/6</a></div>
+<div class="Annotations"><span class="insert6">If Func.C was not a master, 
+then <TT>Computed_Length</TT> temporary objects would have to be retained 
+until the entire <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN> 
+was evaluated, and then finalized all at once afterwards. This would 
+be an unnecessary (and useless) burden on implementations.</span>&nbsp;</div>
+<div class="paranum"><a name="p3.f">3.f/2</a></div>
 <div class="Annotations"><B>Ramification:&nbsp;</B>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00416.TXT">AI95-00416-01</A></I>} 
 The fact that a <SPAN Class="swiss"><A HREF="AA-6-4.html#S0218">function_call</A></SPAN> 
 is a master does not change the accessibility of the return object denoted 
@@ -123,19 +147,19 @@ that depends on the use of the <SPAN Class="swiss"><A HREF="AA-6-4.html#S0218">f
 The <SPAN Class="swiss"><A HREF="AA-6-4.html#S0218">function_call</A></SPAN> 
 is the master of any short-lived entities (such as <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN>s 
 used as parameters of types with task or controlled parts).&nbsp;</div>
-<div class="paranum"><a name="p3.d">3.d/5</a></div>
+<div class="paranum"><a name="p3.g">3.g/5</a></div>
 <div class="Annotations"><B>Term entry:&nbsp;</B><B>master</B> &mdash; execution 
 of a master construct<BR>
 Note: Each object and task is associated with a master. When a master 
 is left, associated tasks are awaited and associated objects are finalized.</div>
-<div class="paranum"><a name="p3.e">3.e/5</a></div>
+<div class="paranum"><a name="p3.h">3.h/5</a></div>
 <div class="Annotations"><B>Term entry:&nbsp;</B><B>master construct</B> &mdash; 
 one of certain executable constructs for which there can be objects or 
 tasks whose lifetime ends when the construct completes<BR>
 Note: Execution of a master construct is a master, with which objects 
 and tasks are associated for the purposes of waiting and finalization.</div>
 <div class="paranum"><a name="p4">4</a></div>
-<div class="Normal"><A NAME="I4559"></A>For the <I>finalization</I> of 
+<div class="Normal"><A NAME="I4635"></A>For the <I>finalization</I> of 
 a master, dependent tasks are first awaited, as explained in <A HREF="AA-9-3.html">9.3</A>. 
 Then each object whose accessibility level is the same as that of the 
 master is finalized if the object was successfully initialized and still 
@@ -177,7 +201,7 @@ are being completed. Thus, for example, &ldquo;the subprogram call or
 task is complete&rdquo; really means &ldquo;<I>the execution of</I> the 
 subprogram call or task is complete&rdquo;.&nbsp;</div>
 <div class="paranum"><a name="p5">5</a></div>
-<div class="Normal" style="margin-bottom: 0.4em"><A NAME="I4560"></A>For 
+<div class="Normal" style="margin-bottom: 0.4em"><A NAME="I4636"></A>For 
 the <I>finalization</I> of an object:&nbsp;</div>
 <div class="paranum"><a name="p6">6/3</a></div>
 <div class="Bulleted">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0099-1.TXT">AI05-0099-1</A></I>} 
@@ -204,7 +228,7 @@ are performed;</div>
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0099-1.TXT">AI05-0099-1</A></I>} 
 If the full type of the object is a composite type, then after performing 
 the above actions, if any, every component of the object is finalized 
-in an arbitrary order, except as follows:<A NAME="I4561"></A> if the 
+in an arbitrary order, except as follows:<A NAME="I4637"></A> if the 
 object has a component with an access discriminant constrained by a per-object 
 expression, this component is finalized before any components that do 
 not have such discriminants; for an object with several components with 
@@ -238,25 +262,31 @@ being initialized and are not finalized until the object being initialized
 is ultimately finalized, even if an anonymous object is created as part 
 of the operation.&nbsp;</div>
 <div class="paranum"><a name="p10">10</a></div>
-<div class="Normal"><A NAME="I4562"></A>Immediately before an instance 
+<div class="Normal"><A NAME="I4638"></A>Immediately before an instance 
 of Unchecked_Deallocation reclaims the storage of an object, the object 
 is finalized. [If an instance of Unchecked_Deallocation is never applied 
 to an object created by an <SPAN Class="swiss"><A HREF="AA-4-8.html#S0164">allocator</A></SPAN>, 
 the object will still exist when the corresponding master completes, 
 and it will be finalized then.]</div>
-<div class="paranum"><a name="p11">11/3</a></div>
+<div class="paranum"><a name="p11">11/6</a></div>
 <div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00280.TXT">AI95-00280-01</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0051-1.TXT">AI05-0051-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0190-1.TXT">AI05-0190-1</A></I>} 
-The finalization of a master performs finalization of objects created 
-by declarations in the master in the reverse order of their creation. 
-After the finalization of a master is complete, the objects finalized 
-as part of its finalization cease to <I>exist</I>, as do any types and 
-subtypes defined and created within the master.<A NAME="I4563"></A> <A NAME="I4564"></A><A NAME="I4565"></A></div>
-<div class="paranum"><a name="p11.a">11.a/3</a></div>
-<div class="Annotations"><SPAN STYLE="font-size: 80%"><I>This paragraph 
-was deleted.</I></SPAN>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0190-1.TXT">AI05-0190-1</A></I>} 
-</div>
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0122-1.html">AI22-0122-1</A></I>} 
+The finalization of a master performs finalization of objects <span class="insert6">(other 
+than components)&nbsp;</span>created by declarations in the master in the 
+reverse order of their creation. After the finalization of a master is 
+complete, the objects finalized as part of its finalization cease to 
+<I>exist</I>, as do any types and subtypes defined and created within 
+the master.<A NAME="I4639"></A> <A NAME="I4640"></A><A NAME="I4641"></A></div>
+<div class="paranum"><a name="p11.a">11.a/6</a></div>
+<div class="Annotations"><span class="insert6"><B>Reason:&nbsp;</B></span>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0190-1.TXT">AI05-0190-1</A></I>} 
+<span class="insert6"></span>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0122-1.html">AI22-0122-1</A></I>} 
+<span class="insert6">This rule covers all &ldquo;top-level&rdquo; objects 
+(stand-alone objects along with any other object that is not a component 
+of an enclosing object) that are created in a master. Components of top-level 
+composite objects are covered by previous rules, which have a weaker 
+required order.</span></div>
 <div class="paranum"><a name="p11.b">11.b/3</a></div>
 <div class="Annotations"><SPAN STYLE="font-size: 80%"><I>This paragraph 
 was deleted.</I></SPAN>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0190-1.TXT">AI05-0190-1</A></I>} 
@@ -288,13 +318,13 @@ that has been finalized, and that object had better be in its (well-defined)
 finalized state.&nbsp;</div>
 <div class="paranum"><a name="p11.1">11.1/3</a></div>
 <div class="Normal" style="margin-bottom: 0.4em">&nbsp;&nbsp;{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0190-1.TXT">AI05-0190-1</A></I>} 
-Each nonderived access type <I>T</I> has an associated <I>collection</I>,<A NAME="I4566"></A> 
+Each nonderived access type <I>T</I> has an associated <I>collection</I>,<A NAME="I4642"></A> 
 which is the set of objects created by <SPAN Class="swiss"><A HREF="AA-4-8.html#S0164">allocator</A></SPAN>s 
 of <I>T</I>, or of types derived from <I>T</I>. Unchecked_Deallocation 
 removes an object from its collection. Finalization of a collection consists 
 of finalization of each object in the collection, in an arbitrary order. 
 The collection of an access type is an object implicitly declared at 
-the following place:<A NAME="I4567"></A></div>
+the following place:<A NAME="I4643"></A></div>
 <div class="paranum"><a name="p11.h">11.h/3</a></div>
 <div class="Annotations"><B>Ramification:&nbsp;</B>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0190-1.TXT">AI05-0190-1</A></I>} 
 The place of the implicit declaration determines when allocated objects 
@@ -333,27 +363,48 @@ This is also the point after which the pool object cannot have been declared.
 We don't want to finalize the pool elements until after anything finalizing 
 objects that contain access values designating them. Nor do we want to 
 finalize pool elements after finalizing the pool object itself.&nbsp;</div>
-<div class="paranum"><a name="p11.3">11.3/3</a></div>
-<div class="Bulleted">For the type of an access parameter, the call that 
-contains the <SPAN Class="swiss"><A HREF="AA-4-8.html#S0164">allocator</A></SPAN>.</div>
-<div class="paranum"><a name="p11.4">11.4/3</a></div>
-<div class="Bulleted">For the type of an access result, within the master 
-of the call (see <A HREF="AA-3-10-2.html">3.10.2</A>).&nbsp;</div>
-<div class="paranum"><a name="p11.m">11.m/3</a></div>
+<div class="paranum"><a name="p11.3">11.3/6</a></div>
+<div class="Bulleted">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0015-1.html">AI22-0015-1</A></I>} 
+For the type of an access parameter, <span class="insert6">the evaluation 
+of&nbsp;</span>the call that contains the <SPAN Class="swiss"><A HREF="AA-4-8.html#S0164">allocator</A></SPAN>.</div>
+<div class="paranum"><a name="p11.4">11.4/6</a></div>
+<div class="Bulleted">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0015-1.html">AI22-0015-1</A></I>} 
+For the type of an access result, within the master of the <span class="insert6">function 
+</span>call (see <A HREF="AA-3-10-2.html">3.10.2</A>).&nbsp;</div>
+<div class="paranum"><a name="p11.m">11.m/6</a></div>
 <div class="Annotations"><B>To be honest:&nbsp;</B>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0005-1.TXT">AI05-0005-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0190-1.TXT">AI05-0190-1</A></I>} 
 We mean at a place within the master consistent with the execution of 
 the call within the master. We don't say that normatively, as it is difficult 
-to explain that when the master of the call need not be the master that 
-immediately includes the call (such as when an anonymous result is converted 
-to a named access type).&nbsp;</div>
+to explain that <span class="insert6">in the cases&nbsp;</span>when the master 
+of the call need not be the master that immediately includes the call 
+(such as when an anonymous result is converted to a named access type). 
+</div>
 <div class="paranum"><a name="p11.5">11.5/3</a></div>
 <div class="Bulleted">For any other anonymous access type, the first 
 freezing point of the innermost enclosing declaration.&nbsp;</div>
 <div class="paranum"><a name="p12">12/2</a></div>
 <div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00256.TXT">AI95-00256-01</A></I>} 
-<A NAME="I4568"></A>The target of an <SPAN Class="swiss"><A HREF="AA-5-2.html#S0173">assignment_statement</A></SPAN> 
+<A NAME="I4644"></A>The target of an <SPAN Class="swiss"><A HREF="AA-5-2.html#S0173">assignment_statement</A></SPAN> 
 is finalized before copying in the new value, as explained in <A HREF="AA-7-6.html">7.6</A>.</div>
+<div class="paranum"><a name="p12.1">12.1/6</a></div>
+<div class="Normal">&nbsp;&nbsp;{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0062-1.html">AI22-0062-1</A></I>} 
+<span class="insert6"></span>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0098-1.html">AI22-0098-1</A></I>} 
+<span class="insert6">When an assignment changes the value of at least 
+one discriminant of a target object, every discriminant-dependent component 
+of the previous value ceases to exist, and every discriminant-dependent 
+component of the new value of the object is newly created.</span></div>
+<div class="paranum"><a name="p12.a">12.a/6</a></div>
+<div class="Annotations"><span class="insert6"><B>Ramification:&nbsp;</B>Access 
+to a component is erroneous after it ceases to exist. That means that 
+any effect is allowed, which of course includes working as expected. 
+Thus, this rule does not require an implementation to do anything.</span></div>
+<div class="paranum"><a name="p12.b">12.b/6</a></div>
+<div class="Annotations"><span class="insert6">If an assignment does 
+not change the value of any discriminant, then any discriminant-dependent 
+components continue to exist. If an implementation chooses to reallocate 
+memory for such components upon assignment, it has to take care that 
+no such reallocation occurs when no discriminants change.</span>&nbsp;</div>
 <div class="paranum"><a name="p13">13/3</a></div>
 <div class="Normal">{<I><A HREF="defect1.html#8652/0021">8652/0021</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00182.TXT">AI95-00182-01</A></I>} 
@@ -432,23 +483,29 @@ parameters will necessarily fail if any such anonymous objects exist.
 This is necessary to avoid requiring the objects to live as long as the 
 access type or having the implementation complexity of an implicit coextension. 
 </div>
-<div class="paranum"><a name="p13.1">13.1/3</a></div>
+<div class="paranum"><a name="p13.1">13.1/6</a></div>
 <div class="Normal">&nbsp;&nbsp;{<I><A HREF="defect1.html#8652/0023">8652/0023</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00169.TXT">AI95-00169-01</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00162.TXT">AI95-00162-01</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0066-1.TXT">AI05-0066-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0262-1.TXT">AI05-0262-1</A></I>} 
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0040-1.html">AI22-0040-1</A></I>} 
 In the case of an <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN> 
-that is a master, finalization of any (anonymous) objects occurs after 
-completing evaluation of the <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN> 
-and all use of the objects, prior to starting the execution of any subsequent 
-construct.</div>
+<span class="insert6">or &lt;&gt;&nbsp;</span>that is a master<span class="insert6">&nbsp;construct</span>, finalization of any (anonymous) objects occurs after 
+completing evaluation of the <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN><span class="insert6">&nbsp;or &lt;&gt;</span> and all use of the objects, prior to starting the 
+execution of any subsequent construct<span class="insert6">&nbsp;or iteration</span>.</div>
+<div class="paranum"><a name="p13.i">13.i/6</a></div>
+<div class="Annotations"><span class="insert6"><B>Discussion:&nbsp;</B></span>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0040-1.html">AI22-0040-1</A></I>} 
+<span class="insert6">Within a reduction expression, this includes any 
+such anonymous objects associated with a call on the reducer subprogram 
+for each value of the <SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0159">value_sequence</A></SPAN>.</span> 
+</div>
 
 <H4 Class="centered">Bounded (Run-Time) Errors</H4>
 <div class="paranum"><a name="p14">14/1</a></div>
 <div class="Normal" style="margin-bottom: 0.4em">{<I><A HREF="defect1.html#8652/0023">8652/0023</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00169.TXT">AI95-00169-01</A></I>} 
-<A NAME="I4569"></A>It is a bounded error for a call on Finalize or Adjust 
+<A NAME="I4645"></A>It is a bounded error for a call on Finalize or Adjust 
 that occurs as part of object finalization or assignment to propagate 
 an exception. The possible consequences depend on what action invoked 
 the Finalize or Adjust operation:&nbsp;</div>
@@ -465,7 +522,7 @@ It also is not a bounded error for an explicit call to Finalize or Adjust
 to propagate an exception. We do not want implementations to have to 
 treat explicit calls to these routines specially.&nbsp;</div>
 <div class="paranum"><a name="p15">15</a></div>
-<div class="Bulleted"><A NAME="I4570"></A>For a Finalize invoked as part 
+<div class="Bulleted"><A NAME="I4646"></A>For a Finalize invoked as part 
 of an <SPAN Class="swiss"><A HREF="AA-5-2.html#S0173">assignment_statement</A></SPAN>, 
 Program_Error is raised at that point.</div>
 <div class="paranum"><a name="p16">16/5</a></div>
@@ -477,7 +534,7 @@ For an Adjust invoked as part of assignment operations other than those
 invoked as part of an <SPAN Class="swiss"><A HREF="AA-5-2.html#S0173">assignment_statement</A></SPAN>, 
 some of the adjustments due to be performed can be performed, and then 
 Program_Error is raised. During its propagation, finalization may be 
-applied to objects whose Adjust failed. <A NAME="I4571"></A>For an Adjust 
+applied to objects whose Adjust failed. <A NAME="I4647"></A>For an Adjust 
 invoked as part of an <SPAN Class="swiss"><A HREF="AA-5-2.html#S0173">assignment_statement</A></SPAN>, 
 any other adjustments due to be performed are performed, and then Program_Error 
 is raised.&nbsp;</div>
@@ -507,7 +564,7 @@ any Adjust or Initialize calls) successfully completed will be finalized.
 The permission above only applies to objects whose Adjust failed. Objects 
 for which Adjust was never even invoked must not be finalized.&nbsp;</div>
 <div class="paranum"><a name="p17">17</a></div>
-<div class="Bulleted"><A NAME="I4572"></A>For a Finalize invoked as part 
+<div class="Bulleted"><A NAME="I4648"></A>For a Finalize invoked as part 
 of a call on an instance of Unchecked_Deallocation, any other finalizations 
 due to be performed are performed, and then Program_Error is raised. 
 </div>
@@ -527,7 +584,7 @@ was deleted.</I></SPAN>{<I><A HREF="defect1.html#8652/0023">8652/0023</A></I>}
 <div class="paranum"><a name="p17.2">17.2/1</a></div>
 <div class="Bulleted">{<I><A HREF="defect1.html#8652/0023">8652/0023</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00169.TXT">AI95-00169-01</A></I>} 
-<A NAME="I4573"></A>For a Finalize invoked due to reaching the end of 
+<A NAME="I4649"></A>For a Finalize invoked due to reaching the end of 
 the execution of a master, any other finalizations associated with the 
 master are performed, and Program_Error is raised immediately after leaving 
 the master.</div>
@@ -539,7 +596,7 @@ All contexts that create objects that need finalization are defined to
 be masters.&nbsp;</div>
 <div class="paranum"><a name="p18">18/2</a></div>
 <div class="Bulleted">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-10318.TXT">AI95-00318-02</A></I>} 
-<A NAME="I4574"></A>For a Finalize invoked by the transfer of control 
+<A NAME="I4650"></A>For a Finalize invoked by the transfer of control 
 of an <SPAN Class="swiss"><A HREF="AA-5-7.html#S0193">exit_statement</A></SPAN>, 
 return statement, <SPAN Class="swiss"><A HREF="AA-5-8.html#S0194">goto_statement</A></SPAN>, 
 or <SPAN Class="swiss"><A HREF="AA-9-5-4.html#S0265">requeue_statement</A></SPAN>, 
@@ -623,7 +680,7 @@ is ignored; any other finalizations due to be performed are performed.
 <div class="Annotations"><B>Ramification:&nbsp;</B>This case includes an asynchronous 
 transfer of control.&nbsp;</div>
 <div class="paranum"><a name="p20.b">20.b</a></div>
-<div class="Annotations"><B>To be honest:&nbsp;</B><A NAME="I4575"></A>This 
+<div class="Annotations"><B>To be honest:&nbsp;</B><A NAME="I4651"></A>This 
 violates the general principle that it is always possible for a bounded 
 error to raise Program_Error (see <A HREF="AA-1-1-5.html">1.1.5</A>, 
 &ldquo;<A HREF="AA-1-1-5.html">Classification of Errors</A>&rdquo;). 
@@ -650,7 +707,7 @@ The implementation may finalize objects created by <SPAN Class="swiss"><A HREF="
 for an access type whose storage pool supports subpools (see <A HREF="AA-13-11-4.html">13.11.4</A>) 
 as if the objects were created (in an arbitrary order) at the point where 
 the storage pool was elaborated instead of at the first freezing point 
-of the access type.<A NAME="I4576"></A></div>
+of the access type.<A NAME="I4652"></A></div>
 <div class="paranum"><a name="p20.d">20.d/3</a></div>
 <div class="Annotations"><B>Ramification:&nbsp;</B>This allows the finalization 
 of such objects to occur later than they otherwise would, but still as 
@@ -667,7 +724,33 @@ deallocated objects will only need to be accessible at run time from
 the subpool header and not also from the overall access type collection 
 header. That is, they only need to belong to a single list, rather than 
 two.&nbsp;</div>
-<div class="paranum"><a name="p21">21/5</a></div>
+
+<H4 Class="centered">Usage</H4>
+<div class="paranum"><a name="p21">21/7</a></div>
+<div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0055-1.html">AI22-0055-1</A></I>} 
+<span class="insert7">The Finalize procedure is called upon finalization 
+of a controlled object, even if Finalize was called earlier, either explicitly 
+or as part of an assignment; hence, if a controlled type is visibly controlled 
+(implying that its Finalize primitive is directly callable), or is nonlimited 
+(implying that assignment is allowed), its Finalize procedure should 
+be designed to have no ill effect if it is applied a second time to the 
+same object.</span>&nbsp;</div>
+<div class="paranum"><a name="p21.a">21.a/7</a></div>
+<div class="Annotations"><span class="insert7"><B>Discussion:&nbsp;</B></span>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0055-1.html">AI22-0055-1</A></I>} 
+<span class="insert7">Or equivalently, a Finalize procedure should be 
+&ldquo;idempotent&rdquo;; applying it twice to the same object should 
+be equivalent to applying it once.</span>&nbsp;</div>
+<div class="paranum"><a name="p21.b">21.b/7</a></div>
+<div class="Annotations"><span class="insert7"><B>Reason:&nbsp;</B></span>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0055-1.html">AI22-0055-1</A></I>} 
+<span class="insert7">A user-written Finalize procedure should be idempotent 
+since it can be called explicitly by a client (at least if the type is 
+&quot;visibly&quot; controlled). Also, Finalize is used implicitly as 
+part of the <SPAN Class="swiss"><A HREF="AA-5-2.html#S0173">assignment_statement</A></SPAN> 
+if the type is nonlimited, and an abort is permitted to disrupt an <SPAN Class="swiss"><A HREF="AA-5-2.html#S0173">assignment_statement</A></SPAN> 
+between finalizing the left-hand side and assigning the new value to 
+it (an abort is not permitted to disrupt an assignment operation between 
+copying in the new value and adjusting it).</span>&nbsp;</div>
+<div class="paranum"><a name="p22">22/5</a></div>
 <div class="Notes">NOTE 1&nbsp;&nbsp;&nbsp;{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0299-1.TXT">AI05-0299-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0449-1.TXT">AI12-0449-1</A></I>} 
 The rules of Clause <A HREF="AA-10.html">10</A> imply that immediately 
@@ -675,44 +758,49 @@ prior to partition termination, Finalize operations are applied to library-level
 controlled objects (including those created by <SPAN Class="swiss"><A HREF="AA-4-8.html#S0164">allocator</A></SPAN>s 
 of library-level access types, except those already finalized). This 
 occurs after waiting for library-level tasks to terminate.&nbsp;</div>
-<div class="paranum"><a name="p21.a">21.a</a></div>
+<div class="paranum"><a name="p22.a">22.a</a></div>
 <div class="Annotations"><B>Discussion:&nbsp;</B>We considered defining a 
 pragma that would apply to a controlled type that would suppress Finalize 
 operations for library-level objects of the type upon partition termination. 
 This would be useful for types whose finalization actions consist of 
 simply reclaiming global heap storage, when this is already provided 
 automatically by the environment upon program termination.&nbsp;</div>
-<div class="paranum"><a name="p22">22</a></div>
+<div class="paranum"><a name="p23">23</a></div>
 <div class="Notes">NOTE 2&nbsp;&nbsp;&nbsp;A constant is only constant 
 between its initialization and finalization. Both initialization and 
 finalization are allowed to change the value of a constant.</div>
-<div class="paranum"><a name="p23">23</a></div>
+<div class="paranum"><a name="p24">24</a></div>
 <div class="Notes">NOTE 3&nbsp;&nbsp;&nbsp;Abort is deferred during certain 
 operations related to controlled types, as explained in <A HREF="AA-9-8.html">9.8</A>. 
 Those rules prevent an abort from causing a controlled object to be left 
 in an ill-defined state.</div>
-<div class="paranum"><a name="p24">24</a></div>
-<div class="Notes">NOTE 4&nbsp;&nbsp;&nbsp;The Finalize procedure is 
-called upon finalization of a controlled object, even if Finalize was 
-called earlier, either explicitly or as part of an assignment; hence, 
-if a controlled type is visibly controlled (implying that its Finalize 
-primitive is directly callable), or is nonlimited (implying that assignment 
-is allowed), its Finalize procedure is ideally designed to have no ill 
-effect if it is applied a second time to the same object.&nbsp;</div>
-<div class="paranum"><a name="p24.a">24.a</a></div>
-<div class="Annotations"><B>Discussion:&nbsp;</B>Or equivalently, a Finalize 
-procedure should be &ldquo;idempotent&rdquo;; applying it twice to the 
-same object should be equivalent to applying it once.&nbsp;</div>
-<div class="paranum"><a name="p24.b">24.b</a></div>
-<div class="Annotations"><B>Reason:&nbsp;</B>A user-written Finalize procedure 
-should be idempotent since it can be called explicitly by a client (at 
-least if the type is &quot;visibly&quot; controlled). Also, Finalize 
-is used implicitly as part of the <SPAN Class="swiss"><A HREF="AA-5-2.html#S0173">assignment_statement</A></SPAN> 
+<div class="paranum"><a name="p25">25/7</a></div>
+<div class="Notes">NOTE 4&nbsp;&nbsp;&nbsp;{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0055-1.html">AI22-0055-1</A></I>} 
+<span class="delete7">The Finalize procedure is called upon finalization 
+of a controlled object, even if Finalize was called earlier, either explicitly 
+or as part of an assignment; hence, if a controlled type is visibly controlled 
+(implying that its Finalize primitive is directly callable), or is nonlimited 
+(implying that assignment is allowed), its Finalize procedure is ideally 
+designed to have no ill effect if it is applied a second time to the 
+same object.</span>&nbsp;</div>
+<div class="paranum"><a name="p25.a">25.a/7</a></div>
+<div class="Annotations"><SPAN STYLE="font-size: 80%"><I>This paragraph 
+was deleted.</I></SPAN><span class="delete7"><B>Discussion:&nbsp;</B></span>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0055-1.html">AI22-0055-1</A></I>} 
+<span class="delete7">Or equivalently, a Finalize procedure should be 
+&ldquo;idempotent&rdquo;; applying it twice to the same object should 
+be equivalent to applying it once.</span>&nbsp;</div>
+<div class="paranum"><a name="p25.b">25.b/7</a></div>
+<div class="Annotations"><SPAN STYLE="font-size: 80%"><I>This paragraph 
+was deleted.</I></SPAN><span class="delete7"><B>Reason:&nbsp;</B></span>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0055-1.html">AI22-0055-1</A></I>} 
+<span class="delete7">A user-written Finalize procedure should be idempotent 
+since it can be called explicitly by a client (at least if the type is 
+&quot;visibly&quot; controlled). Also, Finalize is used implicitly as 
+part of the <SPAN Class="swiss"><A HREF="AA-5-2.html#S0173">assignment_statement</A></SPAN> 
 if the type is nonlimited, and an abort is permitted to disrupt an <SPAN Class="swiss"><A HREF="AA-5-2.html#S0173">assignment_statement</A></SPAN> 
 between finalizing the left-hand side and assigning the new value to 
 it (an abort is not permitted to disrupt an assignment operation between 
-copying in the new value and adjusting it).&nbsp;</div>
-<div class="paranum"><a name="p24.c">24.c/2</a></div>
+copying in the new value and adjusting it).</span>&nbsp;</div>
+<div class="paranum"><a name="p25.c">25.c/2</a></div>
 <div class="Annotations"><B>Discussion:&nbsp;</B>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00287.TXT">AI95-00287-01</A></I>} 
 Either Initialize or Adjust, but not both, is applied to (almost) every 
 controlled object when it is created: Initialize is done when no initial 
@@ -724,33 +812,33 @@ by an <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN>
 that is built-in-place); Initialize is not applied to the <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN> 
 as a whole, nor is the value of the <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN> 
 or object adjusted.</div>
-<div class="paranum"><a name="p24.d">24.d</a></div>
-<div class="Annotations" style="margin-bottom: 0.4em"><A NAME="I4577"></A>All 
+<div class="paranum"><a name="p25.d">25.d</a></div>
+<div class="Annotations" style="margin-bottom: 0.4em"><A NAME="I4653"></A>All 
 of the following use the assignment operation, and thus perform value 
 adjustment:&nbsp;</div>
-<div class="paranum"><a name="p24.e">24.e</a></div>
+<div class="paranum"><a name="p25.e">25.e</a></div>
 <div class="SmallBulleted">the <SPAN Class="swiss"><A HREF="AA-5-2.html#S0173">assignment_statement</A></SPAN> 
 (see <A HREF="AA-5-2.html">5.2</A>);</div>
-<div class="paranum"><a name="p24.f">24.f</a></div>
+<div class="paranum"><a name="p25.f">25.f</a></div>
 <div class="SmallBulleted">explicit initialization of a stand-alone object 
 (see <A HREF="AA-3-3-1.html">3.3.1</A>) or of a pool element (see <A HREF="AA-4-8.html">4.8</A>);</div>
-<div class="paranum"><a name="p24.g">24.g</a></div>
+<div class="paranum"><a name="p25.g">25.g</a></div>
 <div class="SmallBulleted">default initialization of a component of a 
 stand-alone object or pool element (in this case, the value of each component 
 is assigned, and therefore adjusted, but the value of the object as a 
 whole is not adjusted);</div>
-<div class="paranum"><a name="p24.h">24.h/2</a></div>
+<div class="paranum"><a name="p25.h">25.h/2</a></div>
 <div class="SmallBulleted">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-10318.TXT">AI95-00318-02</A></I>} 
 function return, when the result is not built-in-place (adjustment of 
 the result happens before finalization of the function);</div>
-<div class="paranum"><a name="p24.i">24.i</a></div>
+<div class="paranum"><a name="p25.i">25.i</a></div>
 <div class="SmallBulleted">predefined operators (although the only one 
 that matters is concatenation; see <A HREF="AA-4-5-3.html">4.5.3</A>);</div>
-<div class="paranum"><a name="p24.j">24.j</a></div>
+<div class="paranum"><a name="p25.j">25.j</a></div>
 <div class="SmallBulleted">generic formal objects of mode <B>in</B> (see 
 <A HREF="AA-12-4.html">12.4</A>); these are defined in terms of constant 
 declarations; and</div>
-<div class="paranum"><a name="p24.k">24.k/5</a></div>
+<div class="paranum"><a name="p25.k">25.k/5</a></div>
 <div class="SmallBulleted">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00287.TXT">AI95-00287-01</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0005-1.TXT">AI12-0005-1</A></I>} 
 <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN>s 
@@ -759,11 +847,11 @@ declarations; and</div>
 an <SPAN Class="swiss"><A HREF="AA-4-3-2.html#S0111">extension_aggregate</A></SPAN>, 
 is assigned, and therefore adjusted, but the value of the <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN> 
 as a whole is not adjusted; neither is Initialize called);&nbsp;</div>
-<div class="paranum"><a name="p24.l">24.l</a></div>
+<div class="paranum"><a name="p25.l">25.l</a></div>
 <div class="Annotations" style="margin-bottom: 0.4em">The following 
 also use the assignment operation, but adjustment never does anything 
 interesting in these cases:&nbsp;</div>
-<div class="paranum"><a name="p24.m">24.m</a></div>
+<div class="paranum"><a name="p25.m">25.m</a></div>
 <div class="SmallBulleted">By-copy parameter passing uses the assignment 
 operation (see <A HREF="AA-6-4-1.html">6.4.1</A>), but controlled objects 
 are always passed by reference, so the assignment operation never does 
@@ -774,11 +862,11 @@ The finalization of the parameter itself needs to happen after the copy
 back (if any), similar to the finalization of an anonymous function return 
 object or <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN> 
 object.</div>
-<div class="paranum"><a name="p24.n">24.n</a></div>
+<div class="paranum"><a name="p25.n">25.n</a></div>
 <div class="SmallBulleted"><B>For</B> loops use the assignment operation 
 (see <A HREF="AA-5-5.html">5.5</A>), but since the type of the loop parameter 
 is never controlled, nothing interesting happens there, either.</div>
-<div class="paranum"><a name="p24.n.1">24.n.1/2</a></div>
+<div class="paranum"><a name="p25.n.1">25.n.1/2</a></div>
 <div class="SmallBulleted">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-10318.TXT">AI95-00318-02</A></I>} 
 Objects initialized by function results and <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN>s 
 that are built-in-place. In this case, the assignment operation is never 
@@ -786,48 +874,48 @@ executed, and no adjustment takes place. While built-in-place is always
 allowed, it is required for some types &mdash; see <A HREF="AA-7-5.html">7.5</A> 
 and <A HREF="AA-7-6.html">7.6</A> &mdash; and that's important since 
 limited types have no Adjust to call.&nbsp;</div>
-<div class="paranum"><a name="p24.o">24.o/2</a></div>
+<div class="paranum"><a name="p25.o">25.o/2</a></div>
 <div class="Annotations"><SPAN STYLE="font-size: 80%"><I>This paragraph 
 was deleted.</I></SPAN>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00287.TXT">AI95-00287-01</A></I>} 
 </div>
-<div class="paranum"><a name="p24.p">24.p</a></div>
+<div class="paranum"><a name="p25.p">25.p</a></div>
 <div class="Annotations">Finalization of the parts of a protected object 
 are not done as protected actions. It is possible (in pathological cases) 
 to create tasks during finalization that access these parts in parallel 
 with the finalization itself. This is an erroneous use of shared variables. 
 </div>
-<div class="paranum"><a name="p24.q">24.q</a></div>
+<div class="paranum"><a name="p25.q">25.q</a></div>
 <div class="Annotations"><B>Implementation Note:&nbsp;</B>One implementation 
 technique for finalization is to chain the controlled objects together 
 on a per-task list. When leaving a master, the list can be walked up 
 to a marked place. The links needed to implement the list can be declared 
 (privately) in types Controlled and Limited_Controlled, so they will 
 be inherited by all controlled types.</div>
-<div class="paranum"><a name="p24.r">24.r</a></div>
+<div class="paranum"><a name="p25.r">25.r</a></div>
 <div class="Annotations">Another implementation technique, which we refer 
 to as the &ldquo;PC-map&rdquo; approach essentially implies inserting 
 exception handlers at various places, and finalizing objects based on 
 where the exception was raised.</div>
-<div class="paranum"><a name="p24.s">24.s</a></div>
-<div class="Annotations"><A NAME="I4578"></A><A NAME="I4579"></A>The 
+<div class="paranum"><a name="p25.s">25.s</a></div>
+<div class="Annotations"><A NAME="I4654"></A><A NAME="I4655"></A>The 
 PC-map approach is for the compiler/linker to create a map of code addresses; 
 when an exception is raised, or abort occurs, the map can be consulted 
 to see where the task was executing, and what finalization needs to be 
 performed. This approach was given in the Ada 83 Rationale as a possible 
 implementation strategy for exception handling &mdash; the map is consulted 
 to determine which exception handler applies.</div>
-<div class="paranum"><a name="p24.t">24.t</a></div>
+<div class="paranum"><a name="p25.t">25.t</a></div>
 <div class="Annotations">If the PC-map approach is used, the implementation 
 must take care in the case of arrays. The generated code will generally 
 contain a loop to initialize an array. If an exception is raised part 
 way through the array, the components that have been initialized must 
 be finalized, and the others must not be finalized.</div>
-<div class="paranum"><a name="p24.u">24.u</a></div>
+<div class="paranum"><a name="p25.u">25.u</a></div>
 <div class="Annotations">It is our intention that both of these implementation 
 methods should be possible.&nbsp;</div>
 
 <H4 Class="centered">Wording Changes from Ada 83</H4>
-<div class="paranum"><a name="p24.v">24.v</a></div>
+<div class="paranum"><a name="p25.v">25.v</a></div>
 <div class="Annotations">Finalization depends on the concepts of completion 
 and leaving, and on the concept of a master. Therefore, we have moved 
 the definitions of these concepts here, from where they used to be in 
@@ -837,9 +925,9 @@ the rules here refer to the task-waiting rules of Clause <A HREF="AA-9.html">9</
 </div>
 
 <H4 Class="centered">Inconsistencies With Ada 95</H4>
-<div class="paranum"><a name="p24.v.1">24.v.1/3</a></div>
+<div class="paranum"><a name="p25.v.1">25.v.1/3</a></div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0066-1.TXT">AI05-0066-1</A></I>} 
-<A NAME="I4580"></A><B>Ada 2012 Correction:</B> Changed the definition 
+<A NAME="I4656"></A><B>Ada 2012 Correction:</B> Changed the definition 
 of the master of an anonymous object used to directly initialize an object, 
 so it can be finalized immediately rather than having to hang around 
 as long as the object. In this case, the Ada 2005 definition was inconsistent 
@@ -848,24 +936,24 @@ implemented the rule as written in Amendment 1, so an inconsistency is
 unlikely to arise in practice.&nbsp;</div>
 
 <H4 Class="centered">Wording Changes from Ada 95</H4>
-<div class="paranum"><a name="p24.w">24.w/2</a></div>
+<div class="paranum"><a name="p25.w">25.w/2</a></div>
 <div class="Annotations">{<I><A HREF="defect1.html#8652/0021">8652/0021</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00182.TXT">AI95-00182-01</A></I>} 
 <B>Corrigendum:</B> Fixed the wording to say that anonymous objects aren't 
 finalized until the object can't be used anymore.</div>
-<div class="paranum"><a name="p24.x">24.x/2</a></div>
+<div class="paranum"><a name="p25.x">25.x/2</a></div>
 <div class="Annotations">{<I><A HREF="defect1.html#8652/0023">8652/0023</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00169.TXT">AI95-00169-01</A></I>} 
 <B>Corrigendum:</B> Added wording to clarify what happens when Adjust 
 or Finalize raises an exception; some cases had been omitted.</div>
-<div class="paranum"><a name="p24.y">24.y/2</a></div>
+<div class="paranum"><a name="p25.y">25.y/2</a></div>
 <div class="Annotations">{<I><A HREF="defect1.html#8652/0024">8652/0024</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00193.TXT">AI95-00193-01</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00256.TXT">AI95-00256-01</A></I>} 
 <B>Corrigendum:</B> Stated that if Adjust raises an exception during 
 initialization, nothing further is required. This is corrected in Ada 
 2005 to include all kinds of assignment other than <SPAN Class="swiss"><A HREF="AA-5-2.html#S0173">assignment_statement</A></SPAN>s.</div>
-<div class="paranum"><a name="p24.z">24.z/2</a></div>
+<div class="paranum"><a name="p25.z">25.z/2</a></div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00162.TXT">AI95-00162-01</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00416.TXT">AI95-00416-01</A></I>} 
 Revised the definition of master to include <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN>s 
@@ -874,22 +962,22 @@ in order to cleanly define what happens for tasks and controlled objects
 created as part of a subprogram call. Having done that, all of the special 
 wording to cover those cases is eliminated (at least until the Ada comments 
 start rolling in).</div>
-<div class="paranum"><a name="p24.aa">24.aa/2</a></div>
+<div class="paranum"><a name="p25.aa">25.aa/2</a></div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00280.TXT">AI95-00280-01</A></I>} 
 We define <I>finalization of the collection</I> here, so as to be able 
 to conveniently refer to it in other rules (especially in <A HREF="AA-4-8.html">4.8</A>, 
 &ldquo;<A HREF="AA-4-8.html">Allocators</A>&rdquo;).</div>
-<div class="paranum"><a name="p24.bb">24.bb/2</a></div>
+<div class="paranum"><a name="p25.bb">25.bb/2</a></div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00416.TXT">AI95-00416-01</A></I>} 
 Clarified that a coextension is finalized at the same time as the outer 
 object. (This was intended for Ada 95, but since the concept did not 
 have a name, it was overlooked.)&nbsp;</div>
 
 <H4 Class="centered">Inconsistencies With Ada 2005</H4>
-<div class="paranum"><a name="p24.cc">24.cc/3</a></div>
+<div class="paranum"><a name="p25.cc">25.cc/3</a></div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0051-1.TXT">AI05-0051-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0190-1.TXT">AI05-0190-1</A></I>} 
-<A NAME="I4581"></A><B>Correction:</B> Better defined when objects allocated 
+<A NAME="I4657"></A><B>Correction:</B> Better defined when objects allocated 
 from anonymous access types are finalized. This could be inconsistent 
 if objects are finalized in a different order than in an Ada 2005 implementation 
 and that order caused different program behavior; however programs that 
@@ -897,28 +985,28 @@ depend on the order of finalization within a single master are already
 fragile and hopefully are rare.&nbsp;</div>
 
 <H4 Class="centered">Wording Changes from Ada 2005</H4>
-<div class="paranum"><a name="p24.dd">24.dd/3</a></div>
+<div class="paranum"><a name="p25.dd">25.dd/3</a></div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0064-1.TXT">AI05-0064-1</A></I>} 
 <B>Correction:</B> Removed a redundant rule, which is now covered by 
 the additional places where masters are defined.</div>
-<div class="paranum"><a name="p24.ee">24.ee/4</a></div>
+<div class="paranum"><a name="p25.ee">25.ee/4</a></div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0099-1.TXT">AI05-0099-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0005-1.TXT">AI12-0005-1</A></I>} 
 <B>Correction:</B> Clarified the finalization rules so that there is 
 no doubt that privacy is ignored, and to ensure that objects of class-wide 
 interface types are finalized based on their specific concrete type.</div>
-<div class="paranum"><a name="p24.ff">24.ff/3</a></div>
+<div class="paranum"><a name="p25.ff">25.ff/3</a></div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0107-1.TXT">AI05-0107-1</A></I>} 
 <B>Correction:</B> Allowed premature finalization of parts of failed 
 <SPAN Class="swiss"><A HREF="AA-4-8.html#S0164">allocator</A></SPAN>s. 
 This could be an inconsistency, but the previous behavior is still allowed 
 and there is no requirement that implementations take advantage of the 
 permission.</div>
-<div class="paranum"><a name="p24.gg">24.gg/3</a></div>
+<div class="paranum"><a name="p25.gg">25.gg/3</a></div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0111-3.TXT">AI05-0111-3</A></I>} 
 Added a permission to finalize an object allocated from a subpool later 
 than usual.</div>
-<div class="paranum"><a name="p24.hh">24.hh/3</a></div>
+<div class="paranum"><a name="p25.hh">25.hh/3</a></div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0142-4.TXT">AI05-0142-4</A></I>} 
 Added text to specially define the master of anonymous objects which 
 are passed as explicitly aliased parameters (see <A HREF="AA-6-1.html">6.1</A>) 
@@ -926,11 +1014,82 @@ of functions. The model for these parameters is explained in detail in
 <A HREF="AA-6-4-1.html">6.4.1</A>.&nbsp;</div>
 
 <H4 Class="centered">Wording Changes from Ada 2012</H4>
-<div class="paranum"><a name="p24.ii">24.ii/5</a></div>
+<div class="paranum"><a name="p25.ii">25.ii/5</a></div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0406-1.TXT">AI12-0406-1</A></I>} 
 <B>Correction:</B> Defined the term &ldquo;master construct&rdquo;, so 
 as to put static accessibility rules on a firmer basis, including ensuring 
 that those rules apply inside of generic bodies.&nbsp;</div>
+
+<H4 Class="centered">Inconsistencies With Ada 2022</H4>
+<div class="paranum"><a name="p25.jj">25.jj/6</a></div>
+<div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0040-1.html">AI22-0040-1</A></I>} 
+<span class="insert6"><A NAME="I4658"></A><B>Corrigendum:</B> Expressions 
+in iterative contexts are now master constructs, so that temporary objects 
+are immediately finalized rather than having to wait until the end of 
+the enclosing (iterative) construct. This means that temporary objects 
+will be finalized earlier than was defined in Ada 2022. If the program 
+somehow depends on the order of finalization, it could fail. However, 
+depending on the order of finalization of independent objects is very 
+rare and a dubious practice, so we do not expect this to matter in any 
+real programs.</span>&nbsp;</div>
+
+<H4 Class="centered">Incompatibilities With Ada 2022</H4>
+<div class="paranum"><a name="p25.kk">25.kk/6</a></div>
+<div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0040-1.html">AI22-0040-1</A></I>} 
+<span class="insert6"><A NAME="I4659"></A><B>Corrigendum:</B> Expressions 
+in iterative contexts are now master constructs, so that temporary objects 
+are immediately finalized rather than having to wait until the end of 
+the enclosing (iterative) construct. This can make previously legal constructs 
+illegal. Consider the following <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN>, 
+where <TT>Vect_Func</TT> is a function that returns a <TT>Vector</TT> 
+of an instance of <TT>Ada.Containers.Vectors</TT>:</span>&nbsp;</div>
+<div class="paranum"><a name="p25.ll">25.ll/6</a></div>
+<div class="SmallExamples"><span class="insert6"><B>return</B>&nbsp;Some_Array'(<B>others</B>&nbsp;=&gt;&nbsp;Cont_Func(2));</span></div>
+<div class="paranum"><a name="p25.mm">25.mm/6</a></div>
+<div class="Annotations"><span class="insert6">The rule change means 
+that <TT>Cont_Func(2)</TT> is now a master construct. That means the 
+result of Cont_Func no longer lives as long as the <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN>, 
+and that makes the (implicit) call to Reference (that implements the 
+indexing) illegal. That was not true in Ada 2022 or before; however, 
+for Ada 2022 all of the results of the <TT>Some_Array'Length</TT> calls 
+to Cont_Func must be preserved until the <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN> 
+evaluation is complete (otherwise, the <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN> 
+evaluation could be using data that no longer exists to initialize the 
+<SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN> 
+object). While this new illegality is annoying, it is unlikely that the 
+programmer really meant to create <TT>Some_Array'Length</TT> containers; 
+they most likely wanted to create one and use it repeatedly. Surrounding 
+the aggregate with an appropriate <SPAN Class="swiss"><A HREF="AA-4-5-9.html#S0156">declare_expression</A></SPAN> 
+would eliminate the duplication and make the <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN> 
+legal. As such, we think this incompatiblity is as likely to detect code 
+that is unintended to be expensive as it is to reject truly intended 
+code. As such, we judge the effect to be tolerable.</span>&nbsp;</div>
+
+<H4 Class="centered">Wording Changes from Ada 2022</H4>
+<div class="paranum"><a name="p25.nn">25.nn/6</a></div>
+<div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0015-1.html">AI22-0015-1</A></I>} 
+<span class="insert6"><B>Corrigendum:</B> Clarified that &quot;master 
+of the point of the function call&quot; is referring to the master of 
+the execution of that point and not the defined term &quot;master of 
+the function call&quot;. Also corrected the wording to use the defined 
+term exactly when needed.</span></div>
+<div class="paranum"><a name="p25.oo">25.oo/6</a></div>
+<div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0062-1.html">AI22-0062-1</A></I>} 
+<span class="insert6"><B>Corrigendum:</B> Clarified that discriminant-dependent 
+components &quot;cease to exist&quot; when the discriminants of their 
+object are changed. This matters as a future reference to the component 
+should be erroneous. (The easy ways to keep such a reference are illegal, 
+but there are ways to make a reference to a discriminant-dependent component.) 
+This is not intended to be a language change; it just is specifying behavior 
+that was understood to be the case from the underlying model. Having 
+an explicit definition will make understanding whether a specific case 
+is erroneous, that's especially valuable for static analysis tools. Note 
+that this change will not require any changes by any implementation; 
+as the execution is erroneous, the implementation can do anything it 
+wants, which surely includes what it was doing.</span> <span class="insert6"><B>Corrigendum:</B> 
+Clarified the order of components is fully specified by the specific 
+rule (and are not overridden by other rules). This change is not meant 
+to change any requirements of finalization.</span> &nbsp;</div>
 
 <HR>
 <div style="margin-top: 0.0em; margin-bottom: 0.6em"><A HREF="AA-TOC.html"><IMG SRC="cont.gif" ALT="Contents" BORDER=0></A>&nbsp;

@@ -35,7 +35,7 @@
     </STYLE>
 </HEAD>
 <BODY TEXT="#000000" BGCOLOR="#FFFFF0" LINK="#000080" VLINK="#330033" ALINK="#0000FF">
-<DIV><SPAN Style="font-size:200%; color: rgb(0,51,153)"><B>Annotated</B></SPAN><SPAN Style="font-size:200%; color: rgb(0,0,102)"><B>&nbsp;Ada Reference Manual</B> (Ada 202y Draft 1)</SPAN> &mdash; <A HREF="AA-TTL.html"><B>Legal Information</B></A></DIV>
+<DIV><SPAN Style="font-size:200%; color: rgb(0,51,153)"><B>Annotated</B></SPAN><SPAN Style="font-size:200%; color: rgb(0,0,102)"><B>&nbsp;Ada Reference Manual</B> (Ada 202y Draft 3)</SPAN> &mdash; <A HREF="AA-TTL.html"><B>Legal Information</B></A></DIV>
 <div style="margin-top: 0.6em; margin-bottom: 0.0em"><A HREF="AA-TOC.html"><IMG SRC="cont.gif" ALT="Contents" BORDER=0></A>&nbsp;
 &nbsp;<A HREF="AA-0-4.html"><IMG SRC="index.gif" ALT="Index" BORDER=0></A>&nbsp;
 &nbsp;<A HREF="AA-STDS.html"><IMG SRC="lib.gif" ALT="References" BORDER=0></A>&nbsp;
@@ -52,7 +52,7 @@ values are specified for elements of a container; for a <SPAN Class="swiss"><A H
 the elements are given sequentially; for a <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0126">named_container_aggregate</A></SPAN>, 
 the elements are specified by a sequence of key/value pairs, or using 
 an iterator. The Aggregate aspect of the type of the <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN> 
-determines how the elements are combined to form the container.<A NAME="I2999"></A></div>
+determines how the elements are combined to form the container.<A NAME="I3040"></A></div>
 <div class="paranum"><a name="p1.a">1.a/5</a></div>
 <div class="Annotations"><B>Term entry:&nbsp;</B><B>container aggregate</B> 
 &mdash; construct used to define a value of a type that represents a 
@@ -65,7 +65,7 @@ aspect may be specified:</div>
 <div class="paranum"><a name="p3">3/5</a></div>
 <div class="WideHanging-Term" style="margin-bottom: 0.4em">Aggregate</div><div class="WideHanging-Body">
 This aspect is an <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN> 
-of the form:<A NAME="I3000"></A><A NAME="I3001"></A></div>
+of the form:<A NAME="I3041"></A><A NAME="I3042"></A></div>
 <div class="paranum"><a name="p3.a">3.a/5</a></div>
 <div class="Annotations"><B>Aspect Description for&nbsp;</B><B>Aggregate: 
 </B>Mechanism to define user-defined aggregates.</div>
@@ -85,7 +85,7 @@ first.&nbsp;</div>
 <div class="paranum"><a name="p5">5/5</a></div>
 <div class="WideHanging-Body">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0212-1.TXT">AI12-0212-1</A></I>} 
 The type for which this aspect is specified is known as the <I>container 
-type</I> of the Aggregate aspect.<A NAME="I3002"></A> A <I>procedure_</I><SPAN Class="swiss"><A HREF="AA-4-1.html#S0091">name</A></SPAN> 
+type</I> of the Aggregate aspect.<A NAME="I3043"></A> A <I>procedure_</I><SPAN Class="swiss"><A HREF="AA-4-1.html#S0091">name</A></SPAN> 
 shall be specified for at least one of Add_Named, Add_Unnamed, or Assign_Indexed. 
 If Add_Named is specified, neither Add_Unnamed nor Assign_Indexed shall 
 be specified. Either both or neither of New_Indexed and Assign_Indexed 
@@ -94,7 +94,7 @@ shall be specified.</div>
 <H4 Class="centered">Name Resolution Rules</H4>
 <div class="paranum"><a name="p6">6/6</a></div>
 <div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0212-1.TXT">AI12-0212-1</A></I>} 
-{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0002-1.TXT">AI22-0002-1</A></I>} 
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0002-1.html">AI22-0002-1</A></I>} 
 The <SPAN Class="swiss"><A HREF="AA-4-1.html#S0091">name</A></SPAN> specified 
 for Empty for an Aggregate aspect shall denote <span class="delete6">a 
 constant of the container type, or denote</span> exactly one function 
@@ -118,7 +118,7 @@ specified for Add_Unnamed for an Aggregate aspect shall denote exactly
 one procedure that has two parameters, the first an <B>in out</B> parameter 
 of the container type, and the second an <B>in</B> parameter <span class="insert6">whose 
 type is</span><span class="delete6">&nbsp;of some nonlimited type,</span> 
-called the <I>element type</I> of the container type.<A NAME="I3003"></A></div>
+called the <I>element type</I> of the container type.<A NAME="I3044"></A></div>
 <div class="paranum"><a name="p8">8/6</a></div>
 <div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0212-1.TXT">AI12-0212-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0437-1.TXT">AI12-0437-1</A></I>} 
@@ -127,7 +127,7 @@ The <I>function_</I><SPAN Class="swiss"><A HREF="AA-4-1.html#S0091">name</A></SP
 specified for New_Indexed for an Aggregate aspect shall denote exactly 
 one function with a result type of the container type, and two parameters 
 of the same<span class="delete6">&nbsp;discrete</span> type, <span class="insert6">called</span><span class="delete6">&nbsp;with 
-that type being</span> the <I>key type</I> of the container type.<A NAME="I3004"></A></div>
+that type being</span> the <I>key type</I> of the container type.<A NAME="I3045"></A></div>
 <div class="paranum"><a name="p8.a">8.a/5</a></div>
 <div class="Annotations"><B>Reason:&nbsp;</B>The New_Indexed function is used 
 instead of Empty as the first step of creating an aggregate that is initialized 
@@ -145,12 +145,12 @@ a nonlimited</span> type <span class="insert6">is called&nbsp;</span><span class
 <I>key type</I> of the container type<span class="delete6">)</span>, 
 and the third, an <B>in</B> parameter <span class="insert6">whose</span><span class="delete6">&nbsp;of 
 a nonlimited</span> type <span class="delete6">that&nbsp;</span>is called 
-the <I>element type</I> of the container type.<A NAME="I3005"></A><A NAME="I3006"></A></div>
+the <I>element type</I> of the container type.<A NAME="I3046"></A><A NAME="I3047"></A></div>
 
 <H4 Class="centered">Legality Rules</H4>
 <div class="paranum"><a name="p10">10/6</a></div>
 <div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0212-1.TXT">AI12-0212-1</A></I>} 
-{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0002-1.TXT">AI22-0002-1</A></I>} 
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0002-1.html">AI22-0002-1</A></I>} 
 If the container type of an Aggregate aspect is a private type, the full 
 type of the container type shall not be an array type.<span class="delete6">&nbsp;If the container type is limited, the name specified for Empty shall 
 denote a function rather than a constant object.</span></div>
@@ -189,7 +189,7 @@ the Aggregate aspect is nonoverridable, this rule is rechecked on any
 derived type that inherits an Aggregate aspect.</span>&nbsp;</div>
 <div class="paranum"><a name="p11.3">11.3/6</a></div>
 <div class="Normal">&nbsp;&nbsp;{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0032-1.TXT">AI22-0032-1</A></I>} 
-<span class="insert6"><A NAME="I3007"></A>In addition to the places where 
+<span class="insert6"><A NAME="I3048"></A>In addition to the places where 
 Legality Rules normally apply (see <A HREF="AA-12-3.html">12.3</A>), 
 these rules apply also in the private part of an instance of a generic 
 unit.</span></div>
@@ -205,25 +205,25 @@ abstract formal type is not abstract.</span>&nbsp;</div>
 <div class="paranum"><a name="p12">12/5</a></div>
 <div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0212-1.TXT">AI12-0212-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0388-1.TXT">AI12-0388-1</A></I>} 
-The Aggregate aspect is nonoverridable (see <A HREF="AA-13-1-1.html">13.1.1</A>).<A NAME="I3008"></A> 
+The Aggregate aspect is nonoverridable (see <A HREF="AA-13-1-1.html">13.1.1</A>).<A NAME="I3049"></A> 
 </div>
 
 <H4 Class="centered">Syntax</H4>
 <div class="paranum"><a name="p13">13/5</a></div>
 <div class="Indented1">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0212-1.TXT">AI12-0212-1</A></I>} 
-<SPAN Class="swiss">container_aggregate</SPAN><A NAME="I3009"></A><A NAME="S0123"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN><BR>
-&nbsp;&nbsp;&nbsp;&nbsp;<A NAME="I3010"></A><SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0124">null_container_aggregate</A></SPAN><BR>
-&nbsp;&nbsp;|&nbsp;<A NAME="I3011"></A><SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0125">positional_container_aggregate</A></SPAN><BR>
-&nbsp;&nbsp;|&nbsp;<A NAME="I3012"></A><SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0126">named_container_aggregate</A></SPAN></div>
+<SPAN Class="swiss">container_aggregate</SPAN><A NAME="I3050"></A><A NAME="S0123"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN><BR>
+&nbsp;&nbsp;&nbsp;&nbsp;<A NAME="I3051"></A><SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0124">null_container_aggregate</A></SPAN><BR>
+&nbsp;&nbsp;|&nbsp;<A NAME="I3052"></A><SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0125">positional_container_aggregate</A></SPAN><BR>
+&nbsp;&nbsp;|&nbsp;<A NAME="I3053"></A><SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0126">named_container_aggregate</A></SPAN></div>
 <div class="paranum"><a name="p14">14/5</a></div>
 <div class="Indented1">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0212-1.TXT">AI12-0212-1</A></I>} 
-<SPAN Class="swiss">null_container_aggregate</SPAN><A NAME="I3013"></A><A NAME="S0124"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN>'['&nbsp;']'</div>
+<SPAN Class="swiss">null_container_aggregate</SPAN><A NAME="I3054"></A><A NAME="S0124"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN>'['&nbsp;']'</div>
 <div class="paranum"><a name="p15">15/5</a></div>
 <div class="Indented1">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0212-1.TXT">AI12-0212-1</A></I>} 
-<SPAN Class="swiss">positional_container_aggregate</SPAN><A NAME="I3014"></A><A NAME="S0125"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN>'['&nbsp;<A NAME="I3015"></A><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN>{,&nbsp;<A NAME="I3016"></A><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN>}&nbsp;']'</div>
+<SPAN Class="swiss">positional_container_aggregate</SPAN><A NAME="I3055"></A><A NAME="S0125"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN>'['&nbsp;<A NAME="I3056"></A><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN>{,&nbsp;<A NAME="I3057"></A><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN>}&nbsp;']'</div>
 <div class="paranum"><a name="p16">16/5</a></div>
 <div class="Indented1">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0212-1.TXT">AI12-0212-1</A></I>} 
-<SPAN Class="swiss">named_container_aggregate</SPAN><A NAME="I3017"></A><A NAME="S0126"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN>'['&nbsp;<A NAME="I3018"></A><SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0127">container_element_association_list</A></SPAN>&nbsp;']'</div>
+<SPAN Class="swiss">named_container_aggregate</SPAN><A NAME="I3058"></A><A NAME="S0126"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN>'['&nbsp;<A NAME="I3059"></A><SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0127">container_element_association_list</A></SPAN>&nbsp;']'</div>
 <div class="paranum"><a name="p16.a">16.a/5</a></div>
 <div class="Annotations"><B>Reason:&nbsp;</B>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0212-1.TXT">AI12-0212-1</A></I>} 
 Unlike other <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN>s, 
@@ -238,35 +238,107 @@ could not be written at all for a sequence type (such as a list) where
 there is no index or key to use.&nbsp;</div>
 <div class="paranum"><a name="p17">17/5</a></div>
 <div class="Indented1">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0212-1.TXT">AI12-0212-1</A></I>} 
-<SPAN Class="swiss">container_element_association_list</SPAN><A NAME="I3019"></A><A NAME="S0127"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN><BR>
-&nbsp;&nbsp;&nbsp;&nbsp;<A NAME="I3020"></A><SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0128">container_element_association</A></SPAN>&nbsp;{,&nbsp;<A NAME="I3021"></A><SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0128">container_element_association</A></SPAN>}</div>
+<SPAN Class="swiss">container_element_association_list</SPAN><A NAME="I3060"></A><A NAME="S0127"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN><BR>
+&nbsp;&nbsp;&nbsp;&nbsp;<A NAME="I3061"></A><SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0128">container_element_association</A></SPAN>&nbsp;{,&nbsp;<A NAME="I3062"></A><SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0128">container_element_association</A></SPAN>}</div>
 <div class="paranum"><a name="p18">18/5</a></div>
 <div class="Indented1">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0212-1.TXT">AI12-0212-1</A></I>} 
-<SPAN Class="swiss">container_element_association</SPAN><A NAME="I3022"></A><A NAME="S0128"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN><BR>
-&nbsp;&nbsp;&nbsp;&nbsp;<A NAME="I3023"></A><SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0129">key_choice_list</A></SPAN>&nbsp;=&gt;&nbsp;<A NAME="I3024"></A><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN><BR>
-&nbsp;&nbsp;|&nbsp;<A NAME="I3025"></A><SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0129">key_choice_list</A></SPAN>&nbsp;=&gt;&nbsp;&lt;&gt;<BR>
-&nbsp;&nbsp;|&nbsp;<A NAME="I3026"></A><SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0131">iterated_element_association</A></SPAN></div>
+<SPAN Class="swiss">container_element_association</SPAN><A NAME="I3063"></A><A NAME="S0128"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN><BR>
+&nbsp;&nbsp;&nbsp;&nbsp;<A NAME="I3064"></A><SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0129">key_choice_list</A></SPAN>&nbsp;=&gt;&nbsp;<A NAME="I3065"></A><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN><BR>
+&nbsp;&nbsp;|&nbsp;<A NAME="I3066"></A><SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0129">key_choice_list</A></SPAN>&nbsp;=&gt;&nbsp;&lt;&gt;<BR>
+&nbsp;&nbsp;|&nbsp;<A NAME="I3067"></A><SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0131">iterated_element_association</A></SPAN></div>
 <div class="paranum"><a name="p19">19/5</a></div>
 <div class="Indented1">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0212-1.TXT">AI12-0212-1</A></I>} 
-<SPAN Class="swiss">key_choice_list</SPAN><A NAME="I3027"></A><A NAME="S0129"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN><A NAME="I3028"></A><SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0130">key_choice</A></SPAN>&nbsp;{'|'&nbsp;<A NAME="I3029"></A><SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0130">key_choice</A></SPAN>}</div>
+<SPAN Class="swiss">key_choice_list</SPAN><A NAME="I3068"></A><A NAME="S0129"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN><A NAME="I3069"></A><SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0130">key_choice</A></SPAN>&nbsp;{'|'&nbsp;<A NAME="I3070"></A><SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0130">key_choice</A></SPAN>}</div>
 <div class="paranum"><a name="p20">20/5</a></div>
 <div class="Indented1">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0212-1.TXT">AI12-0212-1</A></I>} 
-<SPAN Class="swiss">key_choice</SPAN><A NAME="I3030"></A><A NAME="S0130"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN><I>key_</I><A NAME="I3031"></A><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN>&nbsp;|&nbsp;<A NAME="I3032"></A><SPAN Class="swiss"><A HREF="AA-3-6-1.html#S0058">discrete_range</A></SPAN></div>
+<SPAN Class="swiss">key_choice</SPAN><A NAME="I3071"></A><A NAME="S0130"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN><I>key_</I><A NAME="I3072"></A><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN>&nbsp;|&nbsp;<A NAME="I3073"></A><SPAN Class="swiss"><A HREF="AA-3-6-1.html#S0058">discrete_range</A></SPAN></div>
 <div class="paranum"><a name="p21">21/5</a></div>
 <div class="Indented1">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0212-1.TXT">AI12-0212-1</A></I>} 
-<SPAN Class="swiss">iterated_element_association</SPAN><A NAME="I3033"></A><A NAME="S0131"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN><BR>
-&nbsp;&nbsp;&nbsp;&nbsp;<B>for</B>&nbsp;<A NAME="I3034"></A><SPAN Class="swiss"><A HREF="AA-5-5.html#S0181">loop_parameter_specification</A></SPAN>[&nbsp;<B>use</B>&nbsp;<I>key_</I><A NAME="I3035"></A><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN>]&nbsp;=&gt;&nbsp;<A NAME="I3036"></A><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN><BR>
-&nbsp;&nbsp;|&nbsp;<B>for</B>&nbsp;<A NAME="I3037"></A><SPAN Class="swiss"><A HREF="AA-5-5-2.html#S0183">iterator_specification</A></SPAN>[&nbsp;<B>use</B>&nbsp;<I>key_</I><A NAME="I3038"></A><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN>]&nbsp;=&gt;&nbsp;<A NAME="I3039"></A><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN></div>
+<SPAN Class="swiss">iterated_element_association</SPAN><A NAME="I3074"></A><A NAME="S0131"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN><BR>
+&nbsp;&nbsp;&nbsp;&nbsp;<B>for</B>&nbsp;<A NAME="I3075"></A><SPAN Class="swiss"><A HREF="AA-5-5.html#S0181">loop_parameter_specification</A></SPAN>[&nbsp;<B>use</B>&nbsp;<I>key_</I><A NAME="I3076"></A><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN>]&nbsp;=&gt;&nbsp;<A NAME="I3077"></A><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN><BR>
+&nbsp;&nbsp;|&nbsp;<B>for</B>&nbsp;<A NAME="I3078"></A><SPAN Class="swiss"><A HREF="AA-5-5-2.html#S0183">iterator_specification</A></SPAN>[&nbsp;<B>use</B>&nbsp;<I>key_</I><A NAME="I3079"></A><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN>]&nbsp;=&gt;&nbsp;<A NAME="I3080"></A><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN></div>
+<div class="paranum"><a name="p21.a">21.a/6</a></div>
+<div class="Annotations" style="margin-bottom: 0.4em"><span class="insert6"><B>Discussion: 
+</B>The capabilities supported for <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN>s 
+of a particular container type depend on the subprograms specified in 
+the Aggregate aspect. If only Add_Unnamed is provided in the Aggregate 
+aspect, then container aggregates only support capabilities relevant 
+for a container that holds a set or sequence of elements. If only Add_Named 
+is provided, then container aggregates support capabilities relevant 
+for a map container. If Assign_Indexed is provided, then container aggregates 
+support capabilities relevant for a container that is indexed by a contiguous 
+discrete range of values. Finally, if both Add_Unnamed and Assign_Indexed 
+are provided, then container aggregates support capabilities similar 
+to those provided for array aggregates (excepting others choices). Specifically:</span></div>
+<div class="Indented1"><TABLE frame="border" rules="all" border="2" cellpadding="4"><CAPTION><SPAN STYLE="font-size: 80%"><span class="insert6"><SPAN STYLE="font-size: 125%"></SPAN><SPAN STYLE="font-size: 156%">Capabilities 
+associated with subprograms provided in Aggregate aspect</SPAN><SPAN STYLE="font-size: 125%"></SPAN></span></SPAN></CAPTION>
+<TR><TH align="left"><SPAN STYLE="font-size: 80%"><span class="insert6"><B>Capability</B></SPAN><TH align="center"><SPAN STYLE="font-size: 80%"><B>Only 
+Add_Unnamed</B></SPAN><TH align="center"><SPAN STYLE="font-size: 80%"><B>Add_Named</B></SPAN><TH align="center"><SPAN STYLE="font-size: 80%"><B>Only 
+Assign_Indexed</B></SPAN><TH align="center"><SPAN STYLE="font-size: 80%"><B>Both 
+Add_Unnamed &amp; Assign_Indexed</B></span></SPAN>
+<TR><TD align="left"><SPAN STYLE="font-size: 80%"><span class="insert6">Null 
+aggregates</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes</span></SPAN>
+<TR><TD align="left"><SPAN STYLE="font-size: 80%"><span class="insert6">Positional 
+aggregates</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">No</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes</span></SPAN>
+<TR><TD align="left"><SPAN STYLE="font-size: 80%"><span class="insert6">Named 
+aggregates:</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">&nbsp;</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">&nbsp;</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">&nbsp;</SPAN><TD align="center"><SPAN STYLE="font-size: 80%"></span></SPAN>
+<TR><TD align="left"><SPAN STYLE="font-size: 80%"><span class="insert6">&nbsp;&nbsp;key type</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">N/A</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Any 
+nonlimited</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Discrete</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Discrete</span></SPAN>
+<TR><TD align="left"><SPAN STYLE="font-size: 80%"><span class="insert6">&nbsp;&nbsp;&lt;&gt; allowed</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">No</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">No</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes</span></SPAN>
+<TR><TD align="left"><SPAN STYLE="font-size: 80%"><span class="insert6">&nbsp;&nbsp;choice completeness required</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">No</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">No</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes<SUP><SPAN STYLE="font-size: 140%"><SPAN STYLE="font-size: 64%">2</SPAN></SPAN></SUP></span></SPAN>
+<TR><TD align="left"><SPAN STYLE="font-size: 80%"><span class="insert6">&nbsp;&nbsp;iterators can be used with other kinds of <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0128">container_element_association</A></SPAN>s 
+in a single aggregate</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">No</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes<SUP><SPAN STYLE="font-size: 140%"><SPAN STYLE="font-size: 64%">3</SPAN></SPAN></SUP></SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Sometimes<SUP><SPAN STYLE="font-size: 140%"><SPAN STYLE="font-size: 64%">3</SPAN></SPAN></SUP></span></SPAN>
+<TR><TD align="left"><SPAN STYLE="font-size: 80%"><span class="insert6">&nbsp;&nbsp;with a <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0130">key_choice</A></SPAN> 
+being an <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN></SPAN><TD align="center"><SPAN STYLE="font-size: 80%">No</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes</span></SPAN>
+<TR><TD align="left"><SPAN STYLE="font-size: 80%"><span class="insert6">&nbsp;&nbsp;with a <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0130">key_choice</A></SPAN> 
+being a <SPAN Class="swiss"><A HREF="AA-3-6-1.html#S0058">discrete_range</A></SPAN></SPAN><TD align="center"><SPAN STYLE="font-size: 80%">No</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Discrete 
+key type only<SUP><SPAN STYLE="font-size: 140%"><SPAN STYLE="font-size: 64%">1</SPAN></SPAN></SUP></SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes</span></SPAN>
+<TR><TD align="left"><SPAN STYLE="font-size: 80%"><span class="insert6">&nbsp;&nbsp;with an iterator with a <I>key_</I><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN></SPAN><TD align="center"><SPAN STYLE="font-size: 80%">No</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">No</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">No</span></SPAN>
+<TR><TD align="left"><SPAN STYLE="font-size: 80%"><span class="insert6">&nbsp;&nbsp;with an iterator with a filter</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">No</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes<SUP><SPAN STYLE="font-size: 140%"><SPAN STYLE="font-size: 64%">4</SPAN></SPAN></SUP></span></SPAN>
+<TR><TD align="left"><SPAN STYLE="font-size: 80%"><span class="insert6">&nbsp;&nbsp;with an iterator with a discrete range (<B>in</B>) and no <I>key_</I><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN></SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Discrete 
+key type only<SUP><SPAN STYLE="font-size: 140%"><SPAN STYLE="font-size: 64%">1</SPAN></SPAN></SUP></SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes</span></SPAN>
+<TR><TD align="left"><SPAN STYLE="font-size: 80%"><span class="insert6">&nbsp;&nbsp;with an array iterator (<B>of</B>) and no <I>key_</I><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN></SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">No</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes</span></SPAN>
+<TR><TD align="left"><SPAN STYLE="font-size: 80%"><span class="insert6">&nbsp;&nbsp;with a cursor iterator (<B>in</B>) and no <I>key_</I><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN></SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">No</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes</span></SPAN>
+<TR><TD align="left"><SPAN STYLE="font-size: 80%"><span class="insert6">&nbsp;&nbsp;with a container iterator (<B>of</B>) and no <I>key_</I><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN></SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">No</SPAN><TD align="center"><SPAN STYLE="font-size: 80%">Yes</span></SPAN>
+</table></div>
+<div class="paranum"><a name="p21.b">21.b/6</a></div>
+<div class="Annotations" style="margin-bottom: 0.4em"><span class="insert6">Footnotes 
+for the above chart:</span></div>
+<div class="paranum"><a name="p21.c">21.c/6</a></div>
+<div class="Annotations" style="margin-bottom: 0.4em"><span class="insert6"><SUP><SPAN STYLE="font-size: 140%"><SPAN STYLE="font-size: 64%">1</SPAN></SPAN></SUP> 
+An <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN> 
+with Add_Named can only use a <SPAN Class="swiss"><A HREF="AA-3-6-1.html#S0058">discrete_range</A></SPAN> 
+(in a choice or iterator) if the key type is discrete.</span></div>
+<div class="paranum"><a name="p21.d">21.d/6</a></div>
+<div class="Annotations" style="margin-bottom: 0.4em"><span class="insert6"><SUP><SPAN STYLE="font-size: 140%"><SPAN STYLE="font-size: 64%">2</SPAN></SPAN></SUP> 
+A choice completeness check is not made for array, cursor, and container 
+iterators (as the choice values aren't known at compile-time). These 
+kinds of <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0128">container_element_association</A></SPAN> 
+cannot be mixed with the kinds that do require a check.</span></div>
+<div class="paranum"><a name="p21.e">21.e/6</a></div>
+<div class="Annotations" style="margin-bottom: 0.4em"><span class="insert6"><SUP><SPAN STYLE="font-size: 140%"><SPAN STYLE="font-size: 64%">3</SPAN></SPAN></SUP><SPAN Class="swiss"><A HREF="AA-3-6-1.html#S0058">discrete_range</A></SPAN> 
+iterators can be used with other kinds of choices; other iterators (if 
+allowed at all) have to appear only by themselves.</span></div>
+<div class="paranum"><a name="p21.f">21.f/6</a></div>
+<div class="Annotations" style="margin-bottom: 0.4em"><span class="insert6"><SUP><SPAN STYLE="font-size: 140%"><SPAN STYLE="font-size: 64%">4</SPAN></SPAN></SUP> 
+A filter is not allowed in an indexed aggregate using a <SPAN Class="swiss"><A HREF="AA-3-6-1.html#S0058">discrete_range</A></SPAN> 
+iterator, as those iterators are included in the choice completeness 
+check. This is the same as in an array aggregate.</span>&nbsp;</div>
 
 <H4 Class="centered">Name Resolution Rules</H4>
-<div class="paranum"><a name="p22">22/5</a></div>
+<div class="paranum"><a name="p22">22/6</a></div>
 <div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0212-1.TXT">AI12-0212-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0437-1.TXT">AI12-0437-1</A></I>} 
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0111-1.html">AI22-0111-1</A></I>} 
 The expected type for a <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0123">container_aggregate</A></SPAN> 
-shall be a single type for which the Aggregate aspect has been specified. 
-The expected type for each <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN> 
+shall be a single type for which the Aggregate aspect has been specified<span class="insert6">, 
+or a class-wide type rooted at such a type</span>. The expected type 
+for each <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN> 
 of a <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0123">container_aggregate</A></SPAN> 
-is the element type of the expected type.</div>
+is the element type of the expected type.<span class="insert6">&nbsp;For the 
+purposes of this subclause, the expected type <I>has an Aggregate aspect</I> 
+<A NAME="I3081"></A><A NAME="I3082"></A> if it is class-wide and the 
+aspect has been specified for its root type.</span></div>
 <div class="paranum"><a name="p23">23/5</a></div>
 <div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0212-1.TXT">AI12-0212-1</A></I>} 
 The expected type for a <I>key_</I><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN>, 
@@ -277,7 +349,7 @@ is the key type of the expected type of the <SPAN Class="swiss"><A HREF="AA-4-3.
 <H4 Class="centered">Legality Rules</H4>
 <div class="paranum"><a name="p24">24/6</a></div>
 <div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0212-1.TXT">AI12-0212-1</A></I>} 
-{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0018-1.TXT">AI22-0018-1</A></I>} 
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0018-1.html">AI22-0018-1</A></I>} 
 The expected type for a <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0125">positional_container_aggregate</A></SPAN> 
 shall have an Aggregate aspect that includes a specification for an Add_Unnamed 
 procedure or an Assign_Indexed procedure. The expected type for a <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0126">named_container_aggregate</A></SPAN> 
@@ -295,7 +367,7 @@ can be of any type with an Aggregate aspect.]</div>
 <div class="paranum"><a name="p25">25/5</a></div>
 <div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0212-1.TXT">AI12-0212-1</A></I>} 
 A non-null container aggregate is called an <I>indexed aggregate</I> 
-if the<A NAME="I3040"></A> expected type <I>T</I> of the aggregate specifies 
+if the<A NAME="I3083"></A> expected type <I>T</I> of the aggregate specifies 
 an Assign_Indexed procedure in its Aggregate aspect, and either there 
 is no Add_Unnamed procedure specified for the type, or the aggregate 
 is a <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0126">named_container_aggregate</A></SPAN> 
@@ -303,10 +375,10 @@ with a <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0128">container_element_assoc
 that contains a <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0129">key_choice_list</A></SPAN> 
 or a <SPAN Class="swiss"><A HREF="AA-5-5.html#S0181">loop_parameter_specification</A></SPAN>. 
 The key type of an indexed aggregate is also called the <I>index type</I> 
-of the aggregate.<A NAME="I3041"></A><A NAME="I3042"></A></div>
+of the aggregate.<A NAME="I3084"></A><A NAME="I3085"></A></div>
 <div class="paranum"><a name="p26">26/6</a></div>
 <div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0212-1.TXT">AI12-0212-1</A></I>} 
-{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0018-1.TXT">AI22-0018-1</A></I>} 
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0018-1.html">AI22-0018-1</A></I>} 
 A <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0128">container_element_association</A></SPAN> 
 with a &lt;&gt; rather than an <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN><span class="delete6">, 
 or with a <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0130">key_choice</A></SPAN> 
@@ -378,13 +450,15 @@ is an indexed aggregate, from the result of a call on the New_Indexed
 function; the actual parameters in this call represent the lower and 
 upper bound of the <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN>, 
 and are determined as follows:&nbsp;</div>
-<div class="paranum"><a name="p33">33/5</a></div>
-<div class="Indented2Bulleted">if the <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN> 
+<div class="paranum"><a name="p33">33/6</a></div>
+<div class="Indented2Bulleted">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0085-1.html">AI22-0085-1</A></I>} 
+if the <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN> 
 is a <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0125">positional_container_aggregate</A></SPAN>, 
 the lower bound is the low bound of the subtype of the key parameter 
-of the Add_Indexed procedure, and the upper bound has a position number 
-that is the sum of the position number of the lower bound and one less 
-than the number of <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN>s 
+of the <span class="insert6">Assign_Indexed</span><span class="delete6">&nbsp;Add_Indexed</span> 
+procedure, and the upper bound has a position number that is the sum 
+of the position number of the lower bound and one less than the number 
+of <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN>s 
 in the <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN>;</div>
 <div class="paranum"><a name="p34">34/5</a></div>
 <div class="Indented2Bulleted">if the <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN> 
@@ -397,10 +471,10 @@ or is the high bound of a range defined by a <SPAN Class="swiss"><A HREF="AA-3-6
 of a <SPAN Class="swiss"><A HREF="AA-5-5.html#S0181">loop_parameter_specification</A></SPAN>. 
 </div>
 <div class="paranum"><a name="p35">35/6</a></div>
-<div class="Bulleted" style="margin-bottom: 0.3em">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0002-1.TXT">AI22-0002-1</A></I>} 
+<div class="Bulleted" style="margin-bottom: 0.3em">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0002-1.html">AI22-0002-1</A></I>} 
 if the <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN> 
 is not an indexed aggregate, <span class="delete6">by assignment from 
-the Empty constant,&nbsp;</span>or from a call on the Empty function specified 
+the Empty constant, or&nbsp;</span>from a call on the Empty function specified 
 in the Aggregate aspect. In the case of an Empty function with a formal 
 parameter, the actual parameter has the following value:</div>
 <div class="paranum"><a name="p36">36/5</a></div>
@@ -411,12 +485,12 @@ the value zero;</div>
 the number of <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN>s;</div>
 <div class="paranum"><a name="p38">38/6</a></div>
 <div class="Indented2Bulleted"><SPAN STYLE="font-size: 80%"><I>This paragraph 
-was deleted.</I></SPAN>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0018-1.TXT">AI22-0018-1</A></I>} 
+was deleted.</I></SPAN>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0018-1.html">AI22-0018-1</A></I>} 
 <span class="delete6">for a <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0126">named_container_aggregate</A></SPAN> 
 without an <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0131">iterated_element_association</A></SPAN>, 
 the number of <I>key_</I><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN>s;</span></div>
 <div class="paranum"><a name="p39">39/6</a></div>
-<div class="Indented2Bulleted">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0018-1.TXT">AI22-0018-1</A></I>} 
+<div class="Indented2Bulleted">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0018-1.html">AI22-0018-1</A></I>} 
 for a <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0126">named_container_aggregate</A></SPAN> 
 where <span class="insert6">each</span><span class="delete6">&nbsp;every</span> 
 <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0131">iterated_element_association</A></SPAN><span class="insert6">, 
@@ -442,7 +516,7 @@ the anonymous object <I>A</I> is the result;</div>
 <div class="paranum"><a name="p43">43/5</a></div>
 <div class="Bulleted">for a <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0125">positional_container_aggregate</A></SPAN> 
 of a type with a specified Add_Unnamed procedure, each <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN> 
-is evaluated in an arbitrary order,<A NAME="I3043"></A> and the Add_Unnamed 
+is evaluated in an arbitrary order,<A NAME="I3086"></A> and the Add_Unnamed 
 procedure is invoked in sequence with the anonymous object <I>A</I> as 
 the first parameter and the result of evaluating each <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN> 
 as the second parameter, in the order of the <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN>s;</div>
@@ -450,9 +524,9 @@ as the second parameter, in the order of the <SPAN Class="swiss"><A HREF="AA-4-4
 <div class="Bulleted">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0031-1.TXT">AI22-0031-1</A></I>} 
 for a <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0125">positional_container_aggregate</A></SPAN> 
 that is an indexed aggregate, each <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN> 
-is evaluated in an arbitrary order,<A NAME="I3044"></A> and the Assign_Indexed 
-procedure is invoked <span class="insert6">once for each expression of 
-the <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN></span><span class="delete6">&nbsp;in 
+is evaluated in an arbitrary order,<A NAME="I3087"></A> and the Assign_Indexed 
+procedure is invoked <span class="insert6">once for each <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN> 
+of the <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN></span><span class="delete6">&nbsp;in 
 sequence</span> with the anonymous object <I>A</I> as the first parameter, 
 the key value as the second parameter, computed by starting with the 
 low bound of the subtype of the key formal parameter of the Assign_Indexed 
@@ -463,7 +537,7 @@ as the third parameter;</div>
 <div class="paranum"><a name="p45">45/5</a></div>
 <div class="Bulleted" style="margin-bottom: 0.3em">for a <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0126">named_container_aggregate</A></SPAN> 
 for a type with an Add_Named procedure in its Aggregate aspect, the <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0128">container_element_association</A></SPAN>s 
-are evaluated in an arbitrary order:<A NAME="I3045"></A>&nbsp;</div>
+are evaluated in an arbitrary order:<A NAME="I3088"></A>&nbsp;</div>
 <div class="paranum"><a name="p46">46/6</a></div>
 <div class="Indented2Bulleted">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0031-1.TXT">AI22-0031-1</A></I>} 
 for a <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0128">container_element_association</A></SPAN> 
@@ -473,8 +547,8 @@ of the list in an arbitrary order, the <SPAN Class="swiss"><A HREF="AA-4-3-5.htm
 is evaluated<span class="insert6">,</span><span class="delete6">&nbsp;as is 
 the <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN> 
 of the <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0128">container_element_association</A></SPAN> 
-(in an arbitrary order),<A NAME="I3046"></A></span> and the Add_Named 
-procedure is invoked once for each value covered by the <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0130">key_choice</A></SPAN><span class="insert6">&nbsp;(in an arbitrary order),<A NAME="I3047"></A></span><span class="delete6">,</span> 
+(in an arbitrary order),<A NAME="I3089"></A></span> and the Add_Named 
+procedure is invoked once for each value covered by the <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0130">key_choice</A></SPAN><span class="insert6">&nbsp;(in an arbitrary order),<A NAME="I3090"></A></span><span class="delete6">,</span> 
 with the anonymous object <I>A</I> as the first parameter, the value 
 from the <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0130">key_choice</A></SPAN> 
 as the second parameter, and the result of evaluating the <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN> 
@@ -533,97 +607,118 @@ of the <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0131">iterated_element_associ
 </div>
 <div class="paranum"><a name="p54">54/6</a></div>
 <div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0031-1.TXT">AI22-0031-1</A></I>} 
+<span class="insert6"></span>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0111-1.html">AI22-0111-1</A></I>} 
 <span class="insert6">When the above wording says that a subprogram is 
 invoked or called, this is a subprogram call as defined in <A HREF="AA-6-4.html">6.4</A>, 
 with parameter associations as specified in the wording evaluated as 
 defined <A HREF="AA-6-4-1.html">6.4.1</A>. [In particular, this means 
 that the parameters are converted to the subtype of the formal parameter 
-(which can raise an exception &mdash; see <A HREF="AA-4-6.html">4.6</A>).<A NAME="I3048"></A>]</span></div>
+(which can raise an exception &mdash; see <A HREF="AA-4-6.html">4.6</A>).<A NAME="I3091"></A>] 
+Furthermore, if the expected type is class-wide, the semantics defined 
+in <A HREF="AA-3-9-2.html">3.9.2</A> for tag-indeterminate expressions 
+apply to the call on Empty or New_Indexed, and those for controlling 
+tags apply to the (dispatching) calls on Add_Named, Add_Unnamed, and 
+Assign_Indexed.</span></div>
+<div class="paranum"><a name="p54.a">54.a/6</a></div>
+<div class="Annotations"><span class="insert6"><B>Ramification:&nbsp;</B></span>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0111-1.html">AI22-0111-1</A></I>} 
+<span class="insert6">For a <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0123">container_aggregate</A></SPAN> 
+whose expected type is class-wide, the tag (and thus the specific type) 
+of the anonymous object <I>A</I> that is the result of the <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN> 
+is determined by the tag-indeterminate call on Empty or New_Indexed. 
+The other operations dispatch using that controlling tag.</span>&nbsp;</div>
+<div class="paranum"><a name="p55">55/6</a></div>
+<div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0067-1.html">AI22-0067-1</A></I>} 
+<span class="insert6">The nominal subtype for an indexed aggregate is 
+the return subtype of the New_Indexed function. The nominal subtype for 
+any other container aggregate is the return subtype of the Empty function.</span> 
+</div>
 
 <H4 Class="centered">Examples</H4>
-<div class="paranum"><a name="p55">55/5</a></div>
+<div class="paranum"><a name="p56">56/5</a></div>
 <div class="Normal" style="margin-bottom: 0.4em">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0212-1.TXT">AI12-0212-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0429-1.TXT">AI12-0429-1</A></I>} 
 <I>Examples of specifying the Aggregate aspect for a Set_Type, a Map_Type, 
 and a Vector_Type:</I></div>
-<div class="paranum"><a name="p56">56/5</a></div>
+<div class="paranum"><a name="p57">57/5</a></div>
 <div class="Examples">&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;<SPAN Class="roman"><I>Set_Type&nbsp;is&nbsp;a&nbsp;set-like&nbsp;container&nbsp;type.</I></SPAN><BR>
 &nbsp;&nbsp;&nbsp;<B>type</B>&nbsp;Set_Type&nbsp;<B>is&nbsp;private</B><BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>with</B>&nbsp;Aggregate&nbsp;=&gt;&nbsp;(Empty&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;Empty_Set,<BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add_Unnamed&nbsp;=&gt;&nbsp;Include);<BR>
 &nbsp;&nbsp;&nbsp;<B>function</B>&nbsp;Empty_Set&nbsp;<B>return</B>&nbsp;Set_Type;</div>
-<div class="paranum"><a name="p57">57/5</a></div>
-<div class="Examples">&nbsp;&nbsp;&nbsp;<B>subtype</B>&nbsp;Small_Int&nbsp;<B>is</B>&nbsp;Integer&nbsp;<B>range</B>&nbsp;-1000..1000;</div>
 <div class="paranum"><a name="p58">58/5</a></div>
-<div class="Examples">&nbsp;&nbsp;&nbsp;<B>procedure</B>&nbsp;Include&nbsp;(S&nbsp;:&nbsp;<B>in&nbsp;out</B>&nbsp;Set_Type;&nbsp;N&nbsp;:&nbsp;<B>in</B>&nbsp;Small_Int);</div>
+<div class="Examples">&nbsp;&nbsp;&nbsp;<B>subtype</B>&nbsp;Small_Int&nbsp;<B>is</B>&nbsp;Integer&nbsp;<B>range</B>&nbsp;-1000..1000;</div>
 <div class="paranum"><a name="p59">59/5</a></div>
+<div class="Examples">&nbsp;&nbsp;&nbsp;<B>procedure</B>&nbsp;Include&nbsp;(S&nbsp;:&nbsp;<B>in&nbsp;out</B>&nbsp;Set_Type;&nbsp;N&nbsp;:&nbsp;<B>in</B>&nbsp;Small_Int);</div>
+<div class="paranum"><a name="p60">60/5</a></div>
 <div class="Examples">&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;<SPAN Class="roman"><I>Map_Type&nbsp;is&nbsp;a&nbsp;map-like&nbsp;container&nbsp;type.</I></SPAN><BR>
 &nbsp;&nbsp;&nbsp;<B>type</B>&nbsp;Map_Type&nbsp;<B>is&nbsp;private</B><BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>with</B>&nbsp;Aggregate&nbsp;=&gt;&nbsp;&nbsp;(Empty&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;Empty_Map,<BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add_Named&nbsp;=&gt;&nbsp;Add_To_Map);</div>
-<div class="paranum"><a name="p60">60/5</a></div>
+<div class="paranum"><a name="p61">61/5</a></div>
 <div class="Examples">&nbsp;&nbsp;&nbsp;<B>procedure</B>&nbsp;Add_To_Map&nbsp;(M&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;<B>in&nbsp;out</B>&nbsp;Map_Type;<BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Key&nbsp;&nbsp;&nbsp;:&nbsp;<B>in</B>&nbsp;Integer;<BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Value&nbsp;:&nbsp;<B>in</B>&nbsp;String);</div>
-<div class="paranum"><a name="p61">61/5</a></div>
-<div class="Examples">&nbsp;&nbsp;&nbsp;Empty_Map&nbsp;:&nbsp;<B>constant</B>&nbsp;Map_Type;</div>
-<div class="paranum"><a name="p62">62/5</a></div>
+<div class="paranum"><a name="p62">62/6</a></div>
+<div class="Examples">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0098-1.html">AI22-0098-1</A></I>} 
+&nbsp;&nbsp;&nbsp;<span class="insert6"><B>function</B>&nbsp;</span>Empty_Map&nbsp;<span class="insert6"><B>return</B></span><span class="delete6">:&nbsp;<B>constant</B></span>&nbsp;Map_Type;</div>
+<div class="paranum"><a name="p63">63/5</a></div>
 <div class="Examples">&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;<SPAN Class="roman"><I>Vector_Type&nbsp;is&nbsp;an&nbsp;extensible&nbsp;array-like&nbsp;container&nbsp;type.</I></SPAN><BR>
 &nbsp;&nbsp;&nbsp;<B>type</B>&nbsp;Vector_Type&nbsp;<B>is&nbsp;private</B><BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>with</B>&nbsp;Aggregate&nbsp;=&gt;&nbsp;(Empty&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;Empty_Vector,<BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add_Unnamed&nbsp;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;Append_One,<BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New_Indexed&nbsp;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;New_Vector,<BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Assign_Indexed&nbsp;=&gt;&nbsp;Assign_Element);</div>
-<div class="paranum"><a name="p63">63/5</a></div>
-<div class="Examples">&nbsp;&nbsp;&nbsp;<B>function</B>&nbsp;Empty_Vector&nbsp;(Capacity&nbsp;:&nbsp;Integer&nbsp;:=&nbsp;0)&nbsp;<B>return</B>&nbsp;Vector_Type;</div>
-<div class="paranum"><a name="p64">64/5</a></div>
-<div class="Examples">&nbsp;&nbsp;&nbsp;<B>procedure</B>&nbsp;Append_One&nbsp;(V&nbsp;:&nbsp;<B>in&nbsp;out</B>&nbsp;Vector_Type;&nbsp;New_Item&nbsp;:&nbsp;<B>in</B>&nbsp;String);</div>
+<div class="paranum"><a name="p64">64/6</a></div>
+<div class="Examples">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0098-1.html">AI22-0098-1</A></I>} 
+&nbsp;&nbsp;&nbsp;<B>function</B>&nbsp;Empty_Vector&nbsp;(Capacity&nbsp;:&nbsp;<span class="insert6">Natural</span><span class="delete6">&nbsp;Integer</span>&nbsp;:=&nbsp;0)&nbsp;<B>return</B>&nbsp;Vector_Type;</div>
 <div class="paranum"><a name="p65">65/5</a></div>
+<div class="Examples">&nbsp;&nbsp;&nbsp;<B>procedure</B>&nbsp;Append_One&nbsp;(V&nbsp;:&nbsp;<B>in&nbsp;out</B>&nbsp;Vector_Type;&nbsp;New_Item&nbsp;:&nbsp;<B>in</B>&nbsp;String);</div>
+<div class="paranum"><a name="p66">66/5</a></div>
 <div class="Examples">&nbsp;&nbsp;&nbsp;<B>procedure</B>&nbsp;Assign_Element&nbsp;(V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;<B>in&nbsp;out</B>&nbsp;Vector_Type;<BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Index&nbsp;:&nbsp;<B>in</B>&nbsp;Positive;<BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Item&nbsp;&nbsp;:&nbsp;<B>in</B>&nbsp;String);</div>
-<div class="paranum"><a name="p66">66/5</a></div>
+<div class="paranum"><a name="p67">67/5</a></div>
 <div class="Examples">&nbsp;&nbsp;&nbsp;<B>function</B>&nbsp;New_Vector&nbsp;(First,&nbsp;Last&nbsp;:&nbsp;Positive)&nbsp;<B>return</B>&nbsp;Vector_Type<BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>with</B>&nbsp;Pre&nbsp;=&gt;&nbsp;First&nbsp;=&nbsp;Positive'First;<BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;<SPAN Class="roman"><I>Vectors&nbsp;are&nbsp;always&nbsp;indexed&nbsp;starting&nbsp;at&nbsp;the</I></SPAN><BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;<SPAN Class="roman"><I>lower&nbsp;bound&nbsp;of&nbsp;their&nbsp;index&nbsp;subtype.</I></SPAN></div>
-<div class="paranum"><a name="p67">67/5</a></div>
-<div class="Examples">--&nbsp;<SPAN Class="roman"><I>Private&nbsp;part&nbsp;not&nbsp;shown.</I></SPAN></div>
 <div class="paranum"><a name="p68">68/5</a></div>
+<div class="Examples">--&nbsp;<SPAN Class="roman"><I>Private&nbsp;part&nbsp;not&nbsp;shown.</I></SPAN></div>
+<div class="paranum"><a name="p69">69/5</a></div>
 <div class="Normal" style="margin-bottom: 0.4em">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0212-1.TXT">AI12-0212-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0429-1.TXT">AI12-0429-1</A></I>} 
 <I>Examples of container aggregates for Set_Type, Map_Type, and Vector_Type:</I></div>
-<div class="paranum"><a name="p69">69/5</a></div>
+<div class="paranum"><a name="p70">70/5</a></div>
 <div class="Examples">--&nbsp;&nbsp;<SPAN Class="roman"><I>Example&nbsp;aggregates&nbsp;using&nbsp;Set_Type.</I></SPAN><BR>
 S&nbsp;:&nbsp;Set_Type;</div>
-<div class="paranum"><a name="p70">70/5</a></div>
+<div class="paranum"><a name="p71">71/5</a></div>
 <div class="Examples">--&nbsp;&nbsp;<SPAN Class="roman"><I>Assign&nbsp;the&nbsp;empty&nbsp;set&nbsp;to&nbsp;S:</I></SPAN><BR>
 S&nbsp;:=&nbsp;[];</div>
-<div class="paranum"><a name="p71">71/5</a></div>
+<div class="paranum"><a name="p72">72/5</a></div>
 <div class="Examples">--&nbsp;&nbsp;<SPAN Class="roman"><I>Is&nbsp;equivalent&nbsp;to:</I></SPAN><BR>
 S&nbsp;:=&nbsp;Empty_Set;</div>
-<div class="paranum"><a name="p72">72/5</a></div>
+<div class="paranum"><a name="p73">73/5</a></div>
 <div class="Examples">--&nbsp;&nbsp;<SPAN Class="roman"><I>A&nbsp;positional&nbsp;set&nbsp;aggregate:</I></SPAN><BR>
 S&nbsp;:=&nbsp;[1,&nbsp;2];</div>
-<div class="paranum"><a name="p73">73/5</a></div>
+<div class="paranum"><a name="p74">74/5</a></div>
 <div class="Examples">--&nbsp;&nbsp;<SPAN Class="roman"><I>Is&nbsp;equivalent&nbsp;to:</I></SPAN><BR>
 S&nbsp;:=&nbsp;Empty_Set;<BR>
 Include&nbsp;(S,&nbsp;1);<BR>
 Include&nbsp;(S,&nbsp;2);</div>
-<div class="paranum"><a name="p74">74/5</a></div>
+<div class="paranum"><a name="p75">75/5</a></div>
 <div class="Examples">--&nbsp;&nbsp;<SPAN Class="roman"><I>A&nbsp;set&nbsp;aggregate&nbsp;with&nbsp;an&nbsp;</I></SPAN><SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0131">iterated_element_association</A></SPAN><SPAN Class="roman"><I>:</I></SPAN><BR>
 S&nbsp;:=&nbsp;[<B>for</B>&nbsp;Item&nbsp;<B>in</B>&nbsp;1&nbsp;..&nbsp;5&nbsp;=&gt;&nbsp;Item&nbsp;*&nbsp;2];</div>
-<div class="paranum"><a name="p75">75/5</a></div>
+<div class="paranum"><a name="p76">76/5</a></div>
 <div class="Examples">--&nbsp;&nbsp;<SPAN Class="roman"><I>Is&nbsp;equivalent&nbsp;to:</I></SPAN><BR>
 S&nbsp;:=&nbsp;Empty_Set;<BR>
 <B>for</B>&nbsp;Item&nbsp;<B>in</B>&nbsp;1&nbsp;..&nbsp;5&nbsp;<B>loop</B><BR>
 &nbsp;&nbsp;&nbsp;Include&nbsp;(S,&nbsp;Item&nbsp;*&nbsp;2);<BR>
 <B>end&nbsp;loop</B>;</div>
-<div class="paranum"><a name="p76">76/5</a></div>
+<div class="paranum"><a name="p77">77/5</a></div>
 <div class="Examples">--&nbsp;&nbsp;<SPAN Class="roman"><I>A&nbsp;set&nbsp;aggregate&nbsp;consisting&nbsp;of&nbsp;two&nbsp;</I></SPAN><SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0131">iterated_element_association</A></SPAN><SPAN Class="roman"><I>s:</I></SPAN><BR>
 S&nbsp;:=&nbsp;[<B>for</B>&nbsp;Item&nbsp;<B>in</B>&nbsp;1&nbsp;..&nbsp;5&nbsp;=&gt;&nbsp;Item,<BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>for</B>&nbsp;Item&nbsp;<B>in</B>&nbsp;1&nbsp;..&nbsp;5&nbsp;=&gt;&nbsp;-Item];</div>
-<div class="paranum"><a name="p77">77/5</a></div>
+<div class="paranum"><a name="p78">78/5</a></div>
 <div class="Examples">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0379-1.TXT">AI12-0379-1</A></I>} 
 --&nbsp;&nbsp;<SPAN Class="roman"><I>Is&nbsp;equivalent&nbsp;(assuming&nbsp;set&nbsp;semantics)&nbsp;to:</I></SPAN><BR>
 S&nbsp;:=&nbsp;Empty_Set;<BR>
@@ -633,66 +728,66 @@ S&nbsp;:=&nbsp;Empty_Set;<BR>
 <B>for</B>&nbsp;Item&nbsp;<B>in</B>&nbsp;-5&nbsp;..&nbsp;-1&nbsp;<B>loop</B><BR>
 &nbsp;&nbsp;&nbsp;Include&nbsp;(S,&nbsp;Item);<BR>
 <B>end&nbsp;loop</B>;</div>
-<div class="paranum"><a name="p78">78/5</a></div>
+<div class="paranum"><a name="p79">79/5</a></div>
 <div class="Examples">--&nbsp;&nbsp;<SPAN Class="roman"><I>Example&nbsp;aggregates&nbsp;using&nbsp;Map_Type.</I></SPAN><BR>
 M&nbsp;:&nbsp;Map_Type;</div>
-<div class="paranum"><a name="p79">79/5</a></div>
+<div class="paranum"><a name="p80">80/5</a></div>
 <div class="Examples">--&nbsp;&nbsp;<SPAN Class="roman"><I>A&nbsp;simple&nbsp;named&nbsp;map&nbsp;aggregate:</I></SPAN><BR>
 M&nbsp;:=&nbsp;[12&nbsp;=&gt;&nbsp;&quot;house&quot;,&nbsp;14&nbsp;=&gt;&nbsp;&quot;beige&quot;];</div>
-<div class="paranum"><a name="p80">80/5</a></div>
+<div class="paranum"><a name="p81">81/5</a></div>
 <div class="Examples">--&nbsp;&nbsp;<SPAN Class="roman"><I>Is&nbsp;equivalent&nbsp;to:</I></SPAN><BR>
 M&nbsp;:=&nbsp;Empty_Map;<BR>
 Add_To_Map&nbsp;(M,&nbsp;12,&nbsp;&quot;house&quot;);<BR>
 Add_To_Map&nbsp;(M,&nbsp;14,&nbsp;&quot;beige&quot;);</div>
-<div class="paranum"><a name="p81">81/5</a></div>
+<div class="paranum"><a name="p82">82/5</a></div>
 <div class="Examples">--&nbsp;&nbsp;<SPAN Class="roman"><I>Define&nbsp;a&nbsp;table&nbsp;of&nbsp;pairs:</I></SPAN><BR>
 <B>type</B>&nbsp;Pair&nbsp;<B>is&nbsp;record</B><BR>
 &nbsp;&nbsp;&nbsp;Key&nbsp;:&nbsp;Integer;<BR>
 &nbsp;&nbsp;&nbsp;Value&nbsp;:&nbsp;<B>access&nbsp;constant</B>&nbsp;String;<BR>
 <B>end&nbsp;record</B>;</div>
-<div class="paranum"><a name="p82">82/5</a></div>
+<div class="paranum"><a name="p83">83/5</a></div>
 <div class="Examples">Table&nbsp;:&nbsp;<B>constant&nbsp;array</B>(Positive&nbsp;<B>range</B>&nbsp;&lt;&gt;)&nbsp;<B>of</B>&nbsp;Pair&nbsp;:=<BR>
 &nbsp;&nbsp;&nbsp;[(Key&nbsp;=&gt;&nbsp;33,&nbsp;Value&nbsp;=&gt;&nbsp;<B>new</B>&nbsp;String'(&quot;a&nbsp;nice&nbsp;string&quot;)),<BR>
 &nbsp;&nbsp;&nbsp;&nbsp;(Key&nbsp;=&gt;&nbsp;44,&nbsp;Value&nbsp;=&gt;&nbsp;<B>new</B>&nbsp;String'(&quot;an&nbsp;even&nbsp;better&nbsp;string&quot;))];</div>
-<div class="paranum"><a name="p83">83/5</a></div>
+<div class="paranum"><a name="p84">84/5</a></div>
 <div class="Examples">--&nbsp;&nbsp;<SPAN Class="roman"><I>A&nbsp;map&nbsp;aggregate&nbsp;using&nbsp;an&nbsp;</I></SPAN><SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0131">iterated_element_association</A></SPAN><BR>
 --&nbsp;&nbsp;<SPAN Class="roman"><I>and&nbsp;a&nbsp;key_</I></SPAN><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN><SPAN Class="roman"><I>,&nbsp;built&nbsp;from&nbsp;from&nbsp;a&nbsp;table&nbsp;of&nbsp;key/value&nbsp;pairs:</I></SPAN><BR>
 M&nbsp;:=&nbsp;[<B>for</B>&nbsp;P&nbsp;<B>of</B>&nbsp;Table&nbsp;<B>use</B>&nbsp;P.Key&nbsp;=&gt;&nbsp;P.Value.<B>all</B>];</div>
-<div class="paranum"><a name="p84">84/5</a></div>
+<div class="paranum"><a name="p85">85/5</a></div>
 <div class="Examples">--&nbsp;&nbsp;<SPAN Class="roman"><I>Is&nbsp;equivalent&nbsp;to:</I></SPAN><BR>
 M&nbsp;:=&nbsp;Empty_Map;<BR>
 <B>for</B>&nbsp;P&nbsp;<B>of</B>&nbsp;Table&nbsp;<B>loop</B><BR>
 &nbsp;&nbsp;&nbsp;Add_To_Map&nbsp;(M,&nbsp;P.Key,&nbsp;P.Value.<B>all</B>);<BR>
 <B>end&nbsp;loop</B>;</div>
-<div class="paranum"><a name="p85">85/5</a></div>
+<div class="paranum"><a name="p86">86/5</a></div>
 <div class="Examples">--&nbsp;&nbsp;<SPAN Class="roman"><I>Create&nbsp;an&nbsp;image&nbsp;table&nbsp;for&nbsp;an&nbsp;array&nbsp;of&nbsp;integers:</I></SPAN><BR>
 Keys&nbsp;:&nbsp;<B>constant&nbsp;array</B>(Positive&nbsp;<B>range</B>&nbsp;&lt;&gt;)&nbsp;<B>of</B>&nbsp;Integer&nbsp;:=&nbsp;[2,&nbsp;3,&nbsp;5,&nbsp;7,&nbsp;11];</div>
-<div class="paranum"><a name="p86">86/5</a></div>
+<div class="paranum"><a name="p87">87/5</a></div>
 <div class="Examples">--&nbsp;&nbsp;<SPAN Class="roman"><I>A&nbsp;map&nbsp;aggregate&nbsp;where&nbsp;the&nbsp;values&nbsp;produced&nbsp;by&nbsp;the</I></SPAN><BR>
 --&nbsp;&nbsp;<SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0131">iterated_element_association</A></SPAN><SPAN Class="roman"><I>&nbsp;are&nbsp;of&nbsp;the&nbsp;same&nbsp;type&nbsp;as&nbsp;the&nbsp;key</I></SPAN><BR>
 --&nbsp;&nbsp;<SPAN Class="roman"><I>(hence&nbsp;a&nbsp;separate&nbsp;key_</I></SPAN><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN><SPAN Class="roman"><I>&nbsp;is&nbsp;unnecessary):</I></SPAN><BR>
 M&nbsp;:=&nbsp;[<B>for</B>&nbsp;Key&nbsp;<B>of</B>&nbsp;Keys&nbsp;=&gt;&nbsp;Integer'Image&nbsp;(Key)];</div>
-<div class="paranum"><a name="p87">87/5</a></div>
+<div class="paranum"><a name="p88">88/5</a></div>
 <div class="Examples">--&nbsp;&nbsp;<SPAN Class="roman"><I>Is&nbsp;equivalent&nbsp;to:</I></SPAN><BR>
 M&nbsp;:=&nbsp;Empty_Map;<BR>
 <B>for</B>&nbsp;Key&nbsp;<B>of</B>&nbsp;Keys&nbsp;<B>loop</B><BR>
 &nbsp;&nbsp;&nbsp;Add_To_Map&nbsp;(M,&nbsp;Key,&nbsp;Integer'Image&nbsp;(Key));<BR>
 <B>end&nbsp;loop</B>;</div>
-<div class="paranum"><a name="p88">88/5</a></div>
+<div class="paranum"><a name="p89">89/5</a></div>
 <div class="Examples">--&nbsp;&nbsp;<SPAN Class="roman"><I>Example&nbsp;aggregates&nbsp;using&nbsp;Vector_Type.</I></SPAN><BR>
 V&nbsp;:&nbsp;Vector_Type;</div>
-<div class="paranum"><a name="p89">89/5</a></div>
+<div class="paranum"><a name="p90">90/5</a></div>
 <div class="Examples">--&nbsp;&nbsp;<SPAN Class="roman"><I>A&nbsp;positional&nbsp;vector&nbsp;aggregate:</I></SPAN><BR>
 V&nbsp;:=&nbsp;[&quot;abc&quot;,&nbsp;&quot;def&quot;];</div>
-<div class="paranum"><a name="p90">90/5</a></div>
+<div class="paranum"><a name="p91">91/5</a></div>
 <div class="Examples">--&nbsp;&nbsp;<SPAN Class="roman"><I>Is&nbsp;equivalent&nbsp;to:</I></SPAN><BR>
 V&nbsp;:=&nbsp;Empty_Vector&nbsp;(2);<BR>
 Append_One&nbsp;(V,&nbsp;&quot;abc&quot;);<BR>
 Append_One&nbsp;(V,&nbsp;&quot;def&quot;);</div>
-<div class="paranum"><a name="p91">91/5</a></div>
+<div class="paranum"><a name="p92">92/5</a></div>
 <div class="Examples">--&nbsp;&nbsp;<SPAN Class="roman"><I>An&nbsp;indexed&nbsp;vector&nbsp;aggregate:</I></SPAN><BR>
 V&nbsp;:=&nbsp;[1&nbsp;=&gt;&nbsp;&quot;this&quot;,&nbsp;2&nbsp;=&gt;&nbsp;&quot;is&quot;,&nbsp;3&nbsp;=&gt;&nbsp;&quot;a&quot;,&nbsp;4&nbsp;=&gt;&nbsp;&quot;test&quot;];</div>
-<div class="paranum"><a name="p92">92/5</a></div>
+<div class="paranum"><a name="p93">93/5</a></div>
 <div class="Examples">--&nbsp;&nbsp;<SPAN Class="roman"><I>Is&nbsp;equivalent&nbsp;to:</I></SPAN><BR>
 V&nbsp;:=&nbsp;New_Vector&nbsp;(1,&nbsp;4);<BR>
 Assign_Element&nbsp;(V,&nbsp;1,&nbsp;&quot;this&quot;);<BR>
@@ -701,14 +796,14 @@ Assign_Element&nbsp;(V,&nbsp;3,&nbsp;&quot;a&quot;);<BR>
 Assign_Element&nbsp;(V,&nbsp;4,&nbsp;&quot;test&quot;);</div>
 
 <H4 Class="centered">Extensions to Ada 2012</H4>
-<div class="paranum"><a name="p92.a">92.a/5</a></div>
+<div class="paranum"><a name="p93.a">93.a/5</a></div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0212-1.TXT">AI12-0212-1</A></I>} 
-<A NAME="I3049"></A>Container aggregates are new.&nbsp;</div>
+<A NAME="I3092"></A>Container aggregates are new.&nbsp;</div>
 
 <H4 Class="centered">Inconsistencies With Ada 2022</H4>
-<div class="paranum"><a name="p92.b">92.b/6</a></div>
+<div class="paranum"><a name="p93.b">93.b/6</a></div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0031-1.TXT">AI22-0031-1</A></I>} 
-<span class="insert6"><A NAME="I3050"></A><B>Corrigendum:</B> Expressions 
+<span class="insert6"><A NAME="I3093"></A><B>Corrigendum:</B> Expressions 
 in a <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0126">named_container_aggregate</A></SPAN> 
 are evaluated once for each key value. This is consistent with other 
 kinds of <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN>. 
@@ -719,15 +814,15 @@ depend on each component having a separate evaluation, so this change
 is more likely to fix a bug than cause one.</span>&nbsp;</div>
 
 <H4 Class="centered">Incompatibilities With Ada 2022</H4>
-<div class="paranum"><a name="p92.c">92.c/6</a></div>
-<div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0002-1.TXT">AI22-0002-1</A></I>} 
-<span class="insert6"><A NAME="I3051"></A><B>Corrigendum:</B> Unlike 
+<div class="paranum"><a name="p93.c">93.c/6</a></div>
+<div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0002-1.html">AI22-0002-1</A></I>} 
+<span class="insert6"><A NAME="I3094"></A><B>Corrigendum:</B> Unlike 
 original Ada 2022, Empty can only be given by a function, not by a constant, 
 as a constant does not make sense when the associated type is derived. 
 As a new Ada 2022 feature, the specification of container aggregates 
 should be rare, and the fix is easy: just replace the constant by an 
 expression function returning the constant.</span></div>
-<div class="paranum"><a name="p92.d">92.d/6</a></div>
+<div class="paranum"><a name="p93.d">93.d/6</a></div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0021-1.TXT">AI22-0021-1</A></I>} 
 <span class="insert6"><B>Corrigendum:</B>Adjusted the rules about resolution 
 of subprograms to avoid depending upon properties like limitedness of 
@@ -737,7 +832,7 @@ caused the aggregate implementation to be illegal. In both of these cases,
 unusual programs that were legal in original Ada 2022 are illegal in 
 Ada 202y. As this is a new Ada 2022 feature, and the situations involved 
 are unlikely, it is not expected that this will affect any existing code.</span></div>
-<div class="paranum"><a name="p92.e">92.e/6</a></div>
+<div class="paranum"><a name="p93.e">93.e/6</a></div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0032-1.TXT">AI22-0032-1</A></I>} 
 <span class="insert6"><B>Corrigendum:</B>The subprograms specified for 
 an Aggregate aspect cannot be abstract unless the associated type is 
@@ -748,27 +843,40 @@ an aggregate is used for the type (usually causing internal errors in
 compilers).</span> &nbsp;</div>
 
 <H4 Class="centered">Extensions to Ada 2022</H4>
-<div class="paranum"><a name="p92.f">92.f/6</a></div>
-<div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0018-1.TXT">AI22-0018-1</A></I>} 
-<span class="insert6"><A NAME="I3052"></A><B>Corrigendum:</B>A <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0126">named_container_aggregate</A></SPAN> 
+<div class="paranum"><a name="p93.f">93.f/6</a></div>
+<div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0018-1.html">AI22-0018-1</A></I>} 
+<span class="insert6"><A NAME="I3095"></A><B>Corrigendum:</B>A <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0126">named_container_aggregate</A></SPAN> 
 with a <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0130">key_choice</A></SPAN> 
 with a <SPAN Class="swiss"><A HREF="AA-3-6-1.html#S0058">discrete_range</A></SPAN> 
 no longer has to be an indexed aggregate. There was no reason for this 
-restriction.</span>&nbsp;</div>
+restriction.</span></div>
+<div class="paranum"><a name="p93.g">93.g/6</a></div>
+<div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0111-1.html">AI22-0111-1</A></I>} 
+<span class="insert6"><B>Corrigendum:</B>A <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0123">container_aggregate</A></SPAN> 
+can have a class-wide type. The specific type is determined by the tag-indeterminate 
+call on Empty or New_Indexed.</span>&nbsp;</div>
 
 <H4 Class="centered">Wording Changes from Ada 2022</H4>
-<div class="paranum"><a name="p92.g">92.g/6</a></div>
+<div class="paranum"><a name="p93.h">93.h/6</a></div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0031-1.TXT">AI22-0031-1</A></I>} 
 <span class="insert6"><B>Corrigendum:</B> Added wording to clarify that 
 calls defined in this subclause are evaluated as calls are defined in 
 <A HREF="AA-6-4.html">6.4</A>. While this could cause a program to raise 
 an exception where it previously did not, this is just specifying otherwise 
 unspecified behavior and does so as as Ada programmer would expect.</span></div>
-<div class="paranum"><a name="p92.h">92.h/6</a></div>
+<div class="paranum"><a name="p93.i">93.i/6</a></div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0031-1.TXT">AI22-0031-1</A></I>} 
+<span class="insert6"></span>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0085-1.html">AI22-0085-1</A></I>} 
 <span class="insert6"><B>Corrigendum:</B> Increased flexibility by removing 
-an order requirement on the calls to Add_Indexed. This does not require 
-any change to an existing implementation or program.</span>&nbsp;</div>
+an order requirement on the calls to Assign_Indexed. This does not require 
+any change to an existing implementation or program.</span></div>
+<div class="paranum"><a name="p93.j">93.j/6</a></div>
+<div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0067-1.html">AI22-0067-1</A></I>} 
+<span class="insert6"><B>Corrigendum:</B> Defined the properties of the 
+nominal subtype of a container aggregate. This could allow some expressions 
+of <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN>s 
+of unchecked union types to be evaluated without raising Program_Error 
+(see <A HREF="AA-B-3-3.html">B.3.3</A>).</span>&nbsp;</div>
 
 <HR>
 <div style="margin-top: 0.0em; margin-bottom: 0.6em"><A HREF="AA-TOC.html"><IMG SRC="cont.gif" ALT="Contents" BORDER=0></A>&nbsp;

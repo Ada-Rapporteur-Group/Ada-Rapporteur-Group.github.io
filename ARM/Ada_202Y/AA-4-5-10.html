@@ -13,6 +13,8 @@
     DIV.paranum {float: left; font-family: Arial, Helvetica, sans-serif; font-size: 64%; width: 2.8em; margin-left: -0.4em; margin-right: -3.0em; margin-top: 0.2em}
     TT {font-family: "Courier New", monospace}
     DT {display: compact}
+    SPAN.insert6 {text-decoration: underline; color: rgb(0,51,204) }
+    SPAN.delete6 {text-decoration: line-through; color: rgb(0,51,204) }
     A.Bar:link {font-family: Arial, Helvetica, sans-serif; font-style: normal; text-decoration: none; color: rgb(204,204,51)}
     A.Bar:visited {font-family: Arial, Helvetica, sans-serif; font-style: normal; text-decoration: none; color: rgb(204,204,51)}
     DIV.Normal {font-family: "Times New Roman", Times, serif; line-height: 122%; margin-left: 1.8em; margin-bottom: 0.6em}
@@ -27,7 +29,7 @@
     </STYLE>
 </HEAD>
 <BODY TEXT="#000000" BGCOLOR="#FFFFF0" LINK="#000080" VLINK="#330033" ALINK="#0000FF">
-<DIV><SPAN Style="font-size:200%; color: rgb(0,51,153)"><B>Annotated</B></SPAN><SPAN Style="font-size:200%; color: rgb(0,0,102)"><B>&nbsp;Ada Reference Manual</B> (Ada 202y Draft 1)</SPAN> &mdash; <A HREF="AA-TTL.html"><B>Legal Information</B></A></DIV>
+<DIV><SPAN Style="font-size:200%; color: rgb(0,51,153)"><B>Annotated</B></SPAN><SPAN Style="font-size:200%; color: rgb(0,0,102)"><B>&nbsp;Ada Reference Manual</B> (Ada 202y Draft 3)</SPAN> &mdash; <A HREF="AA-TTL.html"><B>Legal Information</B></A></DIV>
 <div style="margin-top: 0.6em; margin-bottom: 0.0em"><A HREF="AA-TOC.html"><IMG SRC="cont.gif" ALT="Contents" BORDER=0></A>&nbsp;
 &nbsp;<A HREF="AA-0-4.html"><IMG SRC="index.gif" ALT="Index" BORDER=0></A>&nbsp;
 &nbsp;<A HREF="AA-STDS.html"><IMG SRC="lib.gif" ALT="References" BORDER=0></A>&nbsp;
@@ -40,7 +42,7 @@
 <div class="paranum"><a name="p1">1/5</a></div>
 <div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0242-1.TXT">AI12-0242-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0262-1.TXT">AI12-0262-1</A></I>} 
-Reduction expressions<A NAME="I3430"></A><A NAME="I3431"></A> provide 
+Reduction expressions<A NAME="I3482"></A><A NAME="I3483"></A> provide 
 a way to map or transform a collection of values into a new set of values, 
 and then summarize the values produced by applying an operation to reduce 
 the set to a single value result. A reduction expression is represented 
@@ -56,23 +58,25 @@ applying an operation to reduce the set to a single value</div>
 <div class="paranum"><a name="p2">2/5</a></div>
 <div class="Indented1">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0242-1.TXT">AI12-0242-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0262-1.TXT">AI12-0262-1</A></I>} 
-<SPAN Class="swiss">reduction_attribute_reference</SPAN><A NAME="I3432"></A><A NAME="S0158"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN><BR>
-&nbsp;&nbsp;&nbsp;&nbsp;<A NAME="I3433"></A><SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0159">value_sequence</A></SPAN>'<A NAME="I3434"></A><SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0160">reduction_attribute_designator</A></SPAN><BR>
-&nbsp;&nbsp;|&nbsp;<A NAME="I3435"></A><SPAN Class="swiss"><A HREF="AA-4-1.html#S0093">prefix</A></SPAN>'<A NAME="I3436"></A><SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0160">reduction_attribute_designator</A></SPAN></div>
+<SPAN Class="swiss">reduction_attribute_reference</SPAN><A NAME="I3484"></A><A NAME="S0158"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN><BR>
+&nbsp;&nbsp;&nbsp;&nbsp;<A NAME="I3485"></A><SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0159">value_sequence</A></SPAN>'<A NAME="I3486"></A><SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0160">reduction_attribute_designator</A></SPAN><BR>
+&nbsp;&nbsp;|&nbsp;<A NAME="I3487"></A><SPAN Class="swiss"><A HREF="AA-4-1.html#S0093">prefix</A></SPAN>'<A NAME="I3488"></A><SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0160">reduction_attribute_designator</A></SPAN></div>
 <div class="paranum"><a name="p3">3/5</a></div>
 <div class="Indented1">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0262-1.TXT">AI12-0262-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0355-2.TXT">AI12-0355-2</A></I>} 
-<SPAN Class="swiss">value_sequence</SPAN><A NAME="I3437"></A><A NAME="S0159"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN><BR>
-&nbsp;&nbsp;&nbsp;&nbsp;'['&nbsp;[<B>parallel</B>[(<A NAME="I3438"></A><SPAN Class="swiss"><A HREF="AA-5-5.html#S0180">chunk_specification</A></SPAN>)]&nbsp;[<A NAME="I3439"></A><SPAN Class="swiss"><A HREF="AA-13-1-1.html#S0346">aspect_specification</A></SPAN>]]<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A NAME="I3440"></A><SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0131">iterated_element_association</A></SPAN>&nbsp;']'</div>
+<SPAN Class="swiss">value_sequence</SPAN><A NAME="I3489"></A><A NAME="S0159"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN><BR>
+&nbsp;&nbsp;&nbsp;&nbsp;'['&nbsp;[<B>parallel</B>[(<A NAME="I3490"></A><SPAN Class="swiss"><A HREF="AA-5-5.html#S0180">chunk_specification</A></SPAN>)]&nbsp;[<A NAME="I3491"></A><SPAN Class="swiss"><A HREF="AA-13-1-1.html#S0346">aspect_specification</A></SPAN>]]<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A NAME="I3492"></A><SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0131">iterated_element_association</A></SPAN>&nbsp;']'</div>
 <div class="paranum"><a name="p4">4/5</a></div>
 <div class="Indented1">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0262-1.TXT">AI12-0262-1</A></I>} 
-<SPAN Class="swiss">reduction_attribute_designator</SPAN><A NAME="I3441"></A><A NAME="S0160"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN><BR>
-&nbsp;&nbsp;&nbsp;&nbsp;<I>reduction_</I><A NAME="I3442"></A><SPAN Class="swiss"><A HREF="AA-2-3.html#S0002">identifier</A></SPAN>(<A NAME="I3443"></A><SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0161">reduction_specification</A></SPAN>)</div>
-<div class="paranum"><a name="p5">5/5</a></div>
+<SPAN Class="swiss">reduction_attribute_designator</SPAN><A NAME="I3493"></A><A NAME="S0160"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN><BR>
+&nbsp;&nbsp;&nbsp;&nbsp;<I>reduction_</I><A NAME="I3494"></A><SPAN Class="swiss"><A HREF="AA-2-3.html#S0002">identifier</A></SPAN>(<A NAME="I3495"></A><SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0161">reduction_specification</A></SPAN>)</div>
+<div class="paranum"><a name="p5">5/6</a></div>
 <div class="Indented1">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0262-1.TXT">AI12-0262-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0348-1.TXT">AI12-0348-1</A></I>} 
-<SPAN Class="swiss">reduction_specification</SPAN><A NAME="I3444"></A><A NAME="S0161"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN><I>reducer_</I><A NAME="I3445"></A><SPAN Class="swiss"><A HREF="AA-4-1.html#S0091">name</A></SPAN>,&nbsp;<I>initial_value_</I><A NAME="I3446"></A><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN></div>
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0081-1.html">AI22-0081-1</A></I>} 
+<SPAN Class="swiss">reduction_specification</SPAN><A NAME="I3496"></A><A NAME="S0161"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN><I>reducer_</I><A NAME="I3497"></A><SPAN Class="swiss"><A HREF="AA-4-1.html#S0091">name</A></SPAN>,&nbsp;<I>initial_value_</I><A NAME="I3498"></A><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN><span class="insert6"><BR>
+&nbsp;&nbsp;|&nbsp;[Reducer&nbsp;=&gt;&nbsp;]<I>reducer_</I><A NAME="I3499"></A><SPAN Class="swiss"><A HREF="AA-4-1.html#S0091">name</A></SPAN>,&nbsp;Initial_Value&nbsp;=&gt;&nbsp;<I>initial_value_</I><A NAME="I3500"></A><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN></span></div>
 <div class="paranum"><a name="p6">6/5</a></div>
 <div class="Indented1">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0250-1.TXT">AI12-0250-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0262-1.TXT">AI12-0262-1</A></I>} 
@@ -98,89 +102,128 @@ shall be an <I>integer_</I><SPAN Class="swiss"><A HREF="AA-4-4.html#S0138">simpl
 <div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0262-1.TXT">AI12-0262-1</A></I>} 
 The expected type for a <SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0158">reduction_attribute_reference</A></SPAN> 
 shall be a single nonlimited type.</div>
-<div class="paranum"><a name="p9">9/5</a></div>
+<div class="paranum"><a name="p9">9/6</a></div>
 <div class="Normal" style="margin-bottom: 0.4em">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0262-1.TXT">AI12-0262-1</A></I>} 
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0011-1.html">AI22-0011-1</A></I>} 
 In the remainder of this subclause, we will refer to nonlimited subtypes 
-<I>Value_Type</I> and <I>Accum_Type</I> of a <SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0158">reduction_attribute_reference</A></SPAN>. 
+<span class="insert6"><I>Value_Subtype</I></span><span class="delete6"><I>&nbsp;Value_Type</I></span> 
+and <span class="insert6"><I>Accum_Subtype</I></span><span class="delete6"><I>&nbsp;Accum_Type</I></span> 
+of a <SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0158">reduction_attribute_reference</A></SPAN>. 
 These subtypes and interpretations of the <SPAN Class="swiss"><A HREF="AA-4-1.html#S0091">name</A></SPAN>s 
 and <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN>s 
 of a <SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0158">reduction_attribute_reference</A></SPAN> 
 are determined by the following rules:</div>
-<div class="paranum"><a name="p9.a">9.a/5</a></div>
-<div class="Annotations"><B>Discussion:&nbsp;</B><I>Accum_Type</I> represents 
-the result of the reduction (the <I>accumulator</I> type), and <I>Value_Type</I> 
-represents the type of the input values to the reduction.&nbsp;</div>
-<div class="paranum"><a name="p10">10/5</a></div>
+<div class="paranum"><a name="p9.a">9.a/6</a></div>
+<div class="Annotations"><B>Discussion:&nbsp;</B>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0011-1.html">AI22-0011-1</A></I>} 
+<I>Accum_Type</I> represents the result of the reduction (the <I>accumulator</I> 
+type), and <I>Value_Type</I> represents the type of the input values 
+to the reduction.&nbsp;</div>
+<div class="paranum"><a name="p10">10/6</a></div>
 <div class="Bulleted">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0262-1.TXT">AI12-0262-1</A></I>} 
-<I>Accum_Type</I> is a subtype of the expected type of the <SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0158">reduction_attribute_reference</A></SPAN>.</div>
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0011-1.html">AI22-0011-1</A></I>} 
+<span class="insert6"><I>Accum_Subtype</I></span><span class="delete6"><I>&nbsp;Accum_Type</I></span> 
+is a subtype of the expected type of the <SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0158">reduction_attribute_reference</A></SPAN>.</div>
 <div class="paranum"><a name="p11">11/5</a></div>
 <div class="Bulleted" style="margin-bottom: 0.3em">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0262-1.TXT">AI12-0262-1</A></I>} 
-A <I>reducer subprogram</I><A NAME="I3447"></A> is subtype conformant 
+A <I>reducer subprogram</I><A NAME="I3501"></A> is subtype conformant 
 with one of the following specifications:</div>
-<div class="paranum"><a name="p12">12/5</a></div>
-<div class="Examples">&nbsp;&nbsp;&nbsp;<B>function</B>&nbsp;Reducer(Accumulator&nbsp;:&nbsp;<I>Accum_Type</I>;<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Value&nbsp;:&nbsp;<I>Value_Type</I>)&nbsp;<B>return</B>&nbsp;<I>Accum_Type</I>;</div>
-<div class="paranum"><a name="p13">13/5</a></div>
-<div class="Examples">&nbsp;&nbsp;&nbsp;<B>procedure</B>&nbsp;Reducer(Accumulator&nbsp;:&nbsp;<B>in&nbsp;out</B>&nbsp;<I>Accum_Type</I>;<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Value&nbsp;:&nbsp;<B>in</B>&nbsp;<I>Value_Type</I>);</div>
+<div class="paranum"><a name="p12">12/6</a></div>
+<div class="Examples">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0011-1.html">AI22-0011-1</A></I>} 
+&nbsp;&nbsp;&nbsp;<B>function</B>&nbsp;Reducer(Accumulator&nbsp;:&nbsp;<span class="insert6"><I>Accum_Subtype</I></span><span class="delete6"><I>&nbsp;Accum_Type</I></span>;<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Value&nbsp;:&nbsp;<span class="insert6"><I>Value_Subtype</I></span><span class="delete6"><I>&nbsp;Value_Type</I></span>)&nbsp;<B>return</B>&nbsp;<span class="insert6"><I>Accum_Subtype</I></span><span class="delete6"><I>&nbsp;Accum_Type</I></span>;</div>
+<div class="paranum"><a name="p13">13/6</a></div>
+<div class="Examples">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0011-1.html">AI22-0011-1</A></I>} 
+&nbsp;&nbsp;&nbsp;<B>procedure</B>&nbsp;Reducer(Accumulator&nbsp;:&nbsp;<B>in&nbsp;out</B>&nbsp;<span class="insert6"><I>Accum_Subtype</I></span><span class="delete6"><I>&nbsp;Accum_Type</I></span>;<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Value&nbsp;:&nbsp;<B>in</B>&nbsp;<span class="insert6"><I>Value_Subtype</I></span><span class="delete6"><I>&nbsp;Value_Type</I></span>);</div>
 <div class="paranum"><a name="p14">14/5</a></div>
 <div class="Bulleted">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0262-1.TXT">AI12-0262-1</A></I>} 
 The <I>reducer_</I><SPAN Class="swiss"><A HREF="AA-4-1.html#S0091">name</A></SPAN> 
 of a <SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0161">reduction_specification</A></SPAN> 
 denotes a reducer subprogram.</div>
-<div class="paranum"><a name="p15">15/5</a></div>
+<div class="paranum"><a name="p14.a">14.a/6</a></div>
+<div class="Annotations"><span class="insert6"><B>Ramification:&nbsp;</B></span>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0011-1.html">AI22-0011-1</A></I>} 
+<span class="insert6">None of the parameters of a reducer subprogram 
+can be aliased parameters, as such a parameter cannot be subtype conformant 
+with these profiles. This means that it is not necessary to enforce any 
+of the Legality Rules nor generate any of the checks associated with 
+aliased parameters in for a reduction expression.</span>&nbsp;</div>
+<div class="paranum"><a name="p15">15/6</a></div>
 <div class="Bulleted">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0262-1.TXT">AI12-0262-1</A></I>} 
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0011-1.html">AI22-0011-1</A></I>} 
 The expected type of an <I>initial_value_</I><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN> 
 of a <SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0161">reduction_specification</A></SPAN> 
-is that of subtype <I>Accum_Type</I>.</div>
-<div class="paranum"><a name="p16">16/5</a></div>
+is <span class="insert6">the type of <I>Accum_Subtype</I></span><span class="delete6">&nbsp;that 
+of subtype <I>Accum_Type</I></span>.</div>
+<div class="paranum"><a name="p16">16/6</a></div>
 <div class="Bulleted">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0250-1.TXT">AI12-0250-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0262-1.TXT">AI12-0262-1</A></I>} 
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0011-1.html">AI22-0011-1</A></I>} 
 The expected type of the <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN> 
 of the <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0131">iterated_element_association</A></SPAN> 
 of a <SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0159">value_sequence</A></SPAN> 
-is that of subtype <I>Value_Type</I>.&nbsp;</div>
+is <span class="insert6">the type of <I>Value_Subtype</I></span><span class="delete6">&nbsp;that 
+of subtype <I>Value_Type</I></span>.&nbsp;</div>
 
 <H4 Class="centered">Legality Rules</H4>
-<div class="paranum"><a name="p17">17/5</a></div>
+<div class="paranum"><a name="p17">17/6</a></div>
 <div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0262-1.TXT">AI12-0262-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0348-1.TXT">AI12-0348-1</A></I>} 
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0011-1.html">AI22-0011-1</A></I>} 
 If the <SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0158">reduction_attribute_reference</A></SPAN> 
 has a <SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0159">value_sequence</A></SPAN> 
-with the reserved word <B>parallel</B>, the subtypes <I>Accum_Type</I> 
-and <I>Value_Type</I> shall statically match.</div>
-<div class="paranum"><a name="p18">18/5</a></div>
+with the reserved word <B>parallel</B>, <span class="insert6"><I>Accum_Subtype</I> 
+and <I>Value_Subtype</I></span><span class="delete6">&nbsp;the subtypes <I>Accum_Type</I> 
+and <I>Value_Type</I></span> shall statically match.</div>
+<div class="paranum"><a name="p18">18/6</a></div>
 <div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0262-1.TXT">AI12-0262-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0348-1.TXT">AI12-0348-1</A></I>} 
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0011-1.html">AI22-0011-1</A></I>} 
 If the <SPAN Class="swiss"><A HREF="AA-2-3.html#S0002">identifier</A></SPAN> 
 of a <SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0160">reduction_attribute_designator</A></SPAN> 
-is Parallel_Reduce, the subtypes <I>Accum_Type</I> and <I>Value_Type</I> 
+is Parallel_Reduce, <span class="insert6"><I>Accum_Subtype</I></span><span class="delete6">&nbsp;the 
+subtypes <I>Accum_Type</I></span> and <span class="insert6"><I>Value_Subtype</I></span><span class="delete6"><I>&nbsp;Value_Type</I></span> 
 shall statically match.</div>
-<div class="paranum"><a name="p18.a">18.a/5</a></div>
-<div class="Annotations"><B>Reason:&nbsp;</B>For a <SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0158">reduction_attribute_reference</A></SPAN> 
+<div class="paranum"><a name="p18.a">18.a/6</a></div>
+<div class="Annotations"><B>Reason:&nbsp;</B>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0011-1.html">AI22-0011-1</A></I>} 
+For a <SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0158">reduction_attribute_reference</A></SPAN> 
 with a <SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0159">value_sequence</A></SPAN> 
 that does not have the reserved word <B>parallel</B> or has a <SPAN Class="swiss"><A HREF="AA-4-1.html#S0093">prefix</A></SPAN> 
 and the <SPAN Class="swiss"><A HREF="AA-2-3.html#S0002">identifier</A></SPAN> 
-of the <SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0160">reduction_attribute_designator</A></SPAN> 
-is Reduce, the subtypes <I>Accum_Type</I> and <I>Value_Type</I> can be 
-different because only one logical thread of control is presumed so there 
-is no need to combine multiple results.&nbsp;</div>
+of the <SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0158">reduction_attribute_reference</A></SPAN> 
+is Reduce, <span class="insert6"><I>Accum_Subtype</I></span><span class="delete6">&nbsp;the 
+subtypes <I>Accum_Type</I></span> and <span class="insert6"><I>Value_Subtype</I></span><span class="delete6"><I>&nbsp;Value_Type</I></span> 
+can be different because only one logical thread of control is presumed 
+so there is no need to combine multiple results.<span class="insert6">&nbsp;Indeed, in this case, they can be unrelated types.</span>&nbsp;</div>
+<div class="paranum"><a name="p18.1">18.1/6</a></div>
+<div class="Normal">&nbsp;&nbsp;{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0011-1.html">AI22-0011-1</A></I>} 
+<span class="insert6">Neither the type of <I>Accum_Subtype</I> nor <I>Value_Subtype</I> 
+shall be an anonymous access type.</span></div>
+<div class="paranum"><a name="p18.b">18.b/6</a></div>
+<div class="Annotations"><span class="insert6"><B>Reason:&nbsp;</B>This is 
+implied by the form of the profiles given above, but it is better to 
+make it explicit. We would have to define the accessibility of the accumulator(s) 
+among other rules to allow this, and it does not seem sufficiently useful 
+for the complication.</span>&nbsp;</div>
 
 <H4 Class="centered">Static Semantics</H4>
-<div class="paranum"><a name="p19">19/5</a></div>
+<div class="paranum"><a name="p19">19/6</a></div>
 <div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0262-1.TXT">AI12-0262-1</A></I>} 
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0011-1.html">AI22-0011-1</A></I>} 
 A <SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0158">reduction_attribute_reference</A></SPAN> 
-denotes a value, with its nominal subtype being the subtype of the first 
-parameter of the subprogram denoted by the <I>reducer_</I><SPAN Class="swiss"><A HREF="AA-4-1.html#S0091">name</A></SPAN>. 
+denotes a value, with its nominal subtype being <span class="insert6"><I>Accum_Subtype</I>[ 
+(the subtype of the first parameter of the subprogram denoted by the 
+<I>reducer_</I><SPAN Class="swiss"><A HREF="AA-4-1.html#S0091">name</A></SPAN>)]</span><span class="delete6">&nbsp;the 
+subtype of the first parameter of the subprogram denoted by the <I>reducer_</I><SPAN Class="swiss"><A HREF="AA-4-1.html#S0091">name</A></SPAN></span>. 
 </div>
 
 <H4 Class="centered">Dynamic Semantics</H4>
-<div class="paranum"><a name="p20">20/5</a></div>
+<div class="paranum"><a name="p20">20/6</a></div>
 <div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0250-1.TXT">AI12-0250-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0262-1.TXT">AI12-0262-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0327-1.TXT">AI12-0327-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0355-2.TXT">AI12-0355-2</A></I>} 
-<A NAME="I3448"></A>For the evaluation of a <SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0159">value_sequence</A></SPAN>, 
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0011-1.html">AI22-0011-1</A></I>} 
+<A NAME="I3502"></A>For the evaluation of a <SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0159">value_sequence</A></SPAN>, 
 the <SPAN Class="swiss"><A HREF="AA-4-3-5.html#S0131">iterated_element_association</A></SPAN>, 
 the <SPAN Class="swiss"><A HREF="AA-5-5.html#S0180">chunk_specification</A></SPAN>, 
 and the <SPAN Class="swiss"><A HREF="AA-13-1-1.html#S0346">aspect_specification</A></SPAN>, 
@@ -188,10 +231,11 @@ if any, are elaborated in an arbitrary order. Next an iteration is performed,
 and for each value conditionally produced by the iteration (see <A HREF="AA-5-5.html">5.5</A> 
 and <A HREF="AA-5-5-2.html">5.5.2</A>), the associated <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN> 
 is evaluated with the loop parameter having this value, which produces 
-a result that is converted to Value_Type and is used to define the next 
-value in the sequence.</div>
-<div class="paranum"><a name="p21">21/5</a></div>
+a result that is converted to <span class="insert6"><I>Value_Subtype</I></span><span class="delete6">&nbsp;Value_Type</span> 
+and is used to define the next value in the sequence.</div>
+<div class="paranum"><a name="p21">21/6</a></div>
 <div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0262-1.TXT">AI12-0262-1</A></I>} 
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0069-1.html">AI22-0069-1</A></I>} 
 If the <SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0159">value_sequence</A></SPAN> 
 does not have the reserved word <B>parallel</B>, it is produced as a 
 single sequence of values by a single logical thread of control. If the 
@@ -199,10 +243,10 @@ reserved word <B>parallel</B> is present in the <SPAN Class="swiss"><A HREF="AA-
 the enclosing <SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0158">reduction_attribute_reference</A></SPAN> 
 is a parallel construct, and the sequence of values is generated by a 
 parallel iteration (as defined in <A HREF="AA-5-5.html">5.5</A>, <A HREF="AA-5-5-1.html">5.5.1</A>, 
-and <A HREF="AA-5-5-2.html">5.5.2</A>), as a set of non-empty, non-overlapping 
-contiguous chunks (<I>subsequences</I>)<A NAME="I3449"></A> with one 
-logical thread of control (see Clause <A HREF="AA-9.html">9</A>) associated 
-with each subsequence. If there is a <SPAN Class="swiss"><A HREF="AA-5-5.html#S0180">chunk_specification</A></SPAN>, 
+and <A HREF="AA-5-5-2.html">5.5.2</A>), as a set of <span class="delete6">non-empty, 
+</span>non-overlapping contiguous chunks (<I>subsequences</I>)<A NAME="I3503"></A> 
+with one logical thread of control (see Clause <A HREF="AA-9.html">9</A>) 
+associated with each subsequence. If there is a <SPAN Class="swiss"><A HREF="AA-5-5.html#S0180">chunk_specification</A></SPAN>, 
 it determines the maximum number of chunks, as defined in <A HREF="AA-5-5.html">5.5</A>; 
 otherwise the maximum number of chunks is implementation defined.</div>
 <div class="paranum"><a name="p21.a">21.a/5</a></div>
@@ -215,62 +259,96 @@ V, the following attribute is defined:</div>
 <div class="paranum"><a name="p23">23/5</a></div>
 <div class="WideHanging-Term" style="margin-bottom: 0.4em">V'Reduce(Reducer, 
 Initial_Value)</div><div class="WideHanging-Body"><br clear="left">
-<A NAME="I3450"></A><A NAME="I3451"></A>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0262-1.TXT">AI12-0262-1</A></I>} 
+<A NAME="I3504"></A><A NAME="I3505"></A>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0262-1.TXT">AI12-0262-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0348-1.TXT">AI12-0348-1</A></I>} 
 This attribute represents a <I>reduction expression</I>, and is in the 
 form of a <SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0158">reduction_attribute_reference</A></SPAN>. 
 </div>
-<div class="paranum"><a name="p24">24/5</a></div>
+<div class="paranum"><a name="p24">24/6</a></div>
 <div class="WideHanging-Body">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0262-1.TXT">AI12-0262-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0348-1.TXT">AI12-0348-1</A></I>} 
-<A NAME="I3452"></A>The evaluation of a use of this attribute begins 
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0011-1.html">AI22-0011-1</A></I>} 
+<A NAME="I3506"></A>The evaluation of a use of this attribute begins 
 by evaluating the parts of the <SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0160">reduction_attribute_designator</A></SPAN> 
 (the <I>reducer_</I><SPAN Class="swiss"><A HREF="AA-4-1.html#S0091">name</A></SPAN> 
 Reducer and the <I>initial_value_</I><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN> 
-Initial_Value), in an arbitrary order.<A NAME="I3453"></A> It then initializes 
-the <I>accumulator</I> of the reduction expression to the value of the 
-<I>initial_value_</I><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN> 
-(the <I>initial value</I>).<A NAME="I3454"></A> <A NAME="I3455"></A> 
+Initial_Value), in an arbitrary order.<A NAME="I3507"></A> It then <span class="insert6">converts 
+the the value of the <I>initial_value_</I><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN> 
+(the <I>initial value</I>) to <I>Accum_Subtype</I> and then&nbsp;</span>initializes 
+the <I>accumulator</I> <span class="insert6">with the result</span><span class="delete6">&nbsp;of 
+the reduction expression to the value of the <I>initial_value_</I><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN> 
+(the <I>initial value</I>)</span>.<A NAME="I3508"></A> <A NAME="I3509"></A> 
 The <SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0159">value_sequence</A></SPAN> 
-V is then evaluated.</div>
-<div class="paranum"><a name="p25">25/5</a></div>
+V is then evaluated.&nbsp;</div>
+<div class="paranum"><a name="p24.a">24.a/6</a></div>
+<div class="Annotations"><span class="insert6"><B>Ramification:&nbsp;</B></span>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0011-1.html">AI22-0011-1</A></I>} 
+<span class="insert6"></span>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0047-1.html">AI22-0047-1</A></I>} 
+<span class="insert6">This initialization follows the object initialization 
+rules of an explicit object declaration. In particular, if the accumulator 
+subtype is indefinite, then the tag, array bounds, or discriminants of 
+the accumulator object are determined by its initial value as needed. 
+Similarly, if the accumulator subtype is class-wide, the tag of the accumulator 
+object is determined by its initial value.</span>&nbsp;</div>
+<div class="paranum"><a name="p25">25/6</a></div>
 <div class="WideHanging-Body">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0262-1.TXT">AI12-0262-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0348-1.TXT">AI12-0348-1</A></I>} 
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0011-1.html">AI22-0011-1</A></I>} 
 If the <SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0159">value_sequence</A></SPAN> 
 does not have the reserved word <B>parallel</B>, each value of the <SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0159">value_sequence</A></SPAN> 
-is passed, in order, as the second (Value) parameter to a call on Reducer, 
-with the first (Accumulator) parameter being the prior value of the accumulator, 
+is <span class="insert6">converted to <I>Value_Subtype</I> and then&nbsp;</span>passed, 
+in order, as the second (Value) parameter to a call on Reducer, with 
+the first (Accumulator) parameter being the prior value of the accumulator, 
 saving the result as the new value of the accumulator. The reduction 
 expression yields the final value of the accumulator.</div>
+<div class="paranum"><a name="p25.a">25.a/6</a></div>
+<div class="Annotations"><span class="insert6"><B>To be honest:&nbsp;</B></span>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0047-1.html">AI22-0047-1</A></I>} 
+<span class="insert6">In the case where Reducer is a function, &ldquo;saving 
+the result as the new value of the accumulator&rdquo; has the semantics 
+of an assignment of the function result into the accumulator, including 
+associated finalization/adjustment as appropriate.</span>&nbsp;</div>
 <div class="paranum"><a name="p26">26/5</a></div>
 <div class="WideHanging-Body">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0262-1.TXT">AI12-0262-1</A></I>} 
 If the reserved word <B>parallel</B> is present in a <SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0159">value_sequence</A></SPAN>, 
 then the (parallel) reduction expression is a parallel construct and 
 the sequence has been partitioned into one or more subsequences (see 
 above) each with its own separate logical thread of control.</div>
-<div class="paranum"><a name="p27">27/5</a></div>
+<div class="paranum"><a name="p27">27/6</a></div>
 <div class="WideHanging-Body">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0262-1.TXT">AI12-0262-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0348-1.TXT">AI12-0348-1</A></I>} 
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0011-1.html">AI22-0011-1</A></I>} 
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0069-1.html">AI22-0069-1</A></I>} 
 Each logical thread of control creates a local accumulator for processing 
 its subsequence. The accumulator for a subsequence is initialized to 
-the first value of the subsequence, and calls on Reducer start with the 
-second value of the subsequence (if any). The result for the subsequence 
+the <span class="insert6">result of converting the&nbsp;</span>first value 
+<span class="insert6">conditionally produced by</span><span class="delete6">&nbsp;of</span> 
+the subsequence<span class="insert6">, if any, to <I>Accum_Subtype</I></span>, 
+and calls on Reducer start with the second value of the subsequence (if 
+any). The result for the subsequence<span class="insert6">, if non-empty,</span> 
 is the final value of its local accumulator.</div>
-<div class="paranum"><a name="p28">28/5</a></div>
+<div class="paranum"><a name="p28">28/6</a></div>
 <div class="WideHanging-Body">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0262-1.TXT">AI12-0262-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0348-1.TXT">AI12-0348-1</A></I>} 
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0069-1.html">AI22-0069-1</A></I>} 
 After all logical threads of control of a parallel reduction expression 
-have completed, Reducer is called for each subsequence, in the original 
+have completed, Reducer is called for each <span class="insert6">non-empty 
+</span>subsequence<span class="insert6">, if any</span>, in the original 
 sequence order, passing the local accumulator for that subsequence as 
 the second (Value) parameter, and the overall accumulator [(initialized 
 above to the initial value)] as the first (Accumulator) parameter, with 
 the result saved back in the overall accumulator. The parallel reduction 
 expression yields the final value of the overall accumulator.</div>
-<div class="paranum"><a name="p29">29/5</a></div>
+<div class="paranum"><a name="p28.a">28.a/6</a></div>
+<div class="Annotations"><span class="insert6"><B>To be honest:&nbsp;</B></span>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0047-1.html">AI22-0047-1</A></I>} 
+<span class="insert6">In the case where Reducer is a function, &ldquo;with 
+the result saved back in the overall accumulator&rdquo; has the semantics 
+of an assignment of the function result into the accumulator, including 
+associated finalization/adjustment as appropriate.</span>&nbsp;</div>
+<div class="paranum"><a name="p29">29/6</a></div>
 <div class="WideHanging-Body">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0262-1.TXT">AI12-0262-1</A></I>} 
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0011-1.html">AI22-0011-1</A></I>} 
 If the evaluation of the <SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0159">value_sequence</A></SPAN> 
 yields an empty sequence of values, the reduction expression yields the 
-initial value.</div>
+initial value<span class="insert6">&nbsp;of the accumulator</span>.</div>
 <div class="paranum"><a name="p30">30/5</a></div>
 <div class="WideHanging-Body">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0262-1.TXT">AI12-0262-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0348-1.TXT">AI12-0348-1</A></I>} 
@@ -312,7 +390,7 @@ the following attributes are defined:</div>
 <div class="paranum"><a name="p32">32/5</a></div>
 <div class="WideHanging-Term" style="margin-bottom: 0.4em">X'Reduce(Reducer, 
 Initial_Value)</div><div class="WideHanging-Body"><br clear="left">
-<A NAME="I3456"></A><A NAME="I3457"></A>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0242-1.TXT">AI12-0242-1</A></I>} 
+<A NAME="I3510"></A><A NAME="I3511"></A>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0242-1.TXT">AI12-0242-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0348-1.TXT">AI12-0348-1</A></I>} 
 X'Reduce is a reduction expression that yields a result equivalent to 
 replacing the <SPAN Class="swiss"><A HREF="AA-4-1.html#S0093">prefix</A></SPAN> 
@@ -323,7 +401,7 @@ of the attribute with the <SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0159">val
 <div class="paranum"><a name="p33">33/5</a></div>
 <div class="WideHanging-Term" style="margin-bottom: 0.4em">X'Parallel_Reduce(Reducer, 
 Initial_Value)</div><div class="WideHanging-Body"><br clear="left">
-<A NAME="I3458"></A><A NAME="I3459"></A>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0242-1.TXT">AI12-0242-1</A></I>} 
+<A NAME="I3512"></A><A NAME="I3513"></A>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0242-1.TXT">AI12-0242-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0348-1.TXT">AI12-0348-1</A></I>} 
 X'Parallel_Reduce is a reduction expression that yields a result equivalent 
 to replacing the attribute <SPAN Class="swiss"><A HREF="AA-2-3.html#S0002">identifier</A></SPAN> 
@@ -334,19 +412,21 @@ of the attribute with the <SPAN Class="swiss"><A HREF="AA-4-5-10.html#S0159">val
 <div class="Indented4Examples">[<B>parallel&nbsp;for</B>&nbsp;Item&nbsp;<B>of</B>&nbsp;X&nbsp;=&gt;&nbsp;Item]</div>
 
 <H4 Class="centered">Bounded (Run-Time) Errors</H4>
-<div class="paranum"><a name="p34">34/5</a></div>
+<div class="paranum"><a name="p34">34/6</a></div>
 <div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0262-1.TXT">AI12-0262-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0348-1.TXT">AI12-0348-1</A></I>} 
-<A NAME="I3460"></A>For a parallel reduction expression, it is a bounded 
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0011-1.html">AI22-0011-1</A></I>} 
+<A NAME="I3514"></A>For a parallel reduction expression, it is a bounded 
 error if the reducer subprogram is not associative. That is, for any 
-arbitrary values of subtype <I>Value_Type</I> <I>A</I>, <I>B</I>, <I>C</I> 
-and a reducer function <I>R</I>, the result of <I>R</I> (<I>A</I>, <I>R</I> 
-(<I>B</I>, <I>C</I>)) should produce a result equal to <I>R</I> (<I>R</I> 
-(<I>A</I>, <I>B</I>), <I>C</I>)); it is a bounded error if <I>R</I> does 
-not. The possible consequences are Program_Error, or a result that does 
-not match the equivalent sequential reduction expression due to the order 
-of calls on the reducer subprogram being unspecified in the overall reduction. 
-Analogous rules apply in the case of a reduction procedure.<A NAME="I3461"></A></div>
+arbitrary values of <span class="insert6"><I>Value_Subtype</I></span><span class="delete6">&nbsp;subtype 
+<I>Value_Type</I></span> <I>A</I>, <I>B</I>, <I>C</I> and a reducer function 
+<I>R</I>, the result of <I>R</I> (<I>A</I>, <I>R</I> (<I>B</I>, <I>C</I>)) 
+should produce a result equal to <I>R</I> (<I>R</I> (<I>A</I>, <I>B</I>), 
+<I>C</I>)); it is a bounded error if <I>R</I> does not. The possible 
+consequences are Program_Error, or a result that does not match the equivalent 
+sequential reduction expression due to the order of calls on the reducer 
+subprogram being unspecified in the overall reduction. Analogous rules 
+apply in the case of a reduction procedure.<A NAME="I3515"></A></div>
 <div class="paranum"><a name="p34.a">34.a/5</a></div>
 <div class="Annotations"><B>Reason:&nbsp;</B>In a sequential reduction expression, 
 the reducer subprogram is called in a left-to-right order, whereas in 
@@ -400,21 +480,23 @@ a Taylor expansion:</I></div>
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0379-1.TXT">AI12-0379-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0429-1.TXT">AI12-0429-1</A></I>} 
 <I>Example of a reduction expression used to compute the value of Pi:</I></div>
-<div class="paranum"><a name="p42">42/5</a></div>
-<div class="Examples">--&nbsp;&nbsp;<SPAN Class="roman"><I>See&nbsp;<A HREF="AA-3-5-7.html">3.5.7</A>.</I></SPAN><BR>
+<div class="paranum"><a name="p42">42/6</a></div>
+<div class="Examples">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0081-1.html">AI22-0081-1</A></I>} 
+--&nbsp;&nbsp;<SPAN Class="roman"><I>See&nbsp;<A HREF="AA-3-5-7.html">3.5.7</A>.</I></SPAN><BR>
 <B>function</B>&nbsp;Pi&nbsp;(Number_Of_Steps&nbsp;:&nbsp;Natural&nbsp;:=&nbsp;10_000)&nbsp;<B>return</B>&nbsp;Real&nbsp;<B>is</B><BR>
 &nbsp;&nbsp;(1.0&nbsp;/&nbsp;Real&nbsp;(Number_Of_Steps)&nbsp;*<BR>
 &nbsp;&nbsp;&nbsp;&nbsp;[<B>for</B>&nbsp;I&nbsp;<B>in</B>&nbsp;1&nbsp;..&nbsp;Number_Of_Steps&nbsp;=&gt;<BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(4.0&nbsp;/&nbsp;(1.0&nbsp;+&nbsp;((Real&nbsp;(I)&nbsp;-&nbsp;0.5)&nbsp;*<BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1.0&nbsp;/&nbsp;Real&nbsp;(Number_Of_Steps)))**2))]<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Reduce(&quot;+&quot;,&nbsp;0.0));</div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Reduce(<span class="insert6">Reducer&nbsp;=&gt;&nbsp;</span>&quot;+&quot;,&nbsp;<span class="insert6">Initial_Value&nbsp;=&gt;&nbsp;</span>0.0));</div>
 <div class="paranum"><a name="p43">43/5</a></div>
 <div class="Normal" style="margin-bottom: 0.4em">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0242-1.TXT">AI12-0242-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0429-1.TXT">AI12-0429-1</A></I>} 
 <I>Example of a reduction expression used to calculate the sum of elements 
 of an array of integers:</I></div>
-<div class="paranum"><a name="p44">44/5</a></div>
-<div class="Examples">A'Reduce(&quot;+&quot;,0)&nbsp;&nbsp;--&nbsp;<SPAN Class="roman"><I>See&nbsp;<A HREF="AA-4-3-3.html">4.3.3</A>.</I></SPAN></div>
+<div class="paranum"><a name="p44">44/6</a></div>
+<div class="Examples">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0081-1.html">AI22-0081-1</A></I>} 
+A'Reduce(&quot;+&quot;,<span class="insert6">&nbsp;Initial_Value&nbsp;=&gt;&nbsp;</span>0)&nbsp;&nbsp;--&nbsp;<SPAN Class="roman"><I>See&nbsp;<A HREF="AA-4-3-3.html">4.3.3</A>.</I></SPAN></div>
 <div class="paranum"><a name="p45">45/5</a></div>
 <div class="Normal" style="margin-bottom: 0.4em">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0242-1.TXT">AI12-0242-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0429-1.TXT">AI12-0429-1</A></I>} 
@@ -427,8 +509,10 @@ in a two-dimensional array of booleans are set to true:</I></div>
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0429-1.TXT">AI12-0429-1</A></I>} 
 <I>Example of a reduction expression used to calculate the minimum value 
 of an array of integers in parallel:</I></div>
-<div class="paranum"><a name="p48">48/5</a></div>
-<div class="Examples">A'Parallel_Reduce(Integer'Min,&nbsp;Integer'Last)</div>
+<div class="paranum"><a name="p48">48/6</a></div>
+<div class="Examples">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0081-1.html">AI22-0081-1</A></I>} 
+A'Parallel_Reduce(<span class="insert6">Reducer&nbsp;=&gt;&nbsp;</span>Integer'Min,<span class="insert6"><BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Initial_Value&nbsp;=&gt;</span>&nbsp;Integer'Last)</div>
 <div class="paranum"><a name="p49">49/5</a></div>
 <div class="Normal" style="margin-bottom: 0.4em">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0312-1.TXT">AI12-0312-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0429-1.TXT">AI12-0429-1</A></I>} 
@@ -459,8 +543,55 @@ that are greater than 100.0:</I></div>
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0242-1.TXT">AI12-0242-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0262-1.TXT">AI12-0262-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0348-1.TXT">AI12-0348-1</A></I>} 
-<A NAME="I3462"></A>Reduction expressions and the associated attributes 
+<A NAME="I3516"></A>Reduction expressions and the associated attributes 
 are new.&nbsp;</div>
+
+<H4 Class="centered">Inconsistencies With Ada 2022</H4>
+<div class="paranum"><a name="p52.b">52.b/6</a></div>
+<div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0011-1.html">AI22-0011-1</A></I>} 
+<span class="insert6"><A NAME="I3517"></A><B>Corrigendum:</B> Added wording 
+to make it clear that values are converted to the appropriate subtypes. 
+The original Ada 2022 wording did not say this, and in particular for 
+the initialization of the accumulator seemed to imply that there was 
+no conversion (and checks), since we always say that explicitly. If an 
+implementation did not make any check when initializing the accumulator, 
+a program that worked in original Ada 2022 now might raise Constraint_Error. 
+This seems unlikely (known implementations do make a check for the initialization; 
+even if they didn't, subsequent usage probably would would make a check), 
+so such a case probably won't occur in practice.</span></div>
+<div class="paranum"><a name="p52.c">52.c/6</a></div>
+<div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0069-1.html">AI22-0069-1</A></I>} 
+<span class="insert6"><B>Corrigendum:</B>Added wording to define how 
+empty subsequences are handled for parallel reductions. This was incorrectly 
+defined in original Ada 2022; an implementation following the rules as 
+stated would produce nonsense results. We are not aware of any implementations 
+of parallel reduction for original Ada 2022, and the results were nonsense 
+and dependent on how chunks were selected, so it seems highly unlikely 
+that any code depends on the incorrect definition. (Note that non-parallel 
+reductions were correctly defined, and are unchanged.)</span>&nbsp;</div>
+
+<H4 Class="centered">Extensions to Ada 2022</H4>
+<div class="paranum"><a name="p52.d">52.d/6</a></div>
+<div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0081-1.html">AI22-0081-1</A></I>} 
+<span class="insert6"><A NAME="I3518"></A><B>Corrigendum:</B> The ability 
+to use named notation in uses of reduction attributes is new.</span> 
+</div>
+
+<H4 Class="centered">Wording Changes from Ada 2022</H4>
+<div class="paranum"><a name="p52.e">52.e/6</a></div>
+<div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0011-1.html">AI22-0011-1</A></I>} 
+<span class="insert6"><B>Corrigendum:</B>Explicitly stated that <I>Accum_Subtype</I> 
+and <I>Value_Subtype</I> cannot be anonymous access types. It is already 
+illegal for these subtypes to be anonymous access types (as the profiles 
+only allow named subtypes, and anonymous access types cannot be named, 
+but this is better explicitly stated.</span></div>
+<div class="paranum"><a name="p52.f">52.f/6</a></div>
+<div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0011-1.html">AI22-0011-1</A></I>} 
+<span class="insert6"><B>Corrigendum:</B>Renamed <I>Accum_Type</I> to 
+<I>Accum_Subtype</I>, and <I>Value_Type</I> to <I>Value_Subtype</I>, 
+since for most purposes these are subtypes. And it makes more sense to 
+say &ldquo;type of <I>Accum_Subtype</I>&rdquo; that it does to say &ldquo;subtype 
+<I>Accum_Type</I>&rdquo;.</span>&nbsp;</div>
 
 <HR>
 <div style="margin-top: 0.0em; margin-bottom: 0.6em"><A HREF="AA-TOC.html"><IMG SRC="cont.gif" ALT="Contents" BORDER=0></A>&nbsp;

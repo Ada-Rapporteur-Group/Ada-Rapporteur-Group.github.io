@@ -13,6 +13,8 @@
     DIV.paranum {float: left; font-family: Arial, Helvetica, sans-serif; font-size: 64%; width: 2.8em; margin-left: -0.4em; margin-right: -3.0em; margin-top: 0.2em}
     TT {font-family: "Courier New", monospace}
     DT {display: compact}
+    SPAN.insert6 {text-decoration: underline; color: rgb(0,51,204) }
+    SPAN.delete6 {text-decoration: line-through; color: rgb(0,51,204) }
     A.Bar:link {font-family: Arial, Helvetica, sans-serif; font-style: normal; text-decoration: none; color: rgb(204,204,51)}
     A.Bar:visited {font-family: Arial, Helvetica, sans-serif; font-style: normal; text-decoration: none; color: rgb(204,204,51)}
     DIV.Normal {font-family: "Times New Roman", Times, serif; line-height: 122%; margin-left: 1.8em; margin-bottom: 0.6em}
@@ -22,7 +24,7 @@
     </STYLE>
 </HEAD>
 <BODY TEXT="#000000" BGCOLOR="#FFFFF0" LINK="#000080" VLINK="#330033" ALINK="#0000FF">
-<DIV><SPAN Style="font-size:200%; color: rgb(0,51,153)"><B>Annotated</B></SPAN><SPAN Style="font-size:200%; color: rgb(0,0,102)"><B>&nbsp;Ada Reference Manual</B> (Ada 202y Draft 1)</SPAN> &mdash; <A HREF="AA-TTL.html"><B>Legal Information</B></A></DIV>
+<DIV><SPAN Style="font-size:200%; color: rgb(0,51,153)"><B>Annotated</B></SPAN><SPAN Style="font-size:200%; color: rgb(0,0,102)"><B>&nbsp;Ada Reference Manual</B> (Ada 202y Draft 3)</SPAN> &mdash; <A HREF="AA-TTL.html"><B>Legal Information</B></A></DIV>
 <div style="margin-top: 0.6em; margin-bottom: 0.0em"><A HREF="AA-TOC.html"><IMG SRC="cont.gif" ALT="Contents" BORDER=0></A>&nbsp;
 &nbsp;<A HREF="AA-0-4.html"><IMG SRC="index.gif" ALT="Index" BORDER=0></A>&nbsp;
 &nbsp;<A HREF="AA-STDS.html"><IMG SRC="lib.gif" ALT="References" BORDER=0></A>&nbsp;
@@ -36,12 +38,12 @@
 <div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0125-3.TXT">AI12-0125-3</A></I>} 
 @, known as the <I>target name</I> of an assignment statement, provides 
 an abbreviation to avoid repetition of potentially long names in assignment 
-statements.<A NAME="I3772"></A>&nbsp;</div>
+statements.<A NAME="I3834"></A>&nbsp;</div>
 
 <H4 Class="centered">Syntax</H4>
 <div class="paranum"><a name="p2">2/5</a></div>
 <div class="Indented1">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0125-3.TXT">AI12-0125-3</A></I>} 
-<SPAN Class="swiss">target_name</SPAN><A NAME="I3773"></A><A NAME="S0174"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN>@</div>
+<SPAN Class="swiss">target_name</SPAN><A NAME="I3835"></A><A NAME="S0174"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN>@</div>
 
 <H4 Class="centered">Name Resolution Rules</H4>
 <div class="paranum"><a name="p3">3/5</a></div>
@@ -58,6 +60,12 @@ The complete context rule is formally given in <A HREF="AA-8-6.html">8.6</A>.
 The constant view rule is formally given in <A HREF="AA-3-3.html">3.3</A>; 
 the nominal subtype is a property taken from the target object as described 
 below in Dynamic Semantics.&nbsp;</div>
+<div class="paranum"><a name="p3.b">3.b/6</a></div>
+<div class="Annotations"><span class="insert6"><B>Ramification:&nbsp;</B></span>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0112-1.html">AI22-0112-1</A></I>} 
+<span class="insert6">The other resolution rules that apply to all <SPAN Class="swiss"><A HREF="AA-5-2.html#S0173">assignment_statement</A></SPAN>s 
+(see <A HREF="AA-5-2.html">5.2</A>) still apply here. In particular, 
+interpretations that have limited types are not considered in this complete 
+context.</span>&nbsp;</div>
 
 <H4 Class="centered">Legality Rules</H4>
 <div class="paranum"><a name="p4">4/5</a></div>
@@ -129,7 +137,7 @@ My_Complex_Array&nbsp;(Count)&nbsp;:=&nbsp;(Re&nbsp;=&gt;&nbsp;@.Re**2&nbsp;-&nb
 <div class="paranum"><a name="p8.a">8.a/5</a></div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0125-3.TXT">AI12-0125-3</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0322-1.TXT">AI12-0322-1</A></I>} 
-<A NAME="I3774"></A>The target name symbol @ is new.&nbsp;</div>
+<A NAME="I3836"></A>The target name symbol @ is new.&nbsp;</div>
 
 <HR>
 <div style="margin-top: 0.0em; margin-bottom: 0.6em"><A HREF="AA-TOC.html"><IMG SRC="cont.gif" ALT="Contents" BORDER=0></A>&nbsp;

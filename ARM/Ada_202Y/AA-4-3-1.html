@@ -13,6 +13,8 @@
     DIV.paranum {float: left; font-family: Arial, Helvetica, sans-serif; font-size: 64%; width: 2.8em; margin-left: -0.4em; margin-right: -3.0em; margin-top: 0.2em}
     TT {font-family: "Courier New", monospace}
     DT {display: compact}
+    SPAN.insert6 {text-decoration: underline; color: rgb(0,51,204) }
+    SPAN.delete6 {text-decoration: line-through; color: rgb(0,51,204) }
     A.Bar:link {font-family: Arial, Helvetica, sans-serif; font-style: normal; text-decoration: none; color: rgb(204,204,51)}
     A.Bar:visited {font-family: Arial, Helvetica, sans-serif; font-style: normal; text-decoration: none; color: rgb(204,204,51)}
     DIV.Normal {font-family: "Times New Roman", Times, serif; line-height: 122%; margin-left: 1.8em; margin-bottom: 0.6em}
@@ -26,7 +28,7 @@
     </STYLE>
 </HEAD>
 <BODY TEXT="#000000" BGCOLOR="#FFFFF0" LINK="#000080" VLINK="#330033" ALINK="#0000FF">
-<DIV><SPAN Style="font-size:200%; color: rgb(0,51,153)"><B>Annotated</B></SPAN><SPAN Style="font-size:200%; color: rgb(0,0,102)"><B>&nbsp;Ada Reference Manual</B> (Ada 202y Draft 1)</SPAN> &mdash; <A HREF="AA-TTL.html"><B>Legal Information</B></A></DIV>
+<DIV><SPAN Style="font-size:200%; color: rgb(0,51,153)"><B>Annotated</B></SPAN><SPAN Style="font-size:200%; color: rgb(0,0,102)"><B>&nbsp;Ada Reference Manual</B> (Ada 202y Draft 3)</SPAN> &mdash; <A HREF="AA-TTL.html"><B>Legal Information</B></A></DIV>
 <div style="margin-top: 0.6em; margin-bottom: 0.0em"><A HREF="AA-TOC.html"><IMG SRC="cont.gif" ALT="Contents" BORDER=0></A>&nbsp;
 &nbsp;<A HREF="AA-0-4.html"><IMG SRC="index.gif" ALT="Index" BORDER=0></A>&nbsp;
 &nbsp;<A HREF="AA-STDS.html"><IMG SRC="lib.gif" ALT="References" BORDER=0></A>&nbsp;
@@ -43,25 +45,25 @@ value, using either a named or a positional association.]&nbsp;</div>
 
 <H4 Class="centered">Syntax</H4>
 <div class="paranum"><a name="p2">2</a></div>
-<div class="Indented1"><SPAN Class="swiss">record_aggregate</SPAN><A NAME="I2858"></A><A NAME="S0107"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN>(<A NAME="I2859"></A><SPAN Class="swiss"><A HREF="AA-4-3-1.html#S0108">record_component_association_list</A></SPAN>)</div>
+<div class="Indented1"><SPAN Class="swiss">record_aggregate</SPAN><A NAME="I2895"></A><A NAME="S0107"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN>(<A NAME="I2896"></A><SPAN Class="swiss"><A HREF="AA-4-3-1.html#S0108">record_component_association_list</A></SPAN>)</div>
 <div class="paranum"><a name="p3">3</a></div>
-<div class="Indented1"><SPAN Class="swiss">record_component_association_list</SPAN><A NAME="I2860"></A><A NAME="S0108"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN><BR>
-&nbsp;&nbsp;&nbsp;&nbsp;<A NAME="I2861"></A><SPAN Class="swiss"><A HREF="AA-4-3-1.html#S0109">record_component_association</A></SPAN>&nbsp;{,&nbsp;<A NAME="I2862"></A><SPAN Class="swiss"><A HREF="AA-4-3-1.html#S0109">record_component_association</A></SPAN>}<BR>
+<div class="Indented1"><SPAN Class="swiss">record_component_association_list</SPAN><A NAME="I2897"></A><A NAME="S0108"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN><BR>
+&nbsp;&nbsp;&nbsp;&nbsp;<A NAME="I2898"></A><SPAN Class="swiss"><A HREF="AA-4-3-1.html#S0109">record_component_association</A></SPAN>&nbsp;{,&nbsp;<A NAME="I2899"></A><SPAN Class="swiss"><A HREF="AA-4-3-1.html#S0109">record_component_association</A></SPAN>}<BR>
 &nbsp;&nbsp;|&nbsp;<B>null&nbsp;record</B></div>
 <div class="paranum"><a name="p4">4/2</a></div>
 <div class="Indented1">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00287.TXT">AI95-00287-01</A></I>} 
-<SPAN Class="swiss">record_component_association</SPAN><A NAME="I2863"></A><A NAME="S0109"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN><BR>
-&nbsp;&nbsp;&nbsp;&nbsp;[<A NAME="I2864"></A><SPAN Class="swiss"><A HREF="AA-4-3-1.html#S0110">component_choice_list</A></SPAN>&nbsp;=&gt;]&nbsp;<A NAME="I2865"></A><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN><BR>
-&nbsp;&nbsp;&nbsp;|&nbsp;<A NAME="I2866"></A><SPAN Class="swiss"><A HREF="AA-4-3-1.html#S0110">component_choice_list</A></SPAN>&nbsp;=&gt;&nbsp;&lt;&gt;</div>
+<SPAN Class="swiss">record_component_association</SPAN><A NAME="I2900"></A><A NAME="S0109"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN><BR>
+&nbsp;&nbsp;&nbsp;&nbsp;[<A NAME="I2901"></A><SPAN Class="swiss"><A HREF="AA-4-3-1.html#S0110">component_choice_list</A></SPAN>&nbsp;=&gt;]&nbsp;<A NAME="I2902"></A><SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN><BR>
+&nbsp;&nbsp;&nbsp;|&nbsp;<A NAME="I2903"></A><SPAN Class="swiss"><A HREF="AA-4-3-1.html#S0110">component_choice_list</A></SPAN>&nbsp;=&gt;&nbsp;&lt;&gt;</div>
 <div class="paranum"><a name="p5">5/5</a></div>
 <div class="Indented1">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0212-1.TXT">AI12-0212-1</A></I>} 
-<SPAN Class="swiss">component_choice_list</SPAN><A NAME="I2867"></A><A NAME="S0110"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN><BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>component_</I><A NAME="I2868"></A><SPAN Class="swiss"><A HREF="AA-4-1-3.html#S0099">selector_name</A></SPAN>&nbsp;{'|'&nbsp;<I>component_</I><A NAME="I2869"></A><SPAN Class="swiss"><A HREF="AA-4-1-3.html#S0099">selector_name</A></SPAN>}<BR>
+<SPAN Class="swiss">component_choice_list</SPAN><A NAME="I2904"></A><A NAME="S0110"></A><SPAN Class="swiss">&nbsp;::=&nbsp;</SPAN><BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>component_</I><A NAME="I2905"></A><SPAN Class="swiss"><A HREF="AA-4-1-3.html#S0099">selector_name</A></SPAN>&nbsp;{'|'&nbsp;<I>component_</I><A NAME="I2906"></A><SPAN Class="swiss"><A HREF="AA-4-1-3.html#S0099">selector_name</A></SPAN>}<BR>
 &nbsp;&nbsp;&nbsp;|&nbsp;<B>others</B></div>
 <div class="paranum"><a name="p6">6</a></div>
-<div class="Indented1"><A NAME="I2870"></A>A <SPAN Class="swiss"><A HREF="AA-4-3-1.html#S0109">record_component_association</A></SPAN> 
+<div class="Indented1"><A NAME="I2907"></A>A <SPAN Class="swiss"><A HREF="AA-4-3-1.html#S0109">record_component_association</A></SPAN> 
 is a <I>named component association</I> if it has a <SPAN Class="swiss"><A HREF="AA-4-3-1.html#S0110">component_choice_list</A></SPAN>; 
-<A NAME="I2871"></A>otherwise, it is a <I>positional component association</I>. 
+<A NAME="I2908"></A>otherwise, it is a <I>positional component association</I>. 
 Any positional component associations shall precede any named component 
 associations. If there is a named association with a <SPAN Class="swiss"><A HREF="AA-4-3-1.html#S0110">component_choice_list</A></SPAN> 
 of <B>others</B>, it shall come last.&nbsp;</div>
@@ -94,7 +96,7 @@ does not have such a restriction.&nbsp;</div>
 <H4 Class="centered">Name Resolution Rules</H4>
 <div class="paranum"><a name="p8">8/2</a></div>
 <div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00287.TXT">AI95-00287-01</A></I>} 
-<A NAME="I2872"></A>The expected type for a <SPAN Class="swiss"><A HREF="AA-4-3-1.html#S0107">record_aggregate</A></SPAN> 
+<A NAME="I2909"></A>The expected type for a <SPAN Class="swiss"><A HREF="AA-4-3-1.html#S0107">record_aggregate</A></SPAN> 
 shall be a single record type or record extension.&nbsp;</div>
 <div class="paranum"><a name="p8.a">8.a</a></div>
 <div class="Annotations"><B>Ramification:&nbsp;</B>This rule is used to resolve 
@@ -106,7 +108,7 @@ and an <SPAN Class="swiss"><A HREF="AA-4-3-2.html#S0111">extension_aggregate</A>
 </div>
 <div class="paranum"><a name="p9">9/5</a></div>
 <div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0127-1.TXT">AI12-0127-1</A></I>} 
-<A NAME="I2873"></A>For the <SPAN Class="swiss"><A HREF="AA-4-3-1.html#S0108">record_component_association_list</A></SPAN> 
+<A NAME="I2910"></A>For the <SPAN Class="swiss"><A HREF="AA-4-3-1.html#S0108">record_component_association_list</A></SPAN> 
 of a <SPAN Class="swiss"><A HREF="AA-4-3-1.html#S0107">record_aggregate</A></SPAN>, 
 all components of the composite value defined by the aggregate are <I>needed</I>[; 
 for the association list of an <SPAN Class="swiss"><A HREF="AA-4-3-2.html#S0111">extension_aggregate</A></SPAN>, 
@@ -151,10 +153,10 @@ twice and giving components from two different variants.&nbsp;</div>
 component of a record type or record extension that is required to have 
 its value specified within a given aggregate</div>
 <div class="paranum"><a name="p10">10</a></div>
-<div class="Normal" style="margin-bottom: 0.4em"><A NAME="I2874"></A>The 
+<div class="Normal" style="margin-bottom: 0.4em"><A NAME="I2911"></A>The 
 expected type for the <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN> 
 of a <SPAN Class="swiss"><A HREF="AA-4-3-1.html#S0109">record_component_association</A></SPAN> 
-is the type of the <I>associated</I> component(s); <A NAME="I2875"></A>the 
+is the type of the <I>associated</I> component(s); <A NAME="I2912"></A>the 
 associated component(s) are as follows:&nbsp;</div>
 <div class="paranum"><a name="p11">11</a></div>
 <div class="Bulleted">For a positional association, the component [(including 
@@ -277,10 +279,11 @@ but the legality differs. For example:</div>
 <div class="Annotations">There are additional ways for this to happen; 
 because of cases like the above we require that the Legality Rules are 
 checked individually for each associated component.&nbsp;</div>
-<div class="paranum"><a name="p17">17/5</a></div>
+<div class="paranum"><a name="p17">17/6</a></div>
 <div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0220-1.TXT">AI05-0220-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0086-1.TXT">AI12-0086-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0127-1.TXT">AI12-0127-1</A></I>} 
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0044-1.html">AI22-0044-1</A></I>} 
 For a <SPAN Class="swiss"><A HREF="AA-4-3-1.html#S0107">record_aggregate</A></SPAN> 
 or <SPAN Class="swiss"><A HREF="AA-4-3-2.html#S0111">extension_aggregate</A></SPAN>, 
 if a <SPAN Class="swiss"><A HREF="AA-3-8-1.html#S0071">variant_part</A></SPAN> 
@@ -290,11 +293,14 @@ if a <SPAN Class="swiss"><A HREF="AA-3-8-1.html#S0071">variant_part</A></SPAN>
 enclosing <I>V</I>, then there is no restriction on the discriminant 
 governing <I>P</I>. Otherwise, the value of the discriminant that governs 
 <I>P</I> shall be given by a static expression, or by a nonstatic expression 
-having a constrained static nominal subtype. In this latter case of a 
-nonstatic expression, there shall be exactly one <SPAN Class="swiss"><A HREF="AA-3-8-1.html#S0073">discrete_choice_list</A></SPAN> 
-of <I>P</I> that covers each value that belongs to the nominal subtype 
-and satisfies the predicates of the subtype, and there shall be at least 
-one such value.&nbsp;</div>
+having a constrained static nominal subtype. <span class="insert6">There</span><span class="delete6">&nbsp;In 
+this latter case of a nonstatic expression, there</span> shall be exactly 
+one <SPAN Class="swiss"><A HREF="AA-3-8-1.html#S0073">discrete_choice_list</A></SPAN> 
+of <I>P</I> that covers <span class="insert6">every possible value of 
+the expression, which in the case of a nonstatic expression includes 
+</span>each value that belongs to the nominal subtype and satisfies the 
+predicates of the subtype, and there shall be at least one such value. 
+</div>
 <div class="paranum"><a name="p17.a">17.a</a></div>
 <div class="Annotations"><B>Ramification:&nbsp;</B>This expression might either 
 be given within the aggregate itself, or in a constraint on the parent 
@@ -303,9 +309,15 @@ for some ancestor of the type of the aggregate.</div>
 <div class="paranum"><a name="p17.a.1">17.a.1/5</a></div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0086-1.TXT">AI12-0086-1</A></I>} 
 This means that in the nonstatic value case, the (static) subtype cannot 
-have a null range.&nbsp;</div>
+have a null range. <span class="insert6">The discriminant has to belong 
+to the nominal subtype and satify the predicates of the subtype even 
+when it is given by a static value. The expected subtype usually is not 
+relevant for determining whether a value is static (see <A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0393-1.TXT">AI12-0393-1</A>, 
+so we need an explicit rule such as this one to ensure that it is enforced.</span> 
+</div>
 <div class="paranum"><a name="p17.1">17.1/2</a></div>
-<div class="Normal">&nbsp;&nbsp;{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00287.TXT">AI95-00287-01</A></I>} 
+<div class="Normal">&nbsp;&nbsp;{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0044-1.html">AI22-0044-1</A></I>} 
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00287.TXT">AI95-00287-01</A></I>} 
 A <SPAN Class="swiss"><A HREF="AA-4-3-1.html#S0109">record_component_association</A></SPAN> 
 for a discriminant without a <SPAN Class="swiss"><A HREF="AA-3-7.html#S0063">default_expression</A></SPAN> 
 shall have an <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN> 
@@ -345,27 +357,27 @@ of the same <SPAN Class="swiss"><A HREF="AA-3-8-1.html#S0071">variant_part</A></
 
 <H4 Class="centered">Dynamic Semantics</H4>
 <div class="paranum"><a name="p18">18</a></div>
-<div class="Normal"><A NAME="I2876"></A>The evaluation of a <SPAN Class="swiss"><A HREF="AA-4-3-1.html#S0107">record_aggregate</A></SPAN> 
+<div class="Normal"><A NAME="I2913"></A>The evaluation of a <SPAN Class="swiss"><A HREF="AA-4-3-1.html#S0107">record_aggregate</A></SPAN> 
 consists of the evaluation of the <SPAN Class="swiss"><A HREF="AA-4-3-1.html#S0108">record_component_association_list</A></SPAN>.</div>
 <div class="paranum"><a name="p19">19/5</a></div>
 <div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0086-1.TXT">AI12-0086-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0451-1.TXT">AI12-0451-1</A></I>} 
-<A NAME="I2877"></A>For the evaluation of a <SPAN Class="swiss"><A HREF="AA-4-3-1.html#S0108">record_component_association_list</A></SPAN>, 
+<A NAME="I2914"></A>For the evaluation of a <SPAN Class="swiss"><A HREF="AA-4-3-1.html#S0108">record_component_association_list</A></SPAN>, 
 any per-object constraints (see <A HREF="AA-3-8.html">3.8</A>) for components 
 specified in the association list are elaborated and any <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN>s 
 are evaluated and converted to the subtype of the associated component. 
-<A NAME="I2878"></A>Any constraint elaborations and <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN> 
+<A NAME="I2915"></A>Any constraint elaborations and <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN> 
 evaluations (and conversions) occur in an arbitrary order, except that 
 the <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN> 
 for a discriminant is evaluated (and converted) prior to the elaboration 
 of any per-object constraint that depends on it, which in turn occurs 
 prior to the evaluation and conversion of the <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN> 
-for the component with the per-object constraint.<A NAME="I2879"></A> 
+for the component with the per-object constraint.<A NAME="I2916"></A> 
 If the value of a discriminant that governs a selected <SPAN Class="swiss"><A HREF="AA-3-8-1.html#S0071">variant_part</A></SPAN> 
 is given by a nonstatic <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN>, 
 and the evaluation of that <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN> 
 yields a value that does not belong to the nominal subtype of the <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN>, 
-then Constraint_Error is raised.<A NAME="I2880"></A></div>
+then Constraint_Error is raised.<A NAME="I2917"></A></div>
 <div class="paranum"><a name="p19.a">19.a</a></div>
 <div class="Annotations"><B>Ramification:&nbsp;</B>The conversion in the first 
 rule might raise Constraint_Error.&nbsp;</div>
@@ -405,7 +417,12 @@ own default expression or its own default initialization (they can be
 different for each component; the components even could have different 
 types), and each one has to be evaluated. So there is no need to repeat 
 that.&nbsp;</div>
-<div class="paranum"><a name="p21">21/5</a></div>
+<div class="paranum"><a name="p21">21/6</a></div>
+<div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0067-1.html">AI22-0067-1</A></I>} 
+<span class="insert6">The nominal subtype of a <SPAN Class="swiss"><A HREF="AA-4-3-1.html#S0107">record_aggregate</A></SPAN> 
+is constrained by the values defined for the discriminants, if any.</span> 
+</div>
+<div class="paranum"><a name="p22">22/5</a></div>
 <div class="Notes">NOTE&nbsp;&nbsp;&nbsp;{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0447-1.TXT">AI12-0447-1</A></I>} 
 By the rules given above, for a <SPAN Class="swiss"><A HREF="AA-4-3-1.html#S0107">record_aggregate</A></SPAN> 
 with positional associations, expressions specifying discriminant values 
@@ -414,72 +431,72 @@ since the <SPAN Class="swiss"><A HREF="AA-3-7.html#S0061">known_discriminant_par
 occurs first in the declaration of the type.&nbsp;</div>
 
 <H4 Class="centered">Examples</H4>
-<div class="paranum"><a name="p22">22</a></div>
+<div class="paranum"><a name="p23">23</a></div>
 <div class="Normal" style="margin-bottom: 0.4em"><I>Example of a record 
 aggregate with positional associations:</I>&nbsp;</div>
-<div class="paranum"><a name="p23">23</a></div>
-<div class="Examples" style="margin-bottom: 0.9em">(4,&nbsp;July,&nbsp;1776)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--<SPAN Class="roman"><I>&nbsp;see&nbsp;<A HREF="AA-3-8.html">3.8</A>&nbsp;</I></SPAN></div>
 <div class="paranum"><a name="p24">24</a></div>
+<div class="Examples" style="margin-bottom: 0.9em">(4,&nbsp;July,&nbsp;1776)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--<SPAN Class="roman"><I>&nbsp;see&nbsp;<A HREF="AA-3-8.html">3.8</A>&nbsp;</I></SPAN></div>
+<div class="paranum"><a name="p25">25</a></div>
 <div class="Normal" style="margin-bottom: 0.4em"><I>Examples of record 
 aggregates with named associations:</I>&nbsp;</div>
-<div class="paranum"><a name="p25">25</a></div>
+<div class="paranum"><a name="p26">26</a></div>
 <div class="Examples">(Day&nbsp;=&gt;&nbsp;4,&nbsp;Month&nbsp;=&gt;&nbsp;July,&nbsp;Year&nbsp;=&gt;&nbsp;1776)<BR>
 (Month&nbsp;=&gt;&nbsp;July,&nbsp;Day&nbsp;=&gt;&nbsp;4,&nbsp;Year&nbsp;=&gt;&nbsp;1776)</div>
-<div class="paranum"><a name="p26">26</a></div>
+<div class="paranum"><a name="p27">27</a></div>
 <div class="Examples" style="margin-bottom: 0.9em">(Disk,&nbsp;Closed,&nbsp;Track&nbsp;=&gt;&nbsp;5,&nbsp;Cylinder&nbsp;=&gt;&nbsp;12)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--<SPAN Class="roman"><I>&nbsp;see&nbsp;<A HREF="AA-3-8-1.html">3.8.1</A></I></SPAN><BR>
 (Unit&nbsp;=&gt;&nbsp;Disk,&nbsp;Status&nbsp;=&gt;&nbsp;Closed,&nbsp;Cylinder&nbsp;=&gt;&nbsp;9,&nbsp;Track&nbsp;=&gt;&nbsp;1)</div>
-<div class="paranum"><a name="p27">27/2</a></div>
+<div class="paranum"><a name="p28">28/2</a></div>
 <div class="Normal" style="margin-bottom: 0.4em">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00287.TXT">AI95-00287-01</A></I>} 
 <I>Examples of component associations with several choices:</I>&nbsp;</div>
-<div class="paranum"><a name="p28">28</a></div>
-<div class="Examples">(Value&nbsp;=&gt;&nbsp;0,&nbsp;Succ|Pred&nbsp;=&gt;&nbsp;<B>new</B>&nbsp;Cell'(0,&nbsp;<B>null</B>,&nbsp;<B>null</B>))&nbsp;--<SPAN Class="roman"><I>&nbsp;see&nbsp;<A HREF="AA-3-10-1.html">3.10.1</A></I></SPAN></div>
 <div class="paranum"><a name="p29">29</a></div>
+<div class="Examples">(Value&nbsp;=&gt;&nbsp;0,&nbsp;Succ|Pred&nbsp;=&gt;&nbsp;<B>new</B>&nbsp;Cell'(0,&nbsp;<B>null</B>,&nbsp;<B>null</B>))&nbsp;--<SPAN Class="roman"><I>&nbsp;see&nbsp;<A HREF="AA-3-10-1.html">3.10.1</A></I></SPAN></div>
+<div class="paranum"><a name="p30">30</a></div>
 <div class="Examples">&nbsp;&nbsp;&nbsp;--<SPAN Class="roman"><I>&nbsp;The&nbsp;allocator&nbsp;is&nbsp;evaluated&nbsp;twice:</I></SPAN><BR>
 &nbsp;&nbsp;&nbsp;--<SPAN Class="roman"><I>&nbsp;Succ&nbsp;and&nbsp;Pred&nbsp;designate&nbsp;different&nbsp;cells</I></SPAN></div>
-<div class="paranum"><a name="p29.1">29.1/2</a></div>
+<div class="paranum"><a name="p30.1">30.1/2</a></div>
 <div class="Examples">(Value&nbsp;=&gt;&nbsp;0,&nbsp;Succ|Pred&nbsp;=&gt;&nbsp;&lt;&gt;)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--<SPAN Class="roman"><I>&nbsp;see&nbsp;<A HREF="AA-3-10-1.html">3.10.1</A></I></SPAN></div>
-<div class="paranum"><a name="p29.2">29.2/2</a></div>
+<div class="paranum"><a name="p30.2">30.2/2</a></div>
 <div class="Examples" style="margin-bottom: 0.9em">&nbsp;&nbsp;&nbsp;--<SPAN Class="roman"><I>&nbsp;Succ&nbsp;and&nbsp;Pred&nbsp;will&nbsp;be&nbsp;set&nbsp;to&nbsp;<B>null</B></I></SPAN></div>
-<div class="paranum"><a name="p30">30</a></div>
+<div class="paranum"><a name="p31">31</a></div>
 <div class="Normal" style="margin-bottom: 0.4em"><I>Examples of record 
 aggregates for tagged types (see <A HREF="AA-3-9.html">3.9</A> and <A HREF="AA-3-9-1.html">3.9.1</A>):</I> 
 </div>
-<div class="paranum"><a name="p31">31</a></div>
+<div class="paranum"><a name="p32">32</a></div>
 <div class="Examples">Expression'(<B>null&nbsp;record</B>)<BR>
 Literal'(Value&nbsp;=&gt;&nbsp;0.0)<BR>
 Painted_Point'(0.0,&nbsp;Pi/2.0,&nbsp;Paint&nbsp;=&gt;&nbsp;Red)</div>
 
 <H4 Class="centered">Extensions to Ada 83</H4>
-<div class="paranum"><a name="p31.a">31.a</a></div>
-<div class="Annotations"><A NAME="I2881"></A>Null record aggregates may 
+<div class="paranum"><a name="p32.a">32.a</a></div>
+<div class="Annotations"><A NAME="I2918"></A>Null record aggregates may 
 now be specified, via &quot;(<B>null record</B>)&quot;. However, this 
 syntax is more useful for null record extensions in extension aggregates. 
 </div>
 
 <H4 Class="centered">Wording Changes from Ada 83</H4>
-<div class="paranum"><a name="p31.b">31.b</a></div>
+<div class="paranum"><a name="p32.b">32.b</a></div>
 <div class="Annotations">Various AIs have been incorporated (AI83-00189, 
 AI83-00244, and AI83-00309). In particular, Ada 83 did not explicitly 
 disallow extra values in a record aggregate. Now we do.&nbsp;</div>
 
 <H4 Class="centered">Extensions to Ada 95</H4>
-<div class="paranum"><a name="p31.c">31.c/2</a></div>
+<div class="paranum"><a name="p32.c">32.c/2</a></div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00287.TXT">AI95-00287-01</A></I>} 
-<A NAME="I2882"></A>&lt;&gt; can be used in place of an <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN> 
+<A NAME="I2919"></A>&lt;&gt; can be used in place of an <SPAN Class="swiss"><A HREF="AA-4-4.html#S0132">expression</A></SPAN> 
 in a <SPAN Class="swiss"><A HREF="AA-4-3-1.html#S0107">record_aggregate</A></SPAN>, 
 default initializing the component.&nbsp;</div>
 
 <H4 Class="centered">Wording Changes from Ada 95</H4>
-<div class="paranum"><a name="p31.d">31.d/2</a></div>
+<div class="paranum"><a name="p32.d">32.d/2</a></div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00287.TXT">AI95-00287-01</A></I>} 
 Limited <SPAN Class="swiss"><A HREF="AA-4-3-1.html#S0107">record_aggregate</A></SPAN>s 
 are allowed (since all kinds of aggregates can now be limited, see <A HREF="AA-4-3.html">4.3</A>). 
 </div>
 
 <H4 Class="centered">Incompatibilities With Ada 2005</H4>
-<div class="paranum"><a name="p31.e">31.e/3</a></div>
+<div class="paranum"><a name="p32.e">32.e/3</a></div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0220-1.TXT">AI05-0220-1</A></I>} 
-<A NAME="I2883"></A><B>Correction:</B> Corrected wording so that the 
+<A NAME="I2920"></A><B>Correction:</B> Corrected wording so that the 
 rule for discriminants governing <SPAN Class="swiss"><A HREF="AA-3-8-1.html#S0071">variant_part</A></SPAN>s 
 was not effectively circular. The change makes a few <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN>s 
 where a nonstatic discriminant governs an empty <SPAN Class="swiss"><A HREF="AA-3-8-1.html#S0071">variant_part</A></SPAN> 
@@ -489,39 +506,61 @@ So it is unlikely that any incompatibility will be noticed in practice.
 </div>
 
 <H4 Class="centered">Extensions to Ada 2005</H4>
-<div class="paranum"><a name="p31.f">31.f/3</a></div>
+<div class="paranum"><a name="p32.f">32.f/3</a></div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0016-1.TXT">AI05-0016-1</A></I>} 
-<A NAME="I2884"></A><B>Correction:</B> Fixed the wording so that <B>others</B> 
+<A NAME="I2921"></A><B>Correction:</B> Fixed the wording so that <B>others</B> 
 =&gt; &lt;&gt; can be used in place of <B>null record</B>. This is needed 
 to avoid a generic contract issue for generic bodies: we do not want 
 to have to assume the worst to disallow <B>others</B> =&gt; &lt;&gt; 
 if the record type <I>might</I> be a null record.</div>
-<div class="paranum"><a name="p31.g">31.g/3</a></div>
+<div class="paranum"><a name="p32.g">32.g/3</a></div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0199-1.TXT">AI05-0199-1</A></I>} 
 <B>Correction:</B> We now allow multiple components with anonymous access 
 types to be specified with a single component association. This is to 
 be consistent with the capabilities of a named access type.&nbsp;</div>
 
 <H4 Class="centered">Extensions to Ada 2012</H4>
-<div class="paranum"><a name="p31.h">31.h/5</a></div>
+<div class="paranum"><a name="p32.h">32.h/5</a></div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0086-1.TXT">AI12-0086-1</A></I>} 
-<A NAME="I2885"></A>The value of a discriminant that governs a <SPAN Class="swiss"><A HREF="AA-3-8-1.html#S0071">variant_part</A></SPAN> 
+<A NAME="I2922"></A>The value of a discriminant that governs a <SPAN Class="swiss"><A HREF="AA-3-8-1.html#S0071">variant_part</A></SPAN> 
 in an <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN> 
 can be nonstatic if the nominal subtype of the discriminant expression 
 is static and all possible values select a single <SPAN Class="swiss"><A HREF="AA-3-8-1.html#S0072">variant</A></SPAN>. 
 </div>
 
 <H4 Class="centered">Wording Changes from Ada 2012</H4>
-<div class="paranum"><a name="p31.i">31.i/4</a></div>
+<div class="paranum"><a name="p32.i">32.i/4</a></div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0046-1.TXT">AI12-0046-1</A></I>} 
 <B>Corrigendum:</B> We explicitly say that the Legality Rules have to 
 be rechecked for each component individually. This <I>seems</I> obvious, 
 but as the AARM note <A HREF="AA-4-3-1.html">4.3.1</A> (16.c) appeared 
 to say that this was not necessary, and since we explicitly state this 
 sort of thing for generic instances, it seemed better to be explicit.</div>
-<div class="paranum"><a name="p31.j">31.j/5</a></div>
+<div class="paranum"><a name="p32.j">32.j/5</a></div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0127-1.TXT">AI12-0127-1</A></I>} 
-Made wording changes for <SPAN Class="swiss"><A HREF="AA-4-3-4.html#S0120">delta_aggregate</A></SPAN>s.</div>
+Made wording changes for <SPAN Class="swiss"><A HREF="AA-4-3-4.html#S0120">delta_aggregate</A></SPAN>s. 
+</div>
+
+<H4 Class="centered">Incompatibilities With Ada 2022</H4>
+<div class="paranum"><a name="p32.k">32.k/6</a></div>
+<div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0044-1.html">AI22-0044-1</A></I>} 
+<span class="insert6"><A NAME="I2923"></A><B>Corrigendum:</B> Reworded 
+so that a static discriminant has to satisfy any predicate that applies. 
+For aggregates of types whose discriminant subtype has a predicate and 
+the type also has a variant with an <B>others</B> choice, this could 
+cause an aggregate which is legal in Ada 2012 and original Ada 2022 to 
+be illegal in revised Ada 2022. This situation is very unlikely, moreover 
+implementations may not allow such an aggregate by following the spirit 
+rather than a letter of the Standard.</span>&nbsp;</div>
+
+<H4 Class="centered">Wording Changes from Ada 2022</H4>
+<div class="paranum"><a name="p32.l">32.l/6</a></div>
+<div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0067-1.html">AI22-0067-1</A></I>} 
+<span class="insert6"><B>Corrigendum:</B> Defined the properties of the 
+nominal subtype of a <SPAN Class="swiss"><A HREF="AA-4-3-1.html#S0107">record_aggregate</A></SPAN>. 
+This could allow some expressions of <SPAN Class="swiss"><A HREF="AA-4-3.html#S0106">aggregate</A></SPAN>s 
+of unchecked union types to be evaluated without raising Program_Error 
+(see <A HREF="AA-B-3-3.html">B.3.3</A>).</span>&nbsp;</div>
 
 <HR>
 <div style="margin-top: 0.0em; margin-bottom: 0.6em"><A HREF="AA-TOC.html"><IMG SRC="cont.gif" ALT="Contents" BORDER=0></A>&nbsp;

@@ -13,6 +13,8 @@
     DIV.paranum {float: left; font-family: Arial, Helvetica, sans-serif; font-size: 64%; width: 2.8em; margin-left: -0.4em; margin-right: -3.0em; margin-top: 0.2em}
     TT {font-family: "Courier New", monospace}
     DT {display: compact}
+    SPAN.insert6 {text-decoration: underline; color: rgb(0,51,204) }
+    SPAN.delete6 {text-decoration: line-through; color: rgb(0,51,204) }
     A.Bar:link {font-family: Arial, Helvetica, sans-serif; font-style: normal; text-decoration: none; color: rgb(204,204,51)}
     A.Bar:visited {font-family: Arial, Helvetica, sans-serif; font-style: normal; text-decoration: none; color: rgb(204,204,51)}
     DIV.Normal {font-family: "Times New Roman", Times, serif; line-height: 122%; margin-left: 1.8em; margin-bottom: 0.6em}
@@ -22,7 +24,7 @@
     </STYLE>
 </HEAD>
 <BODY TEXT="#000000" BGCOLOR="#FFFFF0" LINK="#000080" VLINK="#330033" ALINK="#0000FF">
-<DIV><SPAN Style="font-size:200%; color: rgb(0,51,153)"><B>Annotated</B></SPAN><SPAN Style="font-size:200%; color: rgb(0,0,102)"><B>&nbsp;Ada Reference Manual</B> (Ada 202y Draft 1)</SPAN> &mdash; <A HREF="AA-TTL.html"><B>Legal Information</B></A></DIV>
+<DIV><SPAN Style="font-size:200%; color: rgb(0,51,153)"><B>Annotated</B></SPAN><SPAN Style="font-size:200%; color: rgb(0,0,102)"><B>&nbsp;Ada Reference Manual</B> (Ada 202y Draft 3)</SPAN> &mdash; <A HREF="AA-TTL.html"><B>Legal Information</B></A></DIV>
 <div style="margin-top: 0.6em; margin-bottom: 0.0em"><A HREF="AA-TOC.html"><IMG SRC="cont.gif" ALT="Contents" BORDER=0></A>&nbsp;
 &nbsp;<A HREF="AA-0-4.html"><IMG SRC="index.gif" ALT="Index" BORDER=0></A>&nbsp;
 &nbsp;<A HREF="AA-STDS.html"><IMG SRC="lib.gif" ALT="References" BORDER=0></A>&nbsp;
@@ -46,28 +48,28 @@ has the following declaration:</div>
 <div class="paranum"><a name="p3">3/5</a></div>
 <div class="Examples"><B>generic</B><BR>
 &nbsp;&nbsp;&nbsp;<B>type</B>&nbsp;Atomic_Type&nbsp;<B>is&nbsp;mod</B>&nbsp;&lt;&gt;&nbsp;<B>with</B>&nbsp;Atomic;<BR>
-<B>package</B>&nbsp;System.Atomic_Operations.Modular_Arithmetic<A NAME="I9508"></A><BR>
+<B>package</B>&nbsp;System.Atomic_Operations.Modular_Arithmetic<A NAME="I9681"></A><BR>
 &nbsp;&nbsp;&nbsp;<B>with</B>&nbsp;Pure,&nbsp;Nonblocking&nbsp;<B>is</B></div>
 <div class="paranum"><a name="p4">4/5</a></div>
-<div class="Examples">&nbsp;&nbsp;&nbsp;<B>procedure</B>&nbsp;<A NAME="I9509"></A>Atomic_Add&nbsp;(Item&nbsp;&nbsp;:&nbsp;<B>aliased&nbsp;in&nbsp;out</B>&nbsp;Atomic_Type;<BR>
+<div class="Examples">&nbsp;&nbsp;&nbsp;<B>procedure</B>&nbsp;<A NAME="I9682"></A>Atomic_Add&nbsp;(Item&nbsp;&nbsp;:&nbsp;<B>aliased&nbsp;in&nbsp;out</B>&nbsp;Atomic_Type;<BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Value&nbsp;:&nbsp;Atomic_Type)<BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>with</B>&nbsp;Convention&nbsp;=&gt;&nbsp;Intrinsic;</div>
 <div class="paranum"><a name="p5">5/5</a></div>
-<div class="Examples">&nbsp;&nbsp;&nbsp;<B>procedure</B>&nbsp;<A NAME="I9510"></A>Atomic_Subtract&nbsp;(Item&nbsp;&nbsp;:&nbsp;<B>aliased&nbsp;in&nbsp;out</B>&nbsp;Atomic_Type;<BR>
+<div class="Examples">&nbsp;&nbsp;&nbsp;<B>procedure</B>&nbsp;<A NAME="I9683"></A>Atomic_Subtract&nbsp;(Item&nbsp;&nbsp;:&nbsp;<B>aliased&nbsp;in&nbsp;out</B>&nbsp;Atomic_Type;<BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Value&nbsp;:&nbsp;Atomic_Type)<BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>with</B>&nbsp;Convention&nbsp;=&gt;&nbsp;Intrinsic;</div>
 <div class="paranum"><a name="p6">6/5</a></div>
-<div class="Examples">&nbsp;&nbsp;&nbsp;<B>function</B>&nbsp;<A NAME="I9511"></A>Atomic_Fetch_And_Add<BR>
+<div class="Examples">&nbsp;&nbsp;&nbsp;<B>function</B>&nbsp;<A NAME="I9684"></A>Atomic_Fetch_And_Add<BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Item&nbsp;&nbsp;:&nbsp;<B>aliased&nbsp;in&nbsp;out</B>&nbsp;Atomic_Type;<BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Value&nbsp;:&nbsp;Atomic_Type)&nbsp;<B>return</B>&nbsp;Atomic_Type<BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>with</B>&nbsp;Convention&nbsp;=&gt;&nbsp;Intrinsic;</div>
 <div class="paranum"><a name="p7">7/5</a></div>
-<div class="Examples">&nbsp;&nbsp;&nbsp;<B>function</B>&nbsp;<A NAME="I9512"></A>Atomic_Fetch_And_Subtract<BR>
+<div class="Examples">&nbsp;&nbsp;&nbsp;<B>function</B>&nbsp;<A NAME="I9685"></A>Atomic_Fetch_And_Subtract<BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Item&nbsp;&nbsp;:&nbsp;<B>aliased&nbsp;in&nbsp;out</B>&nbsp;Atomic_Type;<BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Value&nbsp;:&nbsp;Atomic_Type)&nbsp;<B>return</B>&nbsp;Atomic_Type<BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>with</B>&nbsp;Convention&nbsp;=&gt;&nbsp;Intrinsic;</div>
 <div class="paranum"><a name="p8">8/5</a></div>
-<div class="Examples">&nbsp;&nbsp;&nbsp;<B>function</B>&nbsp;<A NAME="I9513"></A>Is_Lock_Free&nbsp;(Item&nbsp;:&nbsp;<B>aliased</B>&nbsp;Atomic_Type)&nbsp;<B>return</B>&nbsp;Boolean<BR>
+<div class="Examples">&nbsp;&nbsp;&nbsp;<B>function</B>&nbsp;<A NAME="I9686"></A>Is_Lock_Free&nbsp;(Item&nbsp;:&nbsp;<B>aliased</B>&nbsp;Atomic_Type)&nbsp;<B>return</B>&nbsp;Boolean<BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>with</B>&nbsp;Convention&nbsp;=&gt;&nbsp;Intrinsic;</div>
 <div class="paranum"><a name="p9">9/5</a></div>
 <div class="Examples"><B>end</B>&nbsp;System.Atomic_Operations.Modular_Arithmetic;</div>
@@ -107,10 +109,50 @@ Tmp;</TT></div>
 Atomically performs: <TT>Tmp := Item; Item := Item - Value; <B>return</B> 
 Tmp;</TT></div>
 
+<H4 Class="centered">Implementation Permissions</H4>
+<div class="paranum"><a name="p19">19/6</a></div>
+<div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0125-1.html">AI22-0125-1</A></I>} 
+<span class="insert6">An implementation may allow <TT>Item</TT> to be 
+modified if the operation defined in an instance of <TT>System.Atomic_Operations.Modular_Arithmetic</TT> 
+fails a language-defined check. Additionally, an implementation may check 
+that predicates are satisfied after the atomic operation.</span></div>
+<div class="paranum"><a name="p19.a">19.a/6</a></div>
+<div class="Annotations"><span class="insert6"><B>Reason:&nbsp;</B></span>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0125-1.html">AI22-0125-1</A></I>} 
+<span class="insert6">We want to allow the check to be made after the 
+atomic operation, but using the results of the operation. We do not want 
+to require the arbitrary code of predicate checks to be part of the atomic 
+operation, as that could cause unusually long atomic operations.</span> 
+</div>
+<div class="paranum"><a name="p19.b">19.b/6</a></div>
+<div class="Annotations"><span class="insert6"><B>Ramification:&nbsp;</B></span>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0125-1.html">AI22-0125-1</A></I>} 
+<span class="insert6">Range checks will be performed, but if they fail 
+the object value can be invalid afterwards.</span>&nbsp;</div>
+
+<H4 Class="centered">Usage</H4>
+<div class="paranum"><a name="p20">20/6</a></div>
+<div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0125-1.html">AI22-0125-1</A></I>} 
+<span class="insert6">The subtype used to instantiate <TT>System.Atomic_Operations.Modular_Arithmetic</TT> 
+should not have predicates, as those probably will not be checked atomically, 
+potentially causing incorrect check failures if another task has modified 
+the value between the operation and the check. For the best performance, 
+the subtype should be a base subtype so that no range check need be performed.</span> 
+</div>
+
 <H4 Class="centered">Extensions to Ada 2012</H4>
-<div class="paranum"><a name="p18.a">18.a/5</a></div>
+<div class="paranum"><a name="p20.a">20.a/5</a></div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0364-1.TXT">AI12-0364-1</A></I>} 
-<A NAME="I9514"></A>This package is new.&nbsp;</div>
+<A NAME="I9687"></A>This package is new.&nbsp;</div>
+
+<H4 Class="centered">Inconsistencies With Ada 2022</H4>
+<div class="paranum"><a name="p20.b">20.b/6</a></div>
+<div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0125-1.html">AI22-0125-1</A></I>} 
+<span class="insert6"><A NAME="I9688"></A><B>Corrigendum:</B> We now 
+allow language-defined checks to be performed after the atomic operation 
+so that they do not have to harm performance. If an Ada 2022 program 
+depends on the checks being made atomically, it might fail with an updated 
+compiler. However, the only known implementation of this package fails 
+to make language-defined checks at all, so it is very unlikely that any 
+such program exists.</span>&nbsp;</div>
 
 <HR>
 <div style="margin-top: 0.0em; margin-bottom: 0.6em"><A HREF="AA-TOC.html"><IMG SRC="cont.gif" ALT="Contents" BORDER=0></A>&nbsp;

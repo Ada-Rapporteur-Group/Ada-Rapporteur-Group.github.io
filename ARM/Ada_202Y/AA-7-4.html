@@ -13,6 +13,8 @@
     DIV.paranum {float: left; font-family: Arial, Helvetica, sans-serif; font-size: 64%; width: 2.8em; margin-left: -0.4em; margin-right: -3.0em; margin-top: 0.2em}
     TT {font-family: "Courier New", monospace}
     DT {display: compact}
+    SPAN.insert6 {text-decoration: underline; color: rgb(0,51,204) }
+    SPAN.delete6 {text-decoration: line-through; color: rgb(0,51,204) }
     A.Bar:link {font-family: Arial, Helvetica, sans-serif; font-style: normal; text-decoration: none; color: rgb(204,204,51)}
     A.Bar:visited {font-family: Arial, Helvetica, sans-serif; font-style: normal; text-decoration: none; color: rgb(204,204,51)}
     DIV.Normal {font-family: "Times New Roman", Times, serif; line-height: 122%; margin-left: 1.8em; margin-bottom: 0.6em}
@@ -24,7 +26,7 @@
     </STYLE>
 </HEAD>
 <BODY TEXT="#000000" BGCOLOR="#FFFFF0" LINK="#000080" VLINK="#330033" ALINK="#0000FF">
-<DIV><SPAN Style="font-size:200%; color: rgb(0,51,153)"><B>Annotated</B></SPAN><SPAN Style="font-size:200%; color: rgb(0,0,102)"><B>&nbsp;Ada Reference Manual</B> (Ada 202y Draft 1)</SPAN> &mdash; <A HREF="AA-TTL.html"><B>Legal Information</B></A></DIV>
+<DIV><SPAN Style="font-size:200%; color: rgb(0,51,153)"><B>Annotated</B></SPAN><SPAN Style="font-size:200%; color: rgb(0,0,102)"><B>&nbsp;Ada Reference Manual</B> (Ada 202y Draft 3)</SPAN> &mdash; <A HREF="AA-TTL.html"><B>Legal Information</B></A></DIV>
 <div style="margin-top: 0.6em; margin-bottom: 0.0em"><A HREF="AA-TOC.html"><IMG SRC="cont.gif" ALT="Contents" BORDER=0></A>&nbsp;
 &nbsp;<A HREF="AA-0-4.html"><IMG SRC="index.gif" ALT="Index" BORDER=0></A>&nbsp;
 &nbsp;<A HREF="AA-STDS.html"><IMG SRC="lib.gif" ALT="References" BORDER=0></A>&nbsp;
@@ -45,14 +47,14 @@ B</A>).]&nbsp;</div>
 <div class="paranum"><a name="p2">2/3</a></div>
 <div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0229-1.TXT">AI05-0229-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0269-1.TXT">AI05-0269-1</A></I>} 
-[<A NAME="I4493"></A> A <I>deferred constant declaration</I> is an <SPAN Class="swiss"><A HREF="AA-3-3-1.html#S0032">object_declaration</A></SPAN> 
+[<A NAME="I4566"></A> A <I>deferred constant declaration</I> is an <SPAN Class="swiss"><A HREF="AA-3-3-1.html#S0032">object_declaration</A></SPAN> 
 with the reserved word <B>constant</B> but no initialization expression.] 
-<A NAME="I4494"></A>The constant declared by a deferred constant declaration 
-is called a <I>deferred constant</I>. <A NAME="I4495"></A>[Unless the 
+<A NAME="I4567"></A>The constant declared by a deferred constant declaration 
+is called a <I>deferred constant</I>. <A NAME="I4568"></A>[Unless the 
 Import aspect (see <A HREF="AA-B-1.html">B.1</A>) is True for a deferred 
 constant declaration, the] deferred constant declaration requires a completion, 
 which shall be a full constant declaration (called the <I>full declaration</I> 
-of the deferred constant). <A NAME="I4496"></A></div>
+of the deferred constant). <A NAME="I4569"></A></div>
 <div class="paranum"><a name="p2.a">2.a</a></div>
 <div class="Annotations"><B>Proof:&nbsp;</B>The first sentence is redundant, 
 as it is stated officially in <A HREF="AA-3-3-1.html">3.3.1</A>.</div>
@@ -82,32 +84,45 @@ or <SPAN Class="swiss"><A HREF="AA-3-10.html#S0084">access_definition</A></SPAN>
 rather than an <SPAN Class="swiss"><A HREF="AA-3-6.html#S0051">array_type_definition</A></SPAN>, 
 because each <SPAN Class="swiss"><A HREF="AA-3-6.html#S0051">array_type_definition</A></SPAN> 
 would define a new type.&nbsp;</div>
-<div class="paranum"><a name="p6">6/3</a></div>
+<div class="paranum"><a name="p6">6/6</a></div>
 <div class="Bulleted">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00385.TXT">AI95-00385-01</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0062-1.TXT">AI05-0062-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0262-1.TXT">AI05-0262-1</A></I>} 
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0041-1.html">AI22-0041-1</A></I>} 
 If the deferred constant declaration includes a <SPAN Class="swiss"><A HREF="AA-3-2-2.html#S0027">subtype_indication</A></SPAN> 
-<I>S</I> that defines a constrained subtype, then the constraint defined 
-by the <SPAN Class="swiss"><A HREF="AA-3-2-2.html#S0027">subtype_indication</A></SPAN> 
-in the full declaration shall match the constraint defined by <I>S</I> 
-statically.[ On the other hand, if the subtype of the deferred constant 
-is unconstrained, then the full declaration is still allowed to impose 
-a constraint. The constant itself will be constrained, like all constants;]</div>
-<div class="paranum"><a name="p7">7/2</a></div>
+<span class="delete6"><I>S</I>&nbsp;</span>that defines a <span class="delete6">constrained</span> 
+subtype<span class="insert6">&nbsp;<I>S1</I></span>, then <span class="delete6">the 
+constraint defined by</span> the <SPAN Class="swiss"><A HREF="AA-3-2-2.html#S0027">subtype_indication</A></SPAN> 
+in the full declaration shall <span class="insert6">define a subtype 
+<I>S2</I> that is statically compatible with <I>S1</I> (see <A HREF="AA-4-9-1.html">4.9.1</A>).<A NAME="I4570"></A> 
+If <I>S1</I> is a constrained subtype, the constraint defined by <I>S2</I> 
+</span>shall <span class="insert6">statically&nbsp;</span>match the constraint 
+defined by <span class="insert6"><I>S1</I></span><span class="delete6"><I>&nbsp;S</I></span><span class="delete6">&nbsp;statically</span>.[ <span class="insert6">If</span><span class="delete6">&nbsp;On 
+the other hand, if</span> the subtype <span class="insert6"><I>S1</I> 
+</span>of the deferred constant is unconstrained, then the full declaration 
+is still allowed to impose a constraint<span class="delete6">. The constant 
+itself will be constrained, like all constants</span>;]</div>
+<div class="paranum"><a name="p7">7/6</a></div>
 <div class="Bulleted">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00231.TXT">AI95-00231-01</A></I>} 
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0041-1.html">AI22-0041-1</A></I>} 
 If the deferred constant declaration includes the reserved word <B>aliased</B>, 
-then the full declaration shall also;&nbsp;</div>
+then the full declaration shall also<span class="insert6">.</span><span class="delete6">;</span> 
+</div>
 <div class="paranum"><a name="p7.a">7.a</a></div>
 <div class="Annotations"><B>Ramification:&nbsp;</B>On the other hand, the 
 full constant can be aliased even if the deferred constant is not.&nbsp;</div>
-<div class="paranum"><a name="p7.1">7.1/2</a></div>
+<div class="paranum"><a name="p7.1">7.1/6</a></div>
 <div class="Bulleted">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00231.TXT">AI95-00231-01</A></I>} 
-If the subtype of the deferred constant declaration excludes null, the 
-subtype of the full declaration shall also exclude null.&nbsp;</div>
-<div class="paranum"><a name="p7.a.1">7.a.1/2</a></div>
-<div class="Annotations"><B>Ramification:&nbsp;</B>On the other hand, the 
-full constant can exclude null even if the deferred constant does not. 
-But that can only happen for a <SPAN Class="swiss"><A HREF="AA-3-2-2.html#S0027">subtype_indication</A></SPAN>, 
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0041-1.html">AI22-0041-1</A></I>} 
+<span class="delete6">If the subtype of the deferred constant declaration 
+excludes null, the subtype of the full declaration shall also exclude 
+null.</span>&nbsp;</div>
+<div class="paranum"><a name="p7.b">7.b/6</a></div>
+<div class="Annotations"><B>Ramification:&nbsp;</B><span class="insert6">Static 
+compatibility requires that if the subtype of the deferred constant declaration 
+excludes null, the subtype of the full declaration also excludes null. 
+</span>On the other hand, the full constant can exclude null even if 
+the deferred constant does not. But that can only happen for a <SPAN Class="swiss"><A HREF="AA-3-2-2.html#S0027">subtype_indication</A></SPAN>, 
 as anonymous access types are required to statically match (which includes 
 any <SPAN Class="swiss"><A HREF="AA-3-10.html#S0083">null_exclusion</A></SPAN>). 
 </div>
@@ -125,7 +140,7 @@ the constant is frozen (see <A HREF="AA-13-14.html">13.14</A>).</div>
 <H4 Class="centered">Dynamic Semantics</H4>
 <div class="paranum"><a name="p10">10/3</a></div>
 <div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0004-1.TXT">AI05-0004-1</A></I>} 
-<A NAME="I4497"></A>The elaboration of a deferred constant declaration 
+<A NAME="I4571"></A>The elaboration of a deferred constant declaration 
 elaborates the <SPAN Class="swiss"><A HREF="AA-3-2-2.html#S0027">subtype_indication</A></SPAN>, 
 <SPAN Class="swiss"><A HREF="AA-3-10.html#S0084">access_definition</A></SPAN>, 
 or (only allowed in the case of an imported constant) the <SPAN Class="swiss"><A HREF="AA-3-6.html#S0051">array_type_definition</A></SPAN>. 
@@ -175,7 +190,7 @@ CPU_Identifier&nbsp;:&nbsp;<B>constant</B>&nbsp;String(1..8)<BR>
 
 <H4 Class="centered">Extensions to Ada 83</H4>
 <div class="paranum"><a name="p14.a">14.a</a></div>
-<div class="Annotations"><A NAME="I4498"></A>In Ada 83, a deferred constant 
+<div class="Annotations"><A NAME="I4572"></A>In Ada 83, a deferred constant 
 is required to be of a private type declared in the same visible part. 
 This restriction is removed for Ada 95; deferred constants can be of 
 any type.</div>
@@ -229,7 +244,7 @@ their own syntax, but now they are simply a special case of <SPAN Class="swiss">
 <H4 Class="centered">Extensions to Ada 95</H4>
 <div class="paranum"><a name="p14.j">14.j/2</a></div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00385.TXT">AI95-00385-01</A></I>} 
-<A NAME="I4499"></A>Deferred constants were enhanced to allow the use 
+<A NAME="I4573"></A>Deferred constants were enhanced to allow the use 
 of anonymous access types in them.&nbsp;</div>
 
 <H4 Class="centered">Wording Changes from Ada 95</H4>
@@ -243,6 +258,21 @@ Added matching rules for subtypes that exclude null.&nbsp;</div>
 <B>Correction:</B> Corrected rules so that the intent that a full constant 
 may have a null exclusion even if the deferred constant does not is actually 
 met.&nbsp;</div>
+
+<H4 Class="centered">Incompatibilities With Ada 2022</H4>
+<div class="paranum"><a name="p14.m">14.m/6</a></div>
+<div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0041-1.html">AI22-0041-1</A></I>} 
+<span class="insert6"><A NAME="I4574"></A><B>Corrigendum:</B> We now 
+require the subtype of the full constant to be statically compatible 
+with that of the deferred constant. This means that for a deferred constant 
+subject to a predicate, the full constant must be subject to the same 
+predicate. In Ada 2012 and original Ada 2022, this was allowed (but undesirable, 
+as the value might not meet the contract implied by the declaration of 
+the deferred constant). This is thought to be a rare situation (usually 
+the subtype of the full constant will be the same as that of the deferred 
+constant). The other requirements made by static compatibility were already 
+made by explicit rules for deferred constants, so this simplifies the 
+wording somewhat.</span>&nbsp;</div>
 
 <HR>
 <div style="margin-top: 0.0em; margin-bottom: 0.6em"><A HREF="AA-TOC.html"><IMG SRC="cont.gif" ALT="Contents" BORDER=0></A>&nbsp;

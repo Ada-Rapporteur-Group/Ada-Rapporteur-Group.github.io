@@ -13,6 +13,8 @@
     DIV.paranum {float: left; font-family: Arial, Helvetica, sans-serif; font-size: 64%; width: 2.8em; margin-left: -0.4em; margin-right: -3.0em; margin-top: 0.2em}
     TT {font-family: "Courier New", monospace}
     DT {display: compact}
+    SPAN.insert6 {text-decoration: underline; color: rgb(0,51,204) }
+    SPAN.delete6 {text-decoration: line-through; color: rgb(0,51,204) }
     A.Bar:link {font-family: Arial, Helvetica, sans-serif; font-style: normal; text-decoration: none; color: rgb(204,204,51)}
     A.Bar:visited {font-family: Arial, Helvetica, sans-serif; font-style: normal; text-decoration: none; color: rgb(204,204,51)}
     DIV.Normal {font-family: "Times New Roman", Times, serif; line-height: 122%; margin-left: 1.8em; margin-bottom: 0.6em}
@@ -22,7 +24,7 @@
     </STYLE>
 </HEAD>
 <BODY TEXT="#000000" BGCOLOR="#FFFFF0" LINK="#000080" VLINK="#330033" ALINK="#0000FF">
-<DIV><SPAN Style="font-size:200%; color: rgb(0,51,153)"><B>Annotated</B></SPAN><SPAN Style="font-size:200%; color: rgb(0,0,102)"><B>&nbsp;Ada Reference Manual</B> (Ada 202y Draft 1)</SPAN> &mdash; <A HREF="AA-TTL.html"><B>Legal Information</B></A></DIV>
+<DIV><SPAN Style="font-size:200%; color: rgb(0,51,153)"><B>Annotated</B></SPAN><SPAN Style="font-size:200%; color: rgb(0,0,102)"><B>&nbsp;Ada Reference Manual</B> (Ada 202y Draft 3)</SPAN> &mdash; <A HREF="AA-TTL.html"><B>Legal Information</B></A></DIV>
 <div style="margin-top: 0.6em; margin-bottom: 0.0em"><A HREF="AA-TOC.html"><IMG SRC="cont.gif" ALT="Contents" BORDER=0></A>&nbsp;
 &nbsp;<A HREF="AA-0-4.html"><IMG SRC="index.gif" ALT="Index" BORDER=0></A>&nbsp;
 &nbsp;<A HREF="AA-STDS.html"><IMG SRC="lib.gif" ALT="References" BORDER=0></A>&nbsp;
@@ -58,11 +60,20 @@ For direct access, the size of the created file is implementation defined.</div>
 <div class="Annotations"><B>Ramification:&nbsp;</B>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0005-1.TXT">AI12-0005-1</A></I>} 
 For a direct file, the initial value of current index is 1 (see <A HREF="AA-A-8.html">A.8</A>). 
 </div>
-<div class="paranum"><a name="p4">4</a></div>
-<div class="Indented2">A null string for Name specifies an external file 
-that is not accessible after the completion of the main program (a temporary 
-file). A null string for Form specifies the use of the default options 
-of the implementation for the external file.</div>
+<div class="paranum"><a name="p4">4/6</a></div>
+<div class="Indented2">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0114-1.html">AI22-0114-1</A></I>} 
+A null string for Name specifies an external file that is not accessible 
+after the completion of the <span class="insert6">partition</span><span class="delete6">&nbsp;main 
+program</span> (a temporary file). A null string for Form specifies the 
+use of the default options of the implementation for the external file.</div>
+<div class="paranum"><a name="p4.a">4.a/6</a></div>
+<div class="Annotations"><span class="insert6"><B>Ramification:&nbsp;</B></span>{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0114-1.html">AI22-0114-1</A></I>} 
+<span class="insert6">Temporary files become inaccessible after the termination 
+of the environment task of the partition (which includes the termination 
+of any library tasks). If a program consists of multiple partitions, 
+we do not require the temporary files to remain until all partitions 
+have terminated, as that could require significant overhead for a rarely 
+used feature of Ada.</span>&nbsp;</div>
 <div class="paranum"><a name="p5">5</a></div>
 <div class="Indented2" style="margin-bottom: 0.9em">The exception Status_Error 
 is propagated if the given file is already open. The exception Name_Error 
@@ -253,6 +264,21 @@ I/O packages.</div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0021-1.TXT">AI12-0021-1</A></I>} 
 The nested Wide_File_Names and Wide_Wide_File_Names packages are now 
 described here.&nbsp;</div>
+
+<H4 Class="centered">Inconsistencies With Ada 2022</H4>
+<div class="paranum"><a name="p29.f">29.f/6</a></div>
+<div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0114-1.html">AI22-0114-1</A></I>} 
+<span class="insert6"><A NAME="I7806"></A><B>Corrigendum:</B> We now 
+say that temporary files are inaccessible after the termination of the 
+partition, rather than the undefined term &quot;main program&quot;. If 
+some implementation waited until the termination of the entire program 
+(all partitions) before removing any temporary files, and some program 
+depended upon that behavior, then that program could fail after this 
+change. However, since <A HREF="AA-A-7.html">A.7</A> says that the state 
+of external files is unspecified after the termination of the main subprogram, 
+this situation is untestable, and thus no implementation would be compelled 
+to change by this wording change. Thus we judge that is it very unlikely 
+that this inconsistency causes an actual problem.</span>&nbsp;</div>
 
 <HR>
 <div style="margin-top: 0.0em; margin-bottom: 0.6em"><A HREF="AA-TOC.html"><IMG SRC="cont.gif" ALT="Contents" BORDER=0></A>&nbsp;

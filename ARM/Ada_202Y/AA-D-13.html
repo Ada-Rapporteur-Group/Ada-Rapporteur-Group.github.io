@@ -13,6 +13,12 @@
     DIV.paranum {float: left; font-family: Arial, Helvetica, sans-serif; font-size: 64%; width: 2.8em; margin-left: -0.4em; margin-right: -3.0em; margin-top: 0.2em}
     TT {font-family: "Courier New", monospace}
     DT {display: compact}
+    SPAN.insert6 {text-decoration: underline; color: rgb(0,51,204) }
+    SPAN.delete6 {text-decoration: line-through; color: rgb(0,51,204) }
+    SPAN.insert7 {text-decoration: underline; color: rgb(0,102,153) }
+    SPAN.delete7 {text-decoration: line-through; color: rgb(0,102,153) }
+    SPAN.insert8 {text-decoration: underline; color: rgb(204,51,0) }
+    SPAN.delete8 {text-decoration: line-through; color: rgb(204,51,0) }
     A.Bar:link {font-family: Arial, Helvetica, sans-serif; font-style: normal; text-decoration: none; color: rgb(204,204,51)}
     A.Bar:visited {font-family: Arial, Helvetica, sans-serif; font-style: normal; text-decoration: none; color: rgb(204,204,51)}
     DIV.Normal {font-family: "Times New Roman", Times, serif; line-height: 122%; margin-left: 1.8em; margin-bottom: 0.6em}
@@ -23,7 +29,7 @@
     </STYLE>
 </HEAD>
 <BODY TEXT="#000000" BGCOLOR="#FFFFF0" LINK="#000080" VLINK="#330033" ALINK="#0000FF">
-<DIV><SPAN Style="font-size:200%; color: rgb(0,51,153)"><B>Annotated</B></SPAN><SPAN Style="font-size:200%; color: rgb(0,0,102)"><B>&nbsp;Ada Reference Manual</B> (Ada 202y Draft 1)</SPAN> &mdash; <A HREF="AA-TTL.html"><B>Legal Information</B></A></DIV>
+<DIV><SPAN Style="font-size:200%; color: rgb(0,51,153)"><B>Annotated</B></SPAN><SPAN Style="font-size:200%; color: rgb(0,0,102)"><B>&nbsp;Ada Reference Manual</B> (Ada 202y Draft 3)</SPAN> &mdash; <A HREF="AA-TTL.html"><B>Legal Information</B></A></DIV>
 <div style="margin-top: 0.6em; margin-bottom: 0.0em"><A HREF="AA-TOC.html"><IMG SRC="cont.gif" ALT="Contents" BORDER=0></A>&nbsp;
 &nbsp;<A HREF="AA-0-4.html"><IMG SRC="index.gif" ALT="Index" BORDER=0></A>&nbsp;
 &nbsp;<A HREF="AA-STDS.html"><IMG SRC="lib.gif" ALT="References" BORDER=0></A>&nbsp;
@@ -38,8 +44,7 @@
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0246-1.TXT">AI05-0246-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0299-1.TXT">AI05-0299-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0291-1.TXT">AI12-0291-1</A></I>} 
-[This subclause defines the Ravenscar and Jorvik<A NAME="I9862"></A> 
-profiles.<A NAME="I9863"></A>]&nbsp;</div>
+[This subclause defines the Ravenscar and Jorvik profiles.]&nbsp;</div>
 <div class="Normal"><SPAN STYLE="font-size: 80%"><I>Paragraphs 2 and 
 3 were moved to <A HREF="AA-13-12.html">13.12</A>, &ldquo;<A HREF="AA-13-12.html">Pragma 
 Restrictions and Pragma Profile</A>&rdquo;.</I></SPAN>&nbsp;</div>
@@ -59,7 +64,8 @@ usage profiles Ravenscar and Jorvik, there shall be no <I>profile_</I><SPAN Clas
 <div class="paranum"><a name="p5">5/3</a></div>
 <div class="Normal" style="margin-bottom: 0.4em">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00249.TXT">AI95-00249-01</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0246-1.TXT">AI05-0246-1</A></I>} 
-The usage profile Ravenscar is equivalent to the following set of pragmas:</div>
+The usage profile Ravenscar<A NAME="I10041"></A><A NAME="I10042"></A><A NAME="I10043"></A> 
+is equivalent to the following set of pragmas:</div>
 <div class="paranum"><a name="p6">6/4</a></div>
 <div class="Examples">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00249.TXT">AI95-00249-01</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00297.TXT">AI95-00297-01</A></I>} 
@@ -109,7 +115,8 @@ York, UK, near where the Ravenscar profile was created. &quot;Jorvik&quot;
 (pronounced &quot;Yorvick&quot;) was the Viking name for York.&nbsp;</div>
 <div class="paranum"><a name="p6.1">6.1/5</a></div>
 <div class="Normal" style="margin-bottom: 0.4em">&nbsp;{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0291-1.TXT">AI12-0291-1</A></I>} 
-The usage profile Jorvik is equivalent to the following set of pragmas:</div>
+The usage profile Jorvik<A NAME="I10044"></A><A NAME="I10045"></A><A NAME="I10046"></A> 
+is equivalent to the following set of pragmas:</div>
 <div class="paranum"><a name="p6.2">6.2/5</a></div>
 <div class="Examples">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0291-1.TXT">AI12-0291-1</A></I>} 
 <B>pragma</B>&nbsp;Task_Dispatching_Policy&nbsp;(FIFO_Within_Priorities);<BR>
@@ -165,6 +172,14 @@ should have separate and disjoint ready queues.</div>
 <div class="paranum"><a name="p9.a.1">9.a.1/3</a></div>
 <div class="Annotations"><B>Implementation Advice:&nbsp;</B>On a multiprocessor 
 system, each processor should have a separate and disjoint ready queue.</div>
+
+<H4 Class="centered">Usage</H4>
+<div class="paranum"><a name="p9.1">9.1/7</a></div>
+<div class="Normal">&nbsp;{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0055-1.html">AI22-0055-1</A></I>} 
+<span class="insert7">It is not recommended to specify the CPU of a task 
+to be Not_A_Specific_CPU when the Ravenscar or Jorvik profile is in effect. 
+How a partition executes strongly depends on the assignment of tasks 
+to CPUs.</span>&nbsp;</div>
 <div class="paranum"><a name="p10">10/5</a></div>
 <div class="Notes">NOTE 1&nbsp;&nbsp;&nbsp;{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00249.TXT">AI95-00249-01</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0246-1.TXT">AI05-0246-1</A></I>} 
@@ -182,12 +197,15 @@ will execute on a single CPU unless the programmer explicitly uses aspect
 CPU to specify the CPU assignments for tasks. The use of multiple CPUs 
 requires care, as many guarantees of single CPU scheduling no longer 
 apply.</div>
-<div class="paranum"><a name="p12">12/5</a></div>
-<div class="Notes">NOTE 3&nbsp;&nbsp;&nbsp;{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0055-1.TXT">AI12-0055-1</A></I>} 
+<div class="paranum"><a name="p12">12/7</a></div>
+<div class="Notes"><SPAN STYLE="font-size: 80%"><I>This paragraph was 
+deleted.</I></SPAN>NOTE 3&nbsp;&nbsp;&nbsp;{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0055-1.TXT">AI12-0055-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0291-1.TXT">AI12-0291-1</A></I>} 
-It is not recommended to specify the CPU of a task to be Not_A_Specific_CPU 
-when the Ravenscar or Jorvik profile is in effect. How a partition executes 
-strongly depends on the assignment of tasks to CPUs.&nbsp;</div>
+{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI22s/AI22-0055-1.html">AI22-0055-1</A></I>} 
+<span class="delete6">It is not recommended to specify the CPU of a task 
+to be Not_A_Specific_CPU when the Ravenscar or Jorvik profile is in effect. 
+How a partition executes strongly depends on the assignment of tasks 
+to CPUs.</span>&nbsp;</div>
 <div class="paranum"><a name="p13">13/5</a></div>
 <div class="Notes">NOTE 4&nbsp;&nbsp;&nbsp;{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0291-1.TXT">AI12-0291-1</A></I>} 
 Any unit that meets the requirements of the Ravenscar profile also meets 
@@ -197,8 +215,8 @@ the requirements of the Jorvik profile.&nbsp;</div>
 <div class="paranum"><a name="p13.a">13.a/3</a></div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AIs/AI-00249.TXT">AI95-00249-01</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0246-1.TXT">AI05-0246-1</A></I>} 
-<A NAME="I9864"></A>The Ravenscar profile is new; it was moved here by 
-Ada 2012.&nbsp;</div>
+<A NAME="I10047"></A>The Ravenscar profile is new; it was moved here 
+by Ada 2012.&nbsp;</div>
 
 <H4 Class="centered">Wording Changes from Ada 2005</H4>
 <div class="paranum"><a name="p13.b">13.b/3</a></div>
@@ -208,7 +226,7 @@ How Ravenscar behaves on a multiprocessor system is now defined.&nbsp;</div>
 <H4 Class="centered">Incompatibilities With Ada 2012</H4>
 <div class="paranum"><a name="p13.c">13.c/4</a></div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0073-1.TXT">AI05-0073-1</A></I>} 
-<A NAME="I9865"></A><B>Corrigendum:</B> The Ravenscar profile no longer 
+<A NAME="I10048"></A><B>Corrigendum:</B> The Ravenscar profile no longer 
 allows the use of package Synchronous_Barriers, as this package violates 
 the fundamental Ravenscar requirement that each waiting point can only 
 block (and release) a single task. This is incompatible with the published 
@@ -227,7 +245,7 @@ program.&nbsp;</div>
 <H4 Class="centered">Extensions to Ada 2012</H4>
 <div class="paranum"><a name="p13.e">13.e/5</a></div>
 <div class="Annotations">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0291-1.TXT">AI12-0291-1</A></I>} 
-<A NAME="I9866"></A>The Jorvik profile is new.&nbsp;</div>
+<A NAME="I10049"></A>The Jorvik profile is new.&nbsp;</div>
 
 <HR>
 <div style="margin-top: 0.0em; margin-bottom: 0.6em"><A HREF="AA-TOC.html"><IMG SRC="cont.gif" ALT="Contents" BORDER=0></A>&nbsp;

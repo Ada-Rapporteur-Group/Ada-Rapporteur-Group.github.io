@@ -24,7 +24,7 @@
     </STYLE>
 </HEAD>
 <BODY TEXT="#000000" BGCOLOR="#FFFFF0" LINK="#000080" VLINK="#330033" ALINK="#0000FF">
-<DIV><SPAN Style="font-size:200%; color: rgb(0,51,153)"><B>Annotated</B></SPAN><SPAN Style="font-size:200%; color: rgb(0,0,102)"><B>&nbsp;Ada Reference Manual</B> (Ada 202y Draft 1)</SPAN> &mdash; <A HREF="AA-TTL.html"><B>Legal Information</B></A></DIV>
+<DIV><SPAN Style="font-size:200%; color: rgb(0,51,153)"><B>Annotated</B></SPAN><SPAN Style="font-size:200%; color: rgb(0,0,102)"><B>&nbsp;Ada Reference Manual</B> (Ada 202y Draft 3)</SPAN> &mdash; <A HREF="AA-TTL.html"><B>Legal Information</B></A></DIV>
 <div style="margin-top: 0.6em; margin-bottom: 0.0em"><A HREF="AA-TOC.html"><IMG SRC="cont.gif" ALT="Contents" BORDER=0></A>&nbsp;
 &nbsp;<A HREF="AA-0-4.html"><IMG SRC="index.gif" ALT="Index" BORDER=0></A>&nbsp;
 &nbsp;<A HREF="AA-STDS.html"><IMG SRC="lib.gif" ALT="References" BORDER=0></A>&nbsp;
@@ -37,7 +37,7 @@
 <div class="paranum"><a name="p1">1/3</a></div>
 <div class="Normal">{<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0229-1.TXT">AI05-0229-1</A></I>} 
 {<I><A HREF="http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI05s/AI05-0299-1.TXT">AI05-0299-1</A></I>} 
-<A NAME="I10647"></A>This subclause summarizes the definitions given 
+<A NAME="I10858"></A>This subclause summarizes the definitions given 
 elsewhere of the language-defined attributes. Attributes are properties 
 of entities that can be queried by an Ada program.</div>
 <div class="paranum"><a name="p2">2</a></div>
@@ -77,11 +77,11 @@ denotes a function with the following specification:&nbsp;</div>
 <div class="Indented4Examples"><B>function</B>&nbsp;S'Adjacent&nbsp;(<SPAN Class="roman"><I>X</I></SPAN>,&nbsp;<SPAN Class="roman"><I>Towards</I></SPAN>&nbsp;:&nbsp;<SPAN Class="roman"><I>T</I></SPAN>)<BR>
 &nbsp;&nbsp;<B>return</B>&nbsp;<SPAN Class="roman"><I>T</I></SPAN></div>
 <div class="paranum"><a name="p11">11</a></div>
-<div class="WideHanging-Body"><A NAME="I10648"></A>If <SPAN Class="roman"><I>Towards</I></SPAN> 
+<div class="WideHanging-Body"><A NAME="I10859"></A>If <SPAN Class="roman"><I>Towards</I></SPAN> 
 = <SPAN Class="roman"><I>X</I></SPAN>, the function yields <SPAN Class="roman"><I>X</I></SPAN>; 
 otherwise, it yields the machine number of the type <SPAN Class="roman"><I>T</I></SPAN> 
 adjacent to <SPAN Class="roman"><I>X</I></SPAN> in the direction of <SPAN Class="roman"><I>Towards</I></SPAN>, 
-if that machine number exists. <A NAME="I10649"></A><A NAME="I10650"></A>If 
+if that machine number exists. <A NAME="I10860"></A><A NAME="I10861"></A>If 
 the result would be outside the base range of S, Constraint_Error is 
 raised. When <SPAN Class="roman"><I>T</I></SPAN>'Signed_Zeros is True, 
 a zero result has the sign of <SPAN Class="roman"><I>X</I></SPAN>. When 
@@ -187,7 +187,7 @@ type (called <I>T</I>'Class in this document) for the class rooted at
 <I>T</I> (or if S already denotes a class-wide subtype, then S'Class 
 is the same as S).</div>
 <div class="paranum"><a name="p33">33</a></div>
-<div class="WideHanging-Body"><A NAME="I10651"></A><A NAME="I10652"></A>S'Class 
+<div class="WideHanging-Body"><A NAME="I10862"></A><A NAME="I10863"></A>S'Class 
 is unconstrained. However, if S is constrained, then the values of S'Class 
 are only those that when converted to the type <I>T</I> belong to S. 
 See <A HREF="AA-3-9.html">3.9</A>.</div>
@@ -219,7 +219,7 @@ denotes a function with the following specification:&nbsp;</div>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN Class="roman"><I>Exponent</I></SPAN>&nbsp;:&nbsp;<SPAN Class="roman"><I>universal_integer</I></SPAN>)<BR>
 &nbsp;&nbsp;<B>return</B>&nbsp;<SPAN Class="roman"><I>T</I></SPAN></div>
 <div class="paranum"><a name="p41">41</a></div>
-<div class="WideHanging-Body"><A NAME="I10653"></A>Let <SPAN Class="roman"><I>v</I></SPAN> 
+<div class="WideHanging-Body"><A NAME="I10864"></A>Let <SPAN Class="roman"><I>v</I></SPAN> 
 be the value <SPAN Class="roman"><I>Fraction</I></SPAN> &middot; <SPAN Class="roman"><I>T</I></SPAN><SPAN Class="roman">'Machine_Radix</SPAN><SUP><SPAN STYLE="font-size: 140%"><SPAN STYLE="font-size: 64%"></SPAN><SPAN Class="roman"><SPAN STYLE="font-size: 64%"><I>Exponent</I></SPAN></SPAN><SPAN STYLE="font-size: 64%">&ndash;</SPAN><SPAN Class="roman"><SPAN STYLE="font-size: 64%"><I>k</I></SPAN></SPAN><SPAN STYLE="font-size: 64%"></SPAN></SPAN></SUP>, 
 where <SPAN Class="roman"><I>k</I></SPAN> is the normalized exponent 
 of <SPAN Class="roman"><I>Fraction</I></SPAN>. If <SPAN Class="roman"><I>v</I></SPAN> 
@@ -227,7 +227,7 @@ is a machine number of the type <SPAN Class="roman"><I>T</I></SPAN>,
 or if |<SPAN Class="roman"><I>v</I></SPAN>| &ge; <SPAN Class="roman"><I>T</I></SPAN><SPAN Class="roman">'Model_Small</SPAN>, 
 the function yields <SPAN Class="roman"><I>v</I></SPAN>; otherwise, it 
 yields either one of the machine numbers of the type <SPAN Class="roman"><I>T</I></SPAN> 
-adjacent to <SPAN Class="roman"><I>v</I></SPAN>. <A NAME="I10654"></A><A NAME="I10655"></A>Constraint_Error 
+adjacent to <SPAN Class="roman"><I>v</I></SPAN>. <A NAME="I10865"></A><A NAME="I10866"></A>Constraint_Error 
 is optionally raised if <SPAN Class="roman"><I>v</I></SPAN> is outside 
 the base range of S. A zero result has the sign of <SPAN Class="roman"><I>Fraction</I></SPAN> 
 when S'Signed_Zeros is True. See <A HREF="AA-A-5-3.html">A.5.3</A>.</div>
@@ -249,10 +249,10 @@ denotes a function with the following specification:&nbsp;</div>
 <div class="Indented4Examples"><B>function</B>&nbsp;S'Copy_Sign&nbsp;(<SPAN Class="roman"><I>Value</I></SPAN>,&nbsp;<SPAN Class="roman"><I>Sign</I></SPAN>&nbsp;:&nbsp;<SPAN Class="roman"><I>T</I></SPAN>)<BR>
 &nbsp;&nbsp;<B>return</B>&nbsp;<SPAN Class="roman"><I>T</I></SPAN></div>
 <div class="paranum"><a name="p47">47</a></div>
-<div class="WideHanging-Body"><A NAME="I10656"></A>If the value of <SPAN Class="roman"><I>Value</I></SPAN> 
+<div class="WideHanging-Body"><A NAME="I10867"></A>If the value of <SPAN Class="roman"><I>Value</I></SPAN> 
 is nonzero, the function yields a result whose magnitude is that of <SPAN Class="roman"><I>Value</I></SPAN> 
 and whose sign is that of <SPAN Class="roman"><I>Sign</I></SPAN>; otherwise, 
-it yields the value zero. <A NAME="I10657"></A><A NAME="I10658"></A>Constraint_Error 
+it yields the value zero. <A NAME="I10868"></A><A NAME="I10869"></A>Constraint_Error 
 is optionally raised if the result is outside the base range of S. A 
 zero result has the sign of <SPAN Class="roman"><I>Sign</I></SPAN> when 
 S'Signed_Zeros is True. See <A HREF="AA-A-5-3.html">A.5.3</A>.</div>
@@ -319,7 +319,7 @@ denotes a function with the following specification:&nbsp;</div>
 <div class="paranum"><a name="p59.4">59.4/5</a></div>
 <div class="WideHanging-Body">This function returns the representation 
 value of the value of Arg, as a value of type <I>universal_integer</I>. 
-The <I>representation value</I><A NAME="I10659"></A> is<A NAME="I10660"></A> 
+The <I>representation value</I><A NAME="I10870"></A> is<A NAME="I10871"></A> 
 the internal code specified in an enumeration representation clause, 
 if any, for the type corresponding to the value of Arg, and otherwise 
 is the position number of the value. See <A HREF="AA-13-4.html">13.4</A>.</div>
@@ -353,11 +353,11 @@ of <SPAN Class="roman"><I>X</I></SPAN>. See <A HREF="AA-A-5-3.html">A.5.3</A>.</
 <div class="WideHanging-Term">S'External_Tag</div><div class="WideHanging-Body"><br clear="left">
 For every subtype S of a tagged type <I>T</I> (specific or class-wide):</div>
 <div class="paranum"><a name="p65">65</a></div>
-<div class="WideHanging-Body"><A NAME="I10661"></A><A NAME="I10662"></A>S'External_Tag 
+<div class="WideHanging-Body"><A NAME="I10872"></A><A NAME="I10873"></A>S'External_Tag 
 denotes an external string representation for S'Tag; it is of the predefined 
 type String. External_Tag may be specified for a specific tagged type 
 via an <SPAN Class="swiss"><A HREF="AA-13-3.html#S0349">attribute_definition_clause</A></SPAN>; 
-the expression of such a clause shall be static.<A NAME="I10663"></A><A NAME="I10664"></A> 
+the expression of such a clause shall be static.<A NAME="I10874"></A><A NAME="I10875"></A><A NAME="I10876"></A> 
 The default external tag representation is implementation defined. See 
 <A HREF="AA-13-13-2.html">13.13.2</A>. See <A HREF="AA-13-3.html">13.3</A>.</div>
 <div class="paranum"><a name="p66">66/1</a></div>
@@ -609,7 +609,7 @@ positive;</div>
 is negative and <SPAN Class="roman"><I>Radix_Digits</I></SPAN> is positive. 
 </div>
 <div class="paranum"><a name="p114">114</a></div>
-<div class="WideHanging-Body"><A NAME="I10665"></A><A NAME="I10666"></A><A NAME="I10667"></A>Constraint_Error 
+<div class="WideHanging-Body"><A NAME="I10877"></A><A NAME="I10878"></A><A NAME="I10879"></A>Constraint_Error 
 is raised when <SPAN Class="roman"><I>Radix_Digits</I></SPAN> is zero 
 or negative. A zero result, which can only occur when <SPAN Class="roman"><I>X</I></SPAN> 
 is zero, has the sign of <SPAN Class="roman"><I>X</I></SPAN>. See <A HREF="AA-A-5-3.html">A.5.3</A>.</div>
@@ -641,12 +641,12 @@ denotes a function with the following specification:&nbsp;</div>
 <div class="Indented4Examples"><B>function</B>&nbsp;S'Machine&nbsp;(<SPAN Class="roman"><I>X</I></SPAN>&nbsp;:&nbsp;<SPAN Class="roman"><I>T</I></SPAN>)<BR>
 &nbsp;&nbsp;<B>return</B>&nbsp;<SPAN Class="roman"><I>T</I></SPAN></div>
 <div class="paranum"><a name="p122">122</a></div>
-<div class="WideHanging-Body"><A NAME="I10668"></A>If <SPAN Class="roman"><I>X</I></SPAN> 
+<div class="WideHanging-Body"><A NAME="I10880"></A>If <SPAN Class="roman"><I>X</I></SPAN> 
 is a machine number of the type <SPAN Class="roman"><I>T</I></SPAN>, 
 the function yields <SPAN Class="roman"><I>X</I></SPAN>; otherwise, it 
 yields the value obtained by rounding or truncating <SPAN Class="roman"><I>X</I></SPAN> 
 to either one of the adjacent machine numbers of the type <SPAN Class="roman"><I>T</I></SPAN>. 
-<A NAME="I10669"></A><A NAME="I10670"></A>Constraint_Error is raised 
+<A NAME="I10881"></A><A NAME="I10882"></A>Constraint_Error is raised 
 if rounding or truncating <SPAN Class="roman"><I>X</I></SPAN> to the 
 precision of the machine numbers results in a value outside the base 
 range of S. A zero result has the sign of <SPAN Class="roman"><I>X</I></SPAN> 
@@ -733,7 +733,7 @@ lies exactly halfway between two integers, one of those integers is returned,
 but which of them is returned is unspecified. A zero result has the sign 
 of <SPAN Class="roman"><I>X</I></SPAN> when S'Signed_Zeros is True. This 
 function provides access to the rounding behavior which is most efficient 
-on the target processor.<A NAME="I10671"></A> See <A HREF="AA-A-5-3.html">A.5.3</A>.</div>
+on the target processor.<A NAME="I10883"></A> See <A HREF="AA-A-5-3.html">A.5.3</A>.</div>
 <div class="paranum"><a name="p137">137</a></div>
 <div class="WideHanging-Term">S'Machine_Rounds</div><div class="WideHanging-Body"><br clear="left">
 For every subtype S of a floating point type <SPAN Class="roman"><I>T</I></SPAN>:</div>
@@ -990,16 +990,16 @@ a function with the following specification:&nbsp;</div>
 <div class="Indented4Examples"><B>function</B>&nbsp;S'Pred(<SPAN Class="roman"><I>Arg</I></SPAN>&nbsp;:&nbsp;S'Base)<BR>
 &nbsp;&nbsp;<B>return</B>&nbsp;S'Base</div>
 <div class="paranum"><a name="p184">184</a></div>
-<div class="WideHanging-Body"><A NAME="I10672"></A>For an enumeration 
+<div class="WideHanging-Body"><A NAME="I10884"></A>For an enumeration 
 type, the function returns the value whose position number is one less 
-than that of the value of <SPAN Class="roman"><I>Arg</I></SPAN>; <A NAME="I10673"></A><A NAME="I10674"></A>Constraint_Error 
+than that of the value of <SPAN Class="roman"><I>Arg</I></SPAN>; <A NAME="I10885"></A><A NAME="I10886"></A>Constraint_Error 
 is raised if there is no such value of the type. For an integer type, 
 the function returns the result of subtracting one from the value of 
 <SPAN Class="roman"><I>Arg</I></SPAN>. For a fixed point type, the function 
 returns the result of subtracting <I>small</I> from the value of <SPAN Class="roman"><I>Arg</I></SPAN>. 
 For a floating point type, the function returns the machine number (as 
 defined in <A HREF="AA-3-5-7.html">3.5.7</A>) immediately below the value 
-of <SPAN Class="roman"><I>Arg</I></SPAN>; <A NAME="I10675"></A><A NAME="I10676"></A>Constraint_Error 
+of <SPAN Class="roman"><I>Arg</I></SPAN>; <A NAME="I10887"></A><A NAME="I10888"></A>Constraint_Error 
 is raised if there is no such machine number. See <A HREF="AA-3-5.html">3.5</A>.</div>
 <div class="paranum"><a name="p184.1">184.1/5</a></div>
 <div class="WideHanging-Term">&nbsp;&nbsp;&nbsp;S'Preelaborable_Initialization</div><div class="WideHanging-Body"><br clear="left">
@@ -1129,7 +1129,7 @@ denotes a function with the following specification:&nbsp;</div>
 <div class="Indented4Examples"><B>function</B>&nbsp;S'Remainder&nbsp;(<SPAN Class="roman"><I>X</I></SPAN>,&nbsp;<SPAN Class="roman"><I>Y</I></SPAN>&nbsp;:&nbsp;<SPAN Class="roman"><I>T</I></SPAN>)<BR>
 &nbsp;&nbsp;<B>return</B>&nbsp;<SPAN Class="roman"><I>T</I></SPAN></div>
 <div class="paranum"><a name="p202">202</a></div>
-<div class="WideHanging-Body"><A NAME="I10677"></A>For nonzero <SPAN Class="roman"><I>Y</I></SPAN>, 
+<div class="WideHanging-Body"><A NAME="I10889"></A>For nonzero <SPAN Class="roman"><I>Y</I></SPAN>, 
 let <SPAN Class="roman"><I>v</I></SPAN> be the value <SPAN Class="roman"><I>X</I></SPAN> 
 &ndash; <SPAN Class="roman"><I>n</I></SPAN> &middot; <SPAN Class="roman"><I>Y</I></SPAN>, 
 where <SPAN Class="roman"><I>n</I></SPAN> is the integer nearest to the 
@@ -1138,7 +1138,7 @@ if |<SPAN Class="roman"><I>n</I></SPAN> &ndash; <SPAN Class="roman"><I>X</I></SP
 = 1/2, then <SPAN Class="roman"><I>n</I></SPAN> is chosen to be even. 
 If <SPAN Class="roman"><I>v</I></SPAN> is a machine number of the type 
 <SPAN Class="roman"><I>T</I></SPAN>, the function yields <SPAN Class="roman"><I>v</I></SPAN>; 
-otherwise, it yields zero. <A NAME="I10678"></A><A NAME="I10679"></A>Constraint_Error 
+otherwise, it yields zero. <A NAME="I10890"></A><A NAME="I10891"></A>Constraint_Error 
 is raised if <SPAN Class="roman"><I>Y</I></SPAN> is zero. A zero result 
 has the sign of <SPAN Class="roman"><I>X</I></SPAN> when S'Signed_Zeros 
 is True. See <A HREF="AA-A-5-3.html">A.5.3</A>.</div>
@@ -1211,7 +1211,7 @@ For every decimal fixed point subtype S:</div>
 <div class="paranum"><a name="p216">216</a></div>
 <div class="WideHanging-Body">S'Scale denotes the <I>scale</I> of the 
 subtype S, defined as the value N such that S'Delta = 10.0**(&ndash;N). 
-<A NAME="I10680"></A>The scale indicates the position of the point relative 
+<A NAME="I10892"></A>The scale indicates the position of the point relative 
 to the rightmost significant digits of values of subtype S. The value 
 of this attribute is of the type <I>universal_integer</I>. See <A HREF="AA-3-5-10.html">3.5.10</A>.</div>
 <div class="paranum"><a name="p217">217</a></div>
@@ -1225,14 +1225,14 @@ denotes a function with the following specification:&nbsp;</div>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN Class="roman"><I>Adjustment</I></SPAN>&nbsp;:&nbsp;<SPAN Class="roman"><I>universal_integer</I></SPAN>)<BR>
 &nbsp;&nbsp;<B>return</B>&nbsp;<SPAN Class="roman"><I>T</I></SPAN></div>
 <div class="paranum"><a name="p220">220</a></div>
-<div class="WideHanging-Body"><A NAME="I10681"></A>Let <SPAN Class="roman"><I>v</I></SPAN> 
+<div class="WideHanging-Body"><A NAME="I10893"></A>Let <SPAN Class="roman"><I>v</I></SPAN> 
 be the value <SPAN Class="roman"><I>X</I></SPAN> &middot; <SPAN Class="roman"><I>T</I></SPAN><SPAN Class="roman">'Machine_Radix</SPAN><SUP><SPAN STYLE="font-size: 140%"><SPAN STYLE="font-size: 64%"></SPAN><SPAN Class="roman"><SPAN STYLE="font-size: 64%"><I>Adjustment</I></SPAN></SPAN><SPAN STYLE="font-size: 64%"></SPAN></SPAN></SUP>. 
 If <SPAN Class="roman"><I>v</I></SPAN> is a machine number of the type 
 <SPAN Class="roman"><I>T</I></SPAN>, or if |<SPAN Class="roman"><I>v</I></SPAN>| 
 &ge; <SPAN Class="roman"><I>T</I></SPAN><SPAN Class="roman">'Model_Small</SPAN>, 
 the function yields <SPAN Class="roman"><I>v</I></SPAN>; otherwise, it 
 yields either one of the machine numbers of the type <SPAN Class="roman"><I>T</I></SPAN> 
-adjacent to <SPAN Class="roman"><I>v</I></SPAN>. <A NAME="I10682"></A><A NAME="I10683"></A>Constraint_Error 
+adjacent to <SPAN Class="roman"><I>v</I></SPAN>. <A NAME="I10894"></A><A NAME="I10895"></A>Constraint_Error 
 is optionally raised if <SPAN Class="roman"><I>v</I></SPAN> is outside 
 the base range of S. A zero result has the sign of <SPAN Class="roman"><I>X</I></SPAN> 
 when S'Signed_Zeros is True. See <A HREF="AA-A-5-3.html">A.5.3</A>.</div>
@@ -1328,16 +1328,16 @@ a function with the following specification:&nbsp;</div>
 <div class="Indented4Examples"><B>function</B>&nbsp;S'Succ(<SPAN Class="roman"><I>Arg</I></SPAN>&nbsp;:&nbsp;S'Base)<BR>
 &nbsp;&nbsp;<B>return</B>&nbsp;S'Base</div>
 <div class="paranum"><a name="p241">241</a></div>
-<div class="WideHanging-Body"><A NAME="I10684"></A>For an enumeration 
+<div class="WideHanging-Body"><A NAME="I10896"></A>For an enumeration 
 type, the function returns the value whose position number is one more 
-than that of the value of <SPAN Class="roman"><I>Arg</I></SPAN>; <A NAME="I10685"></A><A NAME="I10686"></A>Constraint_Error 
+than that of the value of <SPAN Class="roman"><I>Arg</I></SPAN>; <A NAME="I10897"></A><A NAME="I10898"></A>Constraint_Error 
 is raised if there is no such value of the type. For an integer type, 
 the function returns the result of adding one to the value of <SPAN Class="roman"><I>Arg</I></SPAN>. 
 For a fixed point type, the function returns the result of adding <I>small</I> 
 to the value of <SPAN Class="roman"><I>Arg</I></SPAN>. For a floating 
 point type, the function returns the machine number (as defined in <A HREF="AA-3-5-7.html">3.5.7</A>) 
 immediately above the value of <SPAN Class="roman"><I>Arg</I></SPAN>; 
-<A NAME="I10687"></A><A NAME="I10688"></A>Constraint_Error is raised 
+<A NAME="I10899"></A><A NAME="I10900"></A>Constraint_Error is raised 
 if there is no such machine number. See <A HREF="AA-3-5.html">3.5</A>.</div>
 <div class="paranum"><a name="p242">242</a></div>
 <div class="WideHanging-Term">S'Tag</div><div class="WideHanging-Body">
@@ -1409,7 +1409,7 @@ a function with the following specification:&nbsp;</div>
 <div class="Indented4Examples"><B>function</B>&nbsp;S'Val(<SPAN Class="roman"><I>Arg</I></SPAN>&nbsp;:&nbsp;<SPAN Class="roman"><I>universal_integer</I></SPAN>)<BR>
 &nbsp;&nbsp;<B>return</B>&nbsp;S'Base</div>
 <div class="paranum"><a name="p261">261</a></div>
-<div class="WideHanging-Body"><A NAME="I10689"></A><A NAME="I10690"></A>This 
+<div class="WideHanging-Body"><A NAME="I10901"></A><A NAME="I10902"></A>This 
 function returns a value of the type of S whose position number equals 
 the value of <SPAN Class="roman"><I>Arg</I></SPAN>. See <A HREF="AA-3-5-5.html">3.5.5</A>.</div>
 <div class="paranum"><a name="p262">262</a></div>
@@ -1419,7 +1419,7 @@ X that denotes a scalar object (after any implicit dereference):</div>
 <div class="paranum"><a name="p263">263/4</a></div>
 <div class="WideHanging-Body">Yields True if and only if the object denoted 
 by X is normal, has a valid representation, and then, if the preceding 
-conditions hold, the value of X also satisfies the predicates<A NAME="I10691"></A> 
+conditions hold, the value of X also satisfies the predicates<A NAME="I10903"></A> 
 of the nominal subtype of X. The value of this attribute is of the predefined 
 type Boolean. See <A HREF="AA-13-9-2.html">13.9.2</A>.</div>
 <div class="paranum"><a name="p264">264</a></div>
